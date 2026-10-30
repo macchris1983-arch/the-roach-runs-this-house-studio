@@ -1,0 +1,35 @@
+season: 1
+title: The Roach Runs This House - Season 1
+format: Facebook Reels, 9:16 1080x1920, 30 fps, 20-40 s
+release_target: 3 finished Reels per day (manual posting after approval)
+episodes:
+- id: s01e01
+  title: Kitchen Roach Panic
+  status: full production file
+- id: s01e02
+  title: The Roach Called Backup
+  status: outline
+- id: s01e03
+  title: The Dinner Disaster
+  status: outline
+- id: s01e04
+  title: Who Changed My Password?
+  status: outline
+- id: s01e05
+  title: The Midnight Snack
+  status: outline
+- id: s01e06
+  title: The Roach Gets Promoted
+  status: outline
+- id: s01e07
+  title: Don't Touch My Food
+  status: outline
+- id: s01e08
+  title: The Neighbor's Wi-Fi
+  status: outline
+- id: s01e09
+  title: The $20 Shopping Trip
+  status: outline
+- id: s01e10
+  title: Couples Game Night
+  status: outline

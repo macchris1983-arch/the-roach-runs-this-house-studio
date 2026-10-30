@@ -1,0 +1,16 @@
+# renders and scratch output
+build/
+exports/**/*.mp4
+exports/**/*.wav
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+# secrets
+.env
+*.key
+# OS
+.DS_Store
+Thumbs.db

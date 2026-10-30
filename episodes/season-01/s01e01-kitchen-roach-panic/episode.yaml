@@ -1,0 +1,202 @@
+# The Roach Runs This House - S01E01 "Kitchen Roach Panic"
+# Coordinates are in the 1080x1920 world frame (x right, y down).
+# Kitchen landmarks: countertop surface y=1150 (x 0-820), floor line y=1580,
+# table (prop) top at y=1330 when placed at y=1330.
+id: s01e01
+slug: kitchen-roach-panic
+season: 1
+episode: 1
+title: Kitchen Roach Panic
+logline: >
+  The Husband catches the Roach eating his cereal at midnight and screams for
+  backup. The Wife arrives with her slipper, but the Roach produces a rent
+  receipt and reveals who in this house actually stopped paying.
+hook: Lights flick on and a roach is calmly eating the Husband's cereal with a spoon.
+punchline: "\"Since HE stopped.\" The slipper turns on the Husband."
+loop: Ends with the Roach clicking the light off mid-bite, which loops into the dark opening.
+cover_at: 1.4
+voice_provider: babble   # put recorded WAVs in voice/<line id>.wav to replace any line
+music: {enabled: true, mood: sneaky_funk, bpm: 104, root_midi: 45, seed: 101, gain: 0.2}
+
+reels:
+  caption: "He said 'BABE' like the roach was the problem 😭 #TheRoachRunsThisHouse"
+  hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#reels"]
+
+common:
+  table: &table {name: table, x: 720, y: 1330, z: 12}
+  bowl: &bowl {name: bowl, x: 640, y: 1322, z: 14}
+  box: &box {name: cereal_box, x: 520, y: 1322, z: 12.5, scale: 0.9}
+  milk: &milk {name: milk, x: 905, y: 1322, z: 12.6, scale: 0.85}
+
+shots:
+  # ---------------------------------------------------------------- HOOK
+  - id: A
+    dur: 3.9
+    background: kitchen
+    camera: {x: 540, y: 1100, zoom: 1.0, keys: [{at: 3.9, zoom: 1.12, y: 1180, from: 0.5}]}
+    props: [*table, *bowl, *box, *milk]
+    actors:
+      roach: {x: 770, y: 1326, scale: 1.0, z: 13, action: eat, expr: chewing, hold: {R: spoon},
+              keys: [{at: 0.55, action: freeze, expr: shocked, look: left}]}
+      husband: {x: 250, y: 1840, scale: 0.95, z: 20, action: idle, expr: neutral, look: right,
+                keys: [{at: 0.55, expr: shocked}, {at: 0.9, action: point_R, expr: shocked}]}
+    fx:
+      - {type: darkness, at: 0, until: 0.45, amount: 0.78}
+      - {type: flash, at: 0.45, dur: 0.25}
+      - {type: marks, at: 0.6, dur: 1.4, text: "!!", pos: [250, 760]}
+    sfx:
+      - {at: 0.35, name: light_switch, gain: 0.9}
+      - {at: 0.55, name: record_scratch, gain: 0.7}
+    lines:
+      - {id: L01, who: husband, at: 1.0, text: "Babe. There's a ROACH eating my cereal."}
+
+  - id: B
+    dur: 2.9
+    background: kitchen
+    camera: {x: 740, y: 1180, zoom: 2.3}
+    props: [*table, *bowl, *box, *milk]
+    actors:
+      roach: {x: 770, y: 1326, scale: 1.0, z: 13, action: eat, expr: unbothered, hold: {R: spoon}, look: left}
+    sfx:
+      - {at: 0.1, name: crunch, gain: 0.6}
+    lines:
+      - {id: L02, who: roach, at: 0.3, text: "It's soggy. You let it sit too long."}
+
+  # ---------------------------------------------------------------- ESCALATION
+  - id: C
+    dur: 2.6
+    background: kitchen
+    camera: {x: 300, y: 1340, zoom: 1.45, keys: [{at: 1.6, y: 760, from: 1.15, ease: out}]}
+    actors:
+      husband: {x: 250, y: 1840, scale: 0.95, z: 20, action: scream, expr: screaming,
+                keys: [{at: 1.15, action: jump}, {at: 1.5, y: 1155, from: 1.15, ease: overshoot},
+                       {at: 1.55, action: tremble, expr: scared}]}
+    fx:
+      - {type: shake, at: 0.0, dur: 0.9, amp: 22}
+      - {type: speedlines, at: 0.0, dur: 1.0, pos: [250, 1200]}
+      - {type: shake, at: 1.5, dur: 0.3, amp: 14}
+    sfx:
+      - {at: 0.0, name: scream_sting, gain: 0.8}
+      - {at: 1.15, name: boing, gain: 0.8}
+    lines:
+      - {id: L03, who: husband, at: 0.1, text: "AAAAAH! BABE!"}
+
+  - id: D
+    dur: 3.4
+    background: kitchen
+    camera: {x: 540, y: 960, zoom: 1.0}
+    props: [*table, *bowl, *box, *milk]
+    actors:
+      husband: {x: 250, y: 1155, scale: 0.95, z: 8, action: tremble, expr: scared, look: right}
+      roach: {x: 770, y: 1326, scale: 1.0, z: 13, action: eat, expr: unbothered, hold: {R: spoon}}
+      wife: {x: 1300, y: 1880, scale: 1.0, z: 20, action: walk, expr: unbothered, look: left,
+             keys: [{at: 1.0, x: 880, ease: out}, {at: 1.0, action: hips},
+                    {at: 2.3, action: wind_up, expr: determined, hold: {R: slipper}, variants: {leg_R: bare}}]}
+    fx:
+      - {type: sweat, at: 0, pos: [390, 190], dur: 3.4}
+    sfx:
+      - {at: 2.3, name: dun_dun_dun, gain: 0.75}
+    lines:
+      - {id: L04, who: wife, at: 1.15, text: "Move. I got this."}
+
+  # ---------------------------------------------------------------- TWIST
+  - id: E
+    dur: 3.9
+    background: kitchen
+    camera: {x: 750, y: 1170, zoom: 2.2}
+    props: [*table, *bowl, *box, *milk]
+    actors:
+      roach: {x: 770, y: 1326, scale: 1.0, z: 13, action: hold_up, expr: nervous, look: right, hold: {R: spoon},
+              keys: [{at: 2.0, hold: {R: paper}, expr: smug, look: camera}]}
+    fx:
+      - {type: flash, at: 2.0, dur: 0.15}
+    sfx:
+      - {at: 2.0, name: paper_rustle, gain: 0.8}
+      - {at: 3.2, name: ding, gain: 0.6}
+    lines:
+      - {id: L05, who: roach, at: 0.15, text: "Whoa, whoa. Before you swing..."}
+      - {id: L06, who: roach, at: 2.35, text: "I pay rent."}
+
+  - id: F
+    dur: 2.7
+    background: kitchen
+    camera: {x: 870, y: 1280, zoom: 1.7}
+    props: [*table, *bowl, *box, *milk]
+    actors:
+      wife: {x: 880, y: 1880, scale: 1.0, z: 20, action: read, expr: shocked, hold: {L: paper, R: slipper},
+             variants: {leg_R: bare}, keys: [{at: 1.35, expr: confused, look: left}]}
+    sfx:
+      - {at: 0.0, name: pop, gain: 0.5}
+    lines:
+      - {id: L07, who: wife, at: 0.25, text: "He's been paying rent?"}
+      - {id: L08, who: husband, at: 1.5, text: "Since WHEN?!"}
+
+  # ---------------------------------------------------------------- PUNCHLINE
+  - id: G
+    dur: 2.7
+    background: kitchen
+    camera: {x: 750, y: 1170, zoom: 2.4, keys: [{at: 2.7, zoom: 2.7, from: 0.3}]}
+    props: [*table, *bowl, *box, *milk]
+    actors:
+      roach: {x: 770, y: 1326, scale: 1.0, z: 13, action: point_L, expr: smug, look: left, hold: {R: paper}}
+    sfx:
+      - {at: 1.55, name: record_scratch, gain: 0.8}
+      - {at: 1.75, name: gasp_sting, gain: 0.7}
+    lines:
+      - {id: L09, who: roach, at: 0.3, text: "Since HE stopped."}
+
+  - id: H
+    dur: 3.6
+    background: kitchen
+    camera: {x: 540, y: 1000, zoom: 1.05}
+    props: [*table, *bowl, *box, *milk]
+    actors:
+      husband: {x: 250, y: 1155, scale: 0.95, z: 8, action: shrug, expr: nervous, look: right,
+                keys: [{at: 2.0, expr: scared, action: tremble}]}
+      roach: {x: 770, y: 1326, scale: 1.0, z: 13, action: eat, expr: smug, hold: {R: spoon}}
+      wife: {x: 880, y: 1880, scale: 1.0, z: 20, action: idle, expr: sideeye, look: left, hold: {R: slipper},
+             variants: {leg_R: bare}, keys: [{at: 1.8, expr: furious, action: wind_up}]}
+    fx:
+      - {type: vignette, at: 0, amount: 0.45}
+      - {type: marks, at: 0.3, pos: [250, 110], text: "?!", dur: 2.0}
+    sfx:
+      - {at: 1.8, name: dun_dun_dun, gain: 0.6}
+    lines:
+      - {id: L10, who: husband, at: 0.3, text: "Babe... I can explain."}
+      - {id: L11, who: wife, at: 1.95, text: "Get. Down. Here."}
+
+  - id: I
+    dur: 2.8
+    background: kitchen
+    camera: {x: 540, y: 1200, zoom: 1.0}
+    props: [*table, *bowl, *box, *milk]
+    actors:
+      roach: {x: 770, y: 1326, scale: 1.0, z: 13, action: eat, expr: happy, hold: {R: spoon}}
+      husband: {x: 420, y: 1860, scale: 0.95, z: 20, action: run, expr: screaming,
+                keys: [{at: 1.2, x: -420, from: 0.15, ease: in}]}
+      wife: {x: 1080, y: 1880, scale: 1.0, z: 21, action: chase, expr: furious, hold: {R: slipper},
+             variants: {leg_R: bare}, keys: [{at: 1.75, x: -420, from: 0.3, ease: in}]}
+    fx:
+      - {type: burst, at: 2.0, pos: [260, 900], dur: 0.8, text: "BAM!", size: 130, world: false}
+      - {type: shake, at: 2.0, dur: 0.6, amp: 24}
+    sfx:
+      - {at: 0.1, name: slide_whistle_up, gain: 0.7}
+      - {at: 0.2, name: footsteps_run, gain: 0.7}
+      - {at: 1.95, name: crash, gain: 0.9}
+
+  # ---------------------------------------------------------------- LOOP ENDING
+  - id: J
+    dur: 3.7
+    background: kitchen
+    camera: {x: 740, y: 1180, zoom: 2.3}
+    props: [*table, *bowl, *box, *milk]
+    actors:
+      roach: {x: 770, y: 1326, scale: 1.0, z: 13, action: eat, expr: chewing, hold: {R: spoon},
+              keys: [{at: 0.6, expr: smug, look: camera, action: idle}, {at: 2.9, action: eat, expr: chewing, look: center}]}
+    fx:
+      - {type: darkness, at: 3.25, until: 3.7, amount: 0.78}
+    sfx:
+      - {at: 0.1, name: crunch, gain: 0.6}
+      - {at: 3.2, name: light_switch, gain: 0.9}
+    lines:
+      - {id: L12, who: roach, at: 0.7, text: "Anyway... who's buying milk?"}

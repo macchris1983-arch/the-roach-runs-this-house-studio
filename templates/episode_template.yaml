@@ -1,0 +1,46 @@
+# The Roach Runs This House - {{ID}} "{{TITLE}}"
+# Copy patterns from episodes/season-01/s01e01-kitchen-roach-panic/episode.yaml.
+# Run `python -m studio validate {{ID}}` after every edit.
+#
+# Cheat sheet
+#   backgrounds: kitchen, living_room, bedroom
+#   characters:  wife, husband, roach
+#   expressions: neutral happy smug unbothered shocked scared screaming angry furious
+#                sideeye confused nervous chewing pleading determined
+#   actions:     idle talk walk run tremble scream jump hips point_L point_R hold_up wind_up
+#                read shrug eat sit freeze cross_arms dance chase crouch wave
+#   props:       bowl cereal_box milk spoon paper slipper table
+#   fx:          flash darkness vignette speedlines text burst sweat marks dust shake
+#   sfx:         run `python -m studio sfx` and look in assets/audio/sfx/
+#   Kitchen landmarks: countertop y=1150, floor y=1580, table top y=1330 at x=720
+id: {{ID}}
+slug: {{SLUG}}
+season: {{SEASON}}
+episode: {{NUMBER}}
+title: "{{TITLE}}"
+logline: "{{LOGLINE}}"
+hook: "{{HOOK}}"
+punchline: "{{PUNCHLINE}}"
+loop: "TODO: how the last frame leads back into the first"
+cover_at: 1.0
+voice_provider: babble
+music: {enabled: true, mood: sitcom_bounce, bpm: 108, root_midi: 48, seed: {{NUMBER}}, gain: 0.2}
+reels:
+  caption: "TODO #TheRoachRunsThisHouse"
+  hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#reels"]
+
+shots:
+  - id: A
+    dur: 3.0
+    background: kitchen
+    camera: {x: 540, y: 1100, zoom: 1.0}
+    props:
+      - {name: table, x: 720, y: 1330, z: 12}
+    actors:
+      roach: {x: 770, y: 1326, scale: 1.0, z: 13, action: idle, expr: smug}
+      husband: {x: 250, y: 1840, scale: 0.95, z: 20, action: idle, expr: neutral,
+                keys: [{at: 1.0, expr: shocked}]}
+    sfx:
+      - {at: 0.0, name: pop, gain: 0.6}
+    lines:
+      - {id: L01, who: husband, at: 0.4, text: "TODO first line"}

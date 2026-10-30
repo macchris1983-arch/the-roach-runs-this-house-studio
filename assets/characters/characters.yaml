@@ -1,0 +1,67 @@
+# Character bible: the single source of truth for each character's look and voice.
+#
+# STATUS: DRAFT v0.1, built from the written description only.
+# No reference image was attached when the studio was built, so these designs
+# are NOT yet matched to the official reference. To lock the look:
+#   1. Put the official reference art in assets/characters/reference/
+#   2. Adjust the palette below to match it, then re-run `python -m studio sheet`
+#   3. When the model sheet is approved, set approved: true and run
+#      `python -m studio lock-characters` (records a hash that QC enforces).
+approved: false
+version: "0.1-draft"
+
+wife:
+  display_name: The Wife
+  personality: Sharp, unbothered, runs the house; expressive face, strong opinions.
+  palette:
+    skin: "#8D5524"
+    skin_shadow: "#6E3F18"
+    hair: "#24150F"
+    hoops: "#E2B13C"
+    pajamas: "#7B4BB7"
+    pajamas_dark: "#5E3594"
+    hearts: "#F6A8D3"
+    slippers: "#F49AC1"
+    lips: "#6B2B2E"
+  voice:
+    pitch_hz: 225
+    syllable_s: 0.115
+    brightness: 1.15
+    style: sassy
+
+husband:
+  display_name: The Husband
+  personality: Overconfident until anything moves; screams first, explains later.
+  palette:
+    skin: "#6B3E26"
+    skin_shadow: "#52301C"
+    hair: "#1C1210"
+    beard: "#1C1210"
+    shirt: "#3E8E4A"
+    shirt_dark: "#2E6E38"
+    joggers: "#4A4D52"
+    joggers_dark: "#36383C"
+    slides: "#141414"
+    lips: "#4A2418"
+  voice:
+    pitch_hz: 118
+    syllable_s: 0.125
+    brightness: 0.9
+    style: loud
+
+roach:
+  display_name: The Roach
+  personality: Small, clever, confident troublemaker who acts like he owns the house.
+  palette:
+    shell: "#8B3A1E"
+    shell_dark: "#5E230F"
+    belly: "#B9653E"
+    head: "#7A3218"
+    limbs: "#3A1A0E"
+    brows: "#1A0C06"
+    highlight: "#D98A62"
+  voice:
+    pitch_hz: 340
+    syllable_s: 0.095
+    brightness: 1.35
+    style: raspy
