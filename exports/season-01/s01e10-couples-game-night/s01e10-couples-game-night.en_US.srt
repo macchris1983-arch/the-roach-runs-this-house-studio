@@ -1,0 +1,44 @@
+1
+00:00:01,200 --> 00:00:02,233
+Question one!
+
+2
+00:00:03,150 --> 00:00:04,664
+What's my favorite
+color?
+
+3
+00:00:04,950 --> 00:00:05,867
+...Green?
+
+4
+00:00:06,600 --> 00:00:07,963
+Purple. Obviously.
+
+5
+00:00:09,350 --> 00:00:11,148
+Question two. My mom's
+birthday?
+
+6
+00:00:12,800 --> 00:00:13,650
+March third.
+
+7
+00:00:16,400 --> 00:00:17,250
+New partner.
+
+8
+00:00:18,150 --> 00:00:20,153
+How do YOU know her
+mom's birthday?!
+
+9
+00:00:21,400 --> 00:00:23,001
+I've been to every
+cookout.
+
+10
+00:00:24,400 --> 00:00:26,462
+...It's you and me,
+bowl.
