@@ -180,7 +180,7 @@ shots:
     camera: {x: 340, y: 1060, zoom: 1.7}
     props: [*table, *candle]
     actors:
-      husband: {x: 300, y: 1850, scale: 0.95, z: 20, action: present, expr: pleading, look: camera,
+      husband: {x: 320, y: 1850, scale: 0.95, z: 20, action: read, expr: pleading, look: camera,
                 hold: {R: toast}, variants: *apron}
     fx:
       - {type: vignette, at: 0, amount: 0.5}

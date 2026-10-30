@@ -109,6 +109,45 @@ class FrameRenderer:
         return frame
 
 
+def measure_lufs(wav) -> float | None:
+    """Integrated loudness of a WAV file, measured with FFmpeg's EBU R128 meter."""
+    import re
+    p = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(wav), "-af", "ebur128", "-f", "null", "-"],
+                       capture_output=True, text=True)
+    found = re.findall(r"I:\s+([-\d.]+) LUFS", p.stderr)
+    return float(found[-1]) if found else None
+
+
+def loudnorm_filter(wav) -> str:
+    """Two-pass EBU R128 normalisation: measure first, then apply in linear mode
+    (one-pass loudnorm switches to 'dynamic' mode and can land 2-3 LU low)."""
+    import json as _json
+    base = f"loudnorm=I={config.TARGET_LUFS}:TP=-1.5:LRA=11"
+    p = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(wav), "-af", base + ":print_format=json",
+                        "-f", "null", "-"], capture_output=True, text=True)
+    try:
+        m = _json.loads(p.stderr[p.stderr.rindex("{"):p.stderr.rindex("}") + 1])
+        return (f"{base}:measured_I={m['input_i']}:measured_TP={m['input_tp']}:measured_LRA={m['input_lra']}"
+                f":measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true")
+    except (ValueError, KeyError):
+        return base
+
+
+def _match_loudness(wav, master):
+    """Pre-gain the mix towards the target loudness so the final limiter
+    doesn't have to guess (single-pass loudnorm undershoots on sparse mixes)."""
+    import numpy as np
+    L = measure_lufs(wav)
+    if L is None or L < -70:
+        return master
+    gain = 10 ** ((config.TARGET_LUFS - L) / 20)
+    out = master * gain
+    peak = float(np.max(np.abs(out))) or 1.0
+    if peak > 0.89:  # soft-limit peaks instead of clipping
+        out = np.tanh(out / 0.89) * 0.89
+    return out.astype(master.dtype)
+
+
 def _run(cmd):
     p = subprocess.run(cmd, capture_output=True, text=True)
     if p.returncode != 0:
@@ -138,6 +177,8 @@ def render_episode(ep_path, out_dir=None, preview=False, log=print) -> dict:
                         mood=mcfg.get("mood", "sneaky_funk"), seed=mcfg.get("seed", 1)) if mcfg.get("enabled", True) else None
     master, vstem = audio.mix(plan.duration, voices, fx, track, mcfg.get("gain", 0.22))
     audio.write_wav(out_dir / "mix.wav", master)
+    master = _match_loudness(out_dir / "mix.wav", master)
+    audio.write_wav(out_dir / "mix.wav", master)
     audio.write_wav(out_dir / "voice_stem.wav", vstem)
 
     # ---- captions
@@ -153,7 +194,7 @@ def render_episode(ep_path, out_dir=None, preview=False, log=print) -> dict:
            "-i", str(out_dir / "mix.wav"), *scale,
            "-c:v", "libx264", "-preset", "veryfast", "-crf", "28" if preview else "19", "-pix_fmt", "yuv420p",
            "-r", str(fps), "-g", str(fps * 2),
-           "-af", f"loudnorm=I={config.TARGET_LUFS}:TP=-1.5:LRA=11",
+           "-af", loudnorm_filter(out_dir / "mix.wav"),
            "-c:a", "aac", "-b:a", "192k", "-ar", str(audio.SR),
            "-shortest", "-movflags", "+faststart", str(mp4)]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
