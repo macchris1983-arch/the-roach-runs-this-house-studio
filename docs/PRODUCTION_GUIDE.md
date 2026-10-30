@@ -34,6 +34,9 @@ Open `episodes/season-01/<episode>/episode.yaml`. Use Episode 1 as the reference
 - Every dialogue line needs a unique `id` (L01, L02…). Captions are generated from `text`, so the text you write is exactly what appears on screen.
 - Lip-sync, blinking and talking gestures are automatic.
 - The full list of expressions, actions, props, effects and sounds is at the top of `templates/episode_template.yaml`.
+- **Extra cast:** name an actor `roach@lawyer` or `roach@b1` to put more roaches in a shot. Each copy uses the Roach design, can wear costume `variants`, and speaks with `who: roach@lawyer`. Give it its own voice with `pitch: 0.8` (and `speed: 0.9`) on its lines.
+- **Costumes** (`variants:`) add accessories without changing the base design: `{torso: apron}` for the Husband, `{torso: tie, accessory: glasses}` for roaches, `{leg_R: bare}` when the Wife takes off a slipper.
+- **YAML shortcuts:** define a prop or pose once under `common:` with `&name`, then reuse it with `*name` (see S01E02–S01E04).
 
 **Comedy checklist:** hook in the first 2 s (visual + first line), one clear escalation, a twist, a punchline that lands on a close-up, and an ending that loops back to the opening.
 

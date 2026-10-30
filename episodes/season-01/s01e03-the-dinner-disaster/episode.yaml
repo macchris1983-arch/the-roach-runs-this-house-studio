@@ -1,27 +1,191 @@
-# The Dinner Disaster - OUTLINE STAGE. Break the beats into shots (see s01e01) to produce it.
+# The Roach Runs This House - S01E03 "The Dinner Disaster"
+# Kitchen landmarks: countertop y=1150, floor y=1580, table top y=1330 at x=720.
+# The stove is a floor prop at x=330 (cooktop surface at about y=1165).
 id: s01e03
 slug: the-dinner-disaster
 season: 1
 episode: 3
 title: The Dinner Disaster
-logline: The Husband cooks a romantic dinner, burns it, and the Roach secretly saves it, then the Husband takes
-  all the credit.
-hook: Smoke alarm blaring, Husband fanning a flaming pan with a towel.
-punchline: 'Wife: "Babe, this is amazing!" Husband: "Secret family recipe." Behind him the Roach holds up the seasoning
-  and points at itself. Wife slides the Husband''s plate to the Roach.'
-outline: '1. Smoke alarm, Husband fanning a burnt pan
+logline: The Husband cooks a romantic dinner, burns it, and the Roach secretly saves it, then the Husband takes all the credit.
+hook: Smoke alarm blaring, the Husband frantically fanning a burning pan with a towel.
+punchline: >-
+  "Secret family recipe." Behind him the Roach holds up the seasoning. The Wife slides the Husband's
+  plate to the Roach; the Husband gets burnt toast.
+loop: Ends on a single smoke-alarm chirp that leads straight back into the blaring alarm at the top.
+outline: |-
+  1. Smoke alarm, Husband fanning a burnt pan
+  2. Husband: "She'll be here in two minutes!"
+  3. Roach pushes a seasoning jar across the counter: "Move over, amateur."
+  4. Roach seasons the pan: "A little garlic... a little love."
+  5. Wife tastes: "Babe, this is AMAZING!"
+  6. Husband: "Secret family recipe."
+  7. Roach behind him holds up the jar
+  8. Wife slides the Husband's plate to the Roach: "Family, huh?" Roach: "Merci."
+  9. Husband alone with burnt toast: "...It's crunchy."
+cover_at: 0.8
+voice_provider: babble
+music: {enabled: true, mood: sitcom_bounce, bpm: 112, root_midi: 48, seed: 303, gain: 0.2}
+reels:
+  caption: "He said 'secret family recipe' with his whole chest 😭🪳 #TheRoachRunsThisHouse"
+  hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#reels"]
 
-  2. Husband: "She''s gonna be here in two minutes!"
+common:
+  stove: &stove {name: stove, x: 330, y: 1585, z: 9}
+  pan: &pan {name: pan, x: 290, y: 1172, z: 9.5}
+  table: &table {name: table, x: 720, y: 1330, z: 12}
+  plate_h: &plate_h {name: plate_food, x: 600, y: 1324, z: 13.5, scale: 0.9}
+  plate_w: &plate_w {name: plate_food, x: 850, y: 1324, z: 13.5, scale: 0.9}
+  candle: &candle {name: candle, x: 725, y: 1326, z: 13.2}
+  apron: &apron {torso: apron}
 
-  3. Roach rolls in a seasoning jar like a barrel, seasons, stirs
+shots:
+  # ---------------------------------------------------------------- HOOK
+  - id: A
+    dur: 3.2
+    background: kitchen
+    camera: {x: 470, y: 1230, zoom: 1.15}
+    props: [*stove, *pan]
+    actors:
+      husband: {x: 640, y: 1850, scale: 0.95, z: 20, action: fan, expr: screaming, look: left,
+                hold: {R: towel}, variants: *apron}
+    fx:
+      - {type: smoke, at: 0, pos: [300, 1150], dur: 3.2, size: 1.2}
+      - {type: shake, at: 0.0, dur: 0.6, amp: 10}
+      - {type: blink, at: 0, pos: [140, 290], dur: 3.2, color: "#FF3B30", radius: 14, rate: 3}
+    sfx:
+      - {at: 0.0, name: smoke_alarm, gain: 0.5}
+      - {at: 0.0, name: sizzle, gain: 0.6}
+      - {at: 1.2, name: smoke_alarm, gain: 0.45}
+      - {at: 2.4, name: smoke_alarm, gain: 0.4}
+    lines:
+      - {id: L01, who: husband, at: 0.25, text: "No no no no NO!"}
 
-  4. Wife tastes: "Babe, this is amazing!"
+  - id: B
+    dur: 3.0
+    background: kitchen
+    camera: {x: 620, y: 1060, zoom: 1.8}
+    props: [*stove, *pan]
+    actors:
+      husband: {x: 640, y: 1850, scale: 0.95, z: 20, action: tremble, expr: scared, look: camera,
+                hold: {R: towel}, variants: *apron}
+    fx:
+      - {type: smoke, at: 0, pos: [300, 1150], dur: 3.0, size: 0.8}
+      - {type: sweat, at: 0, pos: [770, 830], dur: 3.0}
+    sfx:
+      - {at: 0.1, name: alarm_chirp, gain: 0.4}
+    lines:
+      - {id: L02, who: husband, at: 0.3, text: "She'll be here in two minutes!"}
 
-  5. Husband: "Secret family recipe."
+  # ---------------------------------------------------------------- the Roach takes over
+  - id: C
+    dur: 3.3
+    background: kitchen
+    camera: {x: 640, y: 1040, zoom: 2.0}
+    props:
+      - {name: seasoning, x: 720, y: 1152, z: 14, keys: [{at: 2.4, x: 520, from: 0.9, ease: inout}]}
+    actors:
+      roach: {x: 820, y: 1152, scale: 1.0, z: 13, action: hips, expr: determined, look: left,
+              keys: [{at: 0.9, action: push}, {at: 2.4, x: 620, from: 0.9, ease: inout}, {at: 2.45, action: hips, look: camera, expr: smug}]}
+    fx:
+      - {type: smoke, at: 0, pos: [300, 1150], dur: 3.3, size: 0.5}
+    sfx:
+      - {at: 0.95, name: scuttle, gain: 0.6}
+      - {at: 1.6, name: scuttle, gain: 0.6}
+    lines:
+      - {id: L03, who: roach, at: 0.2, text: "Move over, amateur."}
 
-  6. Roach behind him holds up the jar, points at itself
+  - id: D
+    dur: 3.3
+    background: kitchen
+    camera: {x: 300, y: 1060, zoom: 2.1}
+    props: [*stove, *pan]
+    actors:
+      roach: {x: 150, y: 1168, scale: 0.9, z: 10, action: hold_up, expr: smug, look: right, hold: {R: seasoning}}
+    fx:
+      - {type: smoke, at: 0, pos: [300, 1150], dur: 1.2, size: 0.4}
+      - {type: text, at: 2.0, dur: 1.3, pos: [420, 880], text: "*chef's kiss*", size: 84, color: "#FFE45C"}
+    sfx:
+      - {at: 0.0, name: sizzle, gain: 0.5}
+      - {at: 2.0, name: ding, gain: 0.5}
+    lines:
+      - {id: L04, who: roach, at: 0.2, text: "A little garlic... a little love."}
 
-  7. Wife slowly slides the Husband''s plate to the Roach
+  # ---------------------------------------------------------------- dinner
+  - id: E
+    dur: 3.4
+    background: kitchen
+    camera: {x: 650, y: 1200, zoom: 1.0}
+    props: [*table, *plate_h, *plate_w, *candle]
+    actors:
+      husband: {x: 300, y: 1850, scale: 0.95, z: 20, action: hips, expr: happy, look: right, variants: *apron}
+      wife: {x: 1000, y: 1880, scale: 1.0, z: 21, action: eat, expr: neutral, look: left, hold: {R: spoon},
+             keys: [{at: 1.0, expr: happy, action: talk}]}
+    sfx:
+      - {at: 0.9, name: ding, gain: 0.6}
+    lines:
+      - {id: L05, who: wife, at: 1.05, text: "Babe, this is AMAZING!"}
 
-  8. Husband eats burnt toast alone (ends on smoke-alarm chirp)'
-shots: []
+  - id: F
+    dur: 2.8
+    background: kitchen
+    camera: {x: 340, y: 1060, zoom: 1.7}
+    props: [*table, *plate_h, *plate_w, *candle]
+    actors:
+      husband: {x: 300, y: 1850, scale: 0.95, z: 20, action: hips, expr: smug, look: camera, variants: *apron}
+    lines:
+      - {id: L06, who: husband, at: 0.3, text: "Secret family recipe."}
+
+  # ---------------------------------------------------------------- the reveal + PUNCHLINE
+  - id: G
+    dur: 3.2
+    background: kitchen
+    camera: {x: 600, y: 1200, zoom: 1.15}
+    props: [*table, *plate_h, *plate_w, *candle]
+    actors:
+      husband: {x: 300, y: 1850, scale: 0.95, z: 20, action: hips, expr: smug, look: right, variants: *apron}
+      roach: {x: 470, y: 1326, scale: 1.0, z: 13, action: hold_up, expr: smug, look: camera, hold: {R: seasoning}}
+      wife: {x: 920, y: 1880, scale: 1.0, z: 21, action: idle, expr: sideeye, look: left}
+    fx:
+      - {type: marks, at: 0.6, dur: 2.0, pos: [920, 790], text: "?!"}
+    sfx:
+      - {at: 0.5, name: record_scratch, gain: 0.7}
+    lines:
+      - {id: L07, who: roach, at: 1.0, text: "Family recipe. Mm-hm."}
+
+  - id: H
+    dur: 3.4
+    background: kitchen
+    camera: {x: 760, y: 1220, zoom: 1.35}
+    props:
+      - *table
+      - *candle
+      - *plate_w
+      - {name: plate_food, x: 600, y: 1324, z: 13.5, scale: 0.9, keys: [{at: 1.1, x: 1000, y: 1324, from: 0.3, ease: inout}, {at: 1.1, z: 15}]}
+    actors:
+      roach: {x: 1010, y: 1326, scale: 0.9, z: 14, action: idle, expr: happy, look: left,
+              keys: [{at: 1.2, action: eat, hold: {R: spoon}}]}
+      wife: {x: 760, y: 1880, scale: 1.0, z: 21, action: push, expr: smug, look: right,
+             keys: [{at: 1.15, action: hips, look: camera}]}
+    sfx:
+      - {at: 0.3, name: whoosh, gain: 0.6}
+      - {at: 2.55, name: pop, gain: 0.5}
+    lines:
+      - {id: L08, who: wife, at: 1.2, text: "Family, huh?"}
+      - {id: L09, who: roach, at: 2.6, text: "Merci."}
+
+  # ---------------------------------------------------------------- LOOP ENDING
+  - id: I
+    dur: 3.0
+    background: kitchen
+    camera: {x: 340, y: 1060, zoom: 1.7}
+    props: [*table, *candle]
+    actors:
+      husband: {x: 300, y: 1850, scale: 0.95, z: 20, action: present, expr: pleading, look: camera,
+                hold: {R: toast}, variants: *apron}
+    fx:
+      - {type: vignette, at: 0, amount: 0.5}
+    sfx:
+      - {at: 1.9, name: crunch, gain: 0.7}
+      - {at: 2.7, name: alarm_chirp, gain: 0.5}
+    lines:
+      - {id: L10, who: husband, at: 0.3, text: "...It's crunchy."}

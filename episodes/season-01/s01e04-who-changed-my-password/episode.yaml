@@ -1,27 +1,165 @@
-# Who Changed My Password? - OUTLINE STAGE. Break the beats into shots (see s01e01) to produce it.
+# The Roach Runs This House - S01E04 "Who Changed My Password?"
+# Living room landmarks: TV stand top y=700 (x 110-560), couch x 60-1020, floor y=1560.
+# The router sits on the TV stand at x=470.
 id: s01e04
 slug: who-changed-my-password
 season: 1
 episode: 4
 title: Who Changed My Password?
-logline: The Wi-Fi password changed overnight and the couple blame each other, until they find the Roach sitting
-  on the router.
-hook: Husband yelling at a spinning loading icon on his phone.
-punchline: The new password is "TheRoachRunsThisHouse" and the Roach only gives it out if you say it out loud. The
-  Husband refuses, then mumbles it; the Roach gives the Wife the password for free.
-outline: '1. Husband: "Who changed the Wi-Fi password?!"
-
-  2. Wife: "Don''t look at me, I need it for my shows"
-
-  3. Both slowly turn: Roach lounging on the blinking router
-
-  4. Roach: "New password. You gotta say it out loud."
-
-  5. Husband (mumbling): "...the roach runs this house"
-
+logline: The Wi-Fi password changed overnight and the couple blame each other, until they find the Roach sitting on the router.
+hook: The Husband glaring at a spinning loading icon, NO INTERNET.
+punchline: >-
+  The Roach makes the Husband yell "THE ROACH RUNS THIS HOUSE!" for the password, then tosses it to the
+  Wife for free. "Why does SHE get it free?!" "She pays." (callback to S01E01)
+loop: Ends on the Roach's smug close-up on the router, which the opening phone-rage cuts straight back into.
+outline: |-
+  1. Husband: "Who changed the Wi-Fi password?!"
+  2. Wife: "Don't look at me. I need it for my shows."
+  3. Both look up: Roach lounging on the blinking router: "Looking for this?"
+  4. Roach: "New password. You gotta say it... out loud."
+  5. Husband (mumbling): "...the roach runs this house."
   6. Roach: "Louder."
+  7. Husband: "THE ROACH RUNS THIS HOUSE!"
+  8. Roach tosses the sticky note to the Wife. Husband: "WHY does SHE get it for free?!"
+  9. Roach: "She pays."
+cover_at: 0.9
+voice_provider: babble
+music: {enabled: true, mood: sneaky_funk, bpm: 98, root_midi: 41, seed: 404, gain: 0.2}
+reels:
+  caption: "The password is... yeah. He had to say it 😭🪳 #TheRoachRunsThisHouse"
+  hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#wifi", "#reels"]
 
-  7. Wife walks up; Roach hands her the password on a sticky note, free
+common:
+  router: &router {name: router, x: 470, y: 702, z: 6}
+  roach_on_router: &roach_sit {x: 470, y: 652, scale: 0.75, z: 7, action: sit}
 
-  8. Husband: "WHY does she get it free?!" Roach: "She pays." (callback to S01E01)'
-shots: []
+shots:
+  # ---------------------------------------------------------------- HOOK
+  - id: A
+    dur: 3.0
+    background: living_room
+    camera: {x: 500, y: 1180, zoom: 1.5}
+    props: [*router]
+    actors:
+      husband: {x: 380, y: 1880, scale: 0.95, z: 20, action: present, expr: furious, look: right, hold: {R: phone_big}}
+    fx:
+      - {type: burst, at: 0.05, dur: 1.4, pos: [560, 330], world: false, text: "NO INTERNET", size: 74, bg: "#E86A5B"}
+    sfx:
+      - {at: 0.05, name: buzzer, gain: 0.7}
+    lines:
+      - {id: L01, who: husband, at: 0.45, text: "Who changed the Wi-Fi password?!"}
+
+  - id: B
+    dur: 3.1
+    background: living_room
+    camera: {x: 780, y: 1180, zoom: 1.5}
+    props: [*router]
+    actors:
+      wife: {x: 780, y: 1880, scale: 1.0, z: 20, action: cross_arms, expr: unbothered, look: left}
+    lines:
+      - {id: L02, who: wife, at: 0.25, text: "Don't look at me. I need it for my shows."}
+
+  # ---------------------------------------------------------------- the reveal
+  - id: C
+    dur: 3.6
+    background: living_room
+    camera: {x: 540, y: 1100, zoom: 1.0, keys: [{at: 1.8, x: 470, y: 660, zoom: 1.8, from: 0.6, ease: inout}]}
+    props: [*router]
+    actors:
+      husband: {x: 300, y: 1880, scale: 0.95, z: 20, action: idle, expr: angry, look: right, hold: {R: phone_big},
+                keys: [{at: 0.5, look: up, expr: shocked}]}
+      wife: {x: 800, y: 1880, scale: 1.0, z: 21, action: cross_arms, expr: sideeye, look: left,
+             keys: [{at: 0.5, look: up, expr: shocked}]}
+      roach: {<<: *roach_sit, expr: smug, look: camera, hold: {R: sticky_note},
+              keys: [{at: 1.9, action: hold_up}]}
+    fx:
+      - {type: blink, at: 0, pos: [440, 680], dur: 3.6, color: "#4BE37A", radius: 7, rate: 5}
+      - {type: blink, at: 0, pos: [500, 680], dur: 3.6, color: "#FFC542", radius: 7, rate: 3}
+    sfx:
+      - {at: 0.6, name: dun_dun_dun, gain: 0.55}
+    lines:
+      - {id: L03, who: roach, at: 2.0, text: "Looking for this?"}
+
+  - id: D
+    dur: 3.8
+    background: living_room
+    camera: {x: 470, y: 600, zoom: 2.6}
+    props: [*router]
+    actors:
+      roach: {<<: *roach_sit, expr: smug, look: camera, hold: {R: sticky_note}, action: hold_up,
+              keys: [{at: 2.0, action: sit, expr: unbothered}]}
+    fx:
+      - {type: blink, at: 0, pos: [440, 680], dur: 3.8, color: "#4BE37A", radius: 7, rate: 5}
+    lines:
+      - {id: L04, who: roach, at: 0.2, text: "New password. You gotta say it... out loud."}
+
+  # ---------------------------------------------------------------- the humiliation
+  - id: E
+    dur: 3.0
+    background: living_room
+    camera: {x: 320, y: 1120, zoom: 1.7}
+    actors:
+      husband: {x: 300, y: 1880, scale: 0.95, z: 20, action: shrug, expr: nervous, look: down, hold: {R: phone_big}}
+    lines:
+      - {id: L05, who: husband, at: 0.3, pitch: 0.92, speed: 0.85, text: "...the roach runs this house."}
+
+  - id: F
+    dur: 2.0
+    background: living_room
+    camera: {x: 470, y: 600, zoom: 2.6}
+    props: [*router]
+    actors:
+      roach: {<<: *roach_sit, expr: smug, look: left, action: phone}
+    sfx:
+      - {at: 1.3, name: pop, gain: 0.5}
+    lines:
+      - {id: L06, who: roach, at: 0.3, text: "Louder."}
+
+  - id: G
+    dur: 3.0
+    background: living_room
+    camera: {x: 320, y: 1150, zoom: 1.35}
+    actors:
+      husband: {x: 300, y: 1880, scale: 0.95, z: 20, action: scream, expr: screaming, look: up, hold: {R: phone_big}}
+    fx:
+      - {type: shake, at: 0.2, dur: 1.8, amp: 18}
+      - {type: speedlines, at: 0.2, dur: 1.8, pos: [300, 1100]}
+    sfx:
+      - {at: 0.15, name: scream_sting, gain: 0.6}
+    lines:
+      - {id: L07, who: husband, at: 0.2, text: "THE ROACH RUNS THIS HOUSE!"}
+
+  # ---------------------------------------------------------------- PUNCHLINE
+  - id: H
+    dur: 3.6
+    background: living_room
+    camera: {x: 560, y: 1100, zoom: 1.0}
+    props:
+      - *router
+      - {name: sticky_note, x: 500, y: 600, z: 25, rot: 0, visible: true,
+         keys: [{at: 1.0, x: 900, y: 1290, rot: 720, from: 0.25, ease: inout}, {at: 1.0, visible: false}]}
+    actors:
+      roach: {<<: *roach_sit, expr: happy, look: right, action: wave}
+      husband: {x: 280, y: 1880, scale: 0.95, z: 20, action: idle, expr: shocked, look: right, hold: {R: phone_big},
+                keys: [{at: 1.2, action: scream, expr: screaming}]}
+      wife: {x: 820, y: 1880, scale: 1.0, z: 21, action: idle, expr: unbothered, look: up,
+             keys: [{at: 1.0, action: hold_up, hold: {R: sticky_note}, expr: happy, look: camera}]}
+    sfx:
+      - {at: 0.25, name: whoosh, gain: 0.6}
+      - {at: 1.0, name: ding, gain: 0.55}
+    lines:
+      - {id: L08, who: husband, at: 1.3, text: "WHY does SHE get it for free?!"}
+
+  - id: I
+    dur: 2.8
+    background: living_room
+    camera: {x: 470, y: 600, zoom: 2.7}
+    props: [*router]
+    actors:
+      roach: {<<: *roach_sit, expr: smug, look: camera}
+    fx:
+      - {type: blink, at: 0, pos: [440, 680], dur: 2.8, color: "#4BE37A", radius: 7, rate: 5}
+    sfx:
+      - {at: 1.4, name: ding, gain: 0.5}
+    lines:
+      - {id: L09, who: roach, at: 0.35, text: "She pays."}

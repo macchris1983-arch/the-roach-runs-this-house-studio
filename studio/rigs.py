@@ -369,6 +369,12 @@ def build_husband() -> Rig:
         p.line([(-128, 10), (128, 10)], color=pal["shirt_dark"], width=6)
         p.arc(-50, -150, 50, 30, 30, 150, color=pal["shirt_dark"], width=4)
         p.arc(50, -150, 50, 30, 30, 150, color=pal["shirt_dark"], width=4)
+        if v == "apron":   # costume variant: cooking apron over the green tee
+            p.line([(-60, -300), (0, -250), (60, -300)], color="#F2F2F2", width=10)
+            p.poly([(-92, -250), (92, -250), (104, 40), (-104, 40)], fill="#FFFFFF", width=5)
+            p.rrect(-48, -150, 48, -90, 8, fill="#F6A8D3", width=4)
+            p.line([(-104, -120), (-142, -110)], color="#FFFFFF", width=10)
+            p.line([(104, -120), (142, -110)], color="#FFFFFF", width=10)
     r.add(PartDef("torso", "pelvis", (0, 0), 2, _const_bbox((-165, -400, 165, 50)), torso))
 
     def upper(p: Pen, v):
@@ -446,6 +452,10 @@ def build_roach() -> Rig:
             y = -118 + i * 22
             p.arc(0, y, 38 - abs(i - 2) * 3, 8, 15, 165, color=pal["shell_dark"], width=4)
         p.ellipse(-30, -120, 9, 18, fill=pal["highlight"], outline=None, width=0)
+        if v == "tie":   # costume variant: lawyer's collar + tie
+            p.poly([(-34, -158), (0, -138), (34, -158), (30, -140), (0, -126), (-30, -140)], fill="#FFFFFF", width=4)
+            p.poly([(0, -134), (14, -118), (8, -40), (0, -26), (-8, -40), (-14, -118)], fill="#2E5FA8", width=4)
+            p.poly([(-10, -136), (10, -136), (6, -120), (-6, -120)], fill="#244B85", width=3)
     r.add(PartDef("torso", "pelvis", (0, 0), 2, _const_bbox((-130, -190, 130, 25)), body))
 
     def upper(p: Pen, v):
@@ -485,10 +495,22 @@ def build_roach() -> Rig:
                   brow_len=34, mouth_w=62, lips=pal["shell_dark"], outline_w=4.5)
     r.face = fs
     _add_face(r, fs, eyes=(0, -66), brows=(0, -100), mouth=(0, -30))
+
+    def accessory(p: Pen, v):
+        if v == "glasses":
+            for s in (-1, 1):
+                p.circle(s * 25, 0, 27, fill=None, outline="#1A0C06", width=6)
+            p.line([(-2, -4), (2, -4)], color="#1A0C06", width=6)
+    r.add(PartDef("accessory", "head", (0, -66), 9, _const_bbox((-60, -35, 60, 35)), accessory, "none"))
     return r
 
 
 BUILDERS = {"wife": build_wife, "husband": build_husband, "roach": build_roach}
+
+
+def char_of(actor: str) -> str:
+    """Actor keys may name extra copies of a character, e.g. 'roach@lawyer'."""
+    return str(actor).split("@", 1)[0]
 
 
 @functools.lru_cache(maxsize=None)
@@ -510,7 +532,7 @@ def _arms(out_L, bend_L, out_R=None, bend_R=None):
 ACTIONS = [
     "idle", "talk", "walk", "run", "tremble", "scream", "jump", "hips", "point_L", "point_R",
     "hold_up", "wind_up", "read", "shrug", "eat", "sit", "freeze", "cross_arms", "dance",
-    "chase", "crouch", "wave",
+    "chase", "crouch", "wave", "phone", "push", "fan", "present",
 ]
 
 
@@ -591,6 +613,20 @@ def pose(action: str, t: float, T: float, phase: float = 0.0) -> dict:
         P["leg_L"], P["leg_R"] = 34, -34
         P["dy"] = 50
         P.update(_arms(30, 110))
+    elif action == "phone":       # hand up at the side of the head
+        P.update({"upper_R": -34, "fore_R": 150})
+        P["head"] = 6
+    elif action == "push":        # leaning in, both arms forward
+        P.update(_arms(70, 30))
+        P["torso"] = 8
+        P["dx"] = s(2 * math.pi * 1.6 * t) * 6
+    elif action == "fan":         # frantic towel waving
+        P.update({"upper_R": -150 + s(2 * math.pi * 5 * t) * 40, "fore_R": s(2 * math.pi * 5 * t) * 30})
+        P.update({"upper_L": 30, "fore_L": -100})
+        P["dx"] = s(2 * math.pi * 9 * T) * 3
+    elif action == "present":     # one arm out, palm up, showing something
+        P.update({"upper_R": -70, "fore_R": -30})
+        P["head"] = 6
     elif action == "wave":
         P.update({"upper_R": -140, "fore_R": s(2 * math.pi * 2.5 * t) * 25})
     P["antenna_L"] = 6 + s(2 * math.pi * 0.7 * T + phase) * 8
@@ -661,7 +697,7 @@ def render_character(name: str, state: dict, k: float, T: float, props_draw=None
     k: pixels per design unit (actor scale x camera zoom)
     Returns (RGBA layer, anchor_x, anchor_y) where anchor is the feet origin.
     """
-    rig = get_rig(name)
+    rig = get_rig(char_of(name))
     angles = pose(state.get("action", "idle"), state.get("action_t", 0.0), T, state.get("phase", 0.0))
     angles.update(state.get("angle_overrides", {}))
     xf = world_transforms(rig, angles)

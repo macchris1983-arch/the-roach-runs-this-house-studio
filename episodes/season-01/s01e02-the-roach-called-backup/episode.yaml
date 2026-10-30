@@ -1,26 +1,179 @@
-# The Roach Called Backup - OUTLINE STAGE. Break the beats into shots (see s01e01) to produce it.
+# The Roach Runs This House - S01E02 "The Roach Called Backup"
+# Kitchen landmarks: countertop y=1150, floor y=1580, table top y=1330 at x=720.
+# Extra cast: "roach@lawyer" (Marcus) and "roach@b1".."roach@b4" (backup) are copies of the Roach rig.
 id: s01e02
 slug: the-roach-called-backup
 season: 1
 episode: 2
 title: The Roach Called Backup
 logline: The Husband finally traps the Roach under a cup and gloats, until the Roach makes one phone call.
-hook: A cup slams down over the Roach. The Husband does a victory dance.
-punchline: 'A tiny roach lawyer arrives with a briefcase: "My client would like to discuss his security deposit."
-  Wife: "HE has a lawyer and YOU don''t have a job?"'
-outline: '1. Husband slams a cup over the Roach and dances (wide, kitchen)
-
+hook: A cup slams down over the Roach and the Husband does a victory dance.
+punchline: >-
+  A tiny roach lawyer arrives with a briefcase: "My client would like to discuss his security deposit."
+  Wife: "HE has a lawyer... and YOU don't have a job?"
+loop: The Husband ends holding the empty cup over the table, the exact pose from the opening slam.
+outline: |-
+  1. Husband slams a cup over the Roach and dances (wide, kitchen)
   2. Roach, unbothered, pulls out a crumb-sized phone: "Yeah. Send Marcus."
-
-  3. Scuttle SFX; a line of tiny roaches marches under the door
-
-  4. A roach in a tie climbs onto the table with a briefcase
-
+  3. Scuttle SFX; a line of tiny roaches marches in
+  4. A roach in a tie and glasses climbs onto the table with a briefcase
   5. Lawyer: "My client would like to discuss his security deposit."
-
   6. Husband looks to Wife for help
+  7. Wife: "HE has a lawyer... and YOU don't have a job?"
+  8. Husband lifts the cup; Roach walks out, backup roaches cheer
+cover_at: 1.2
+voice_provider: babble
+music: {enabled: true, mood: sneaky_funk, bpm: 100, root_midi: 43, seed: 202, gain: 0.2}
+reels:
+  caption: "He trapped ONE roach. The roach called his lawyer 💼🪳 #TheRoachRunsThisHouse"
+  hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#reels"]
 
-  7. Wife: "HE has a lawyer and YOU don''t have a job?"
+common:
+  table: &table {name: table, x: 720, y: 1330, z: 12}
+  box: &box {name: cereal_box, x: 980, y: 1322, z: 12.5, scale: 0.8}
+  cup_on_table: &cup {name: cup, x: 770, y: 1330, z: 14}
+  lawyer_look: &lawyer {torso: tie, accessory: glasses}
 
-  8. Husband slowly lifts the cup; Roach walks out fixing his tie (loop: cup back on table)'
-shots: []
+shots:
+  # ---------------------------------------------------------------- HOOK: the slam
+  - id: A
+    dur: 3.6
+    background: kitchen
+    camera: {x: 600, y: 1150, zoom: 1.0, keys: [{at: 3.6, zoom: 1.1, from: 1.0}]}
+    props:
+      - *table
+      - *box
+      - {name: cup, x: 770, y: 1330, z: 14, visible: false, keys: [{at: 0.45, visible: true}]}
+    actors:
+      roach: {x: 770, y: 1326, scale: 1.0, z: 13, action: idle, expr: smug, look: left,
+              keys: [{at: 0.45, expr: shocked, action: freeze}, {at: 1.4, expr: unbothered, action: idle}]}
+      husband: {x: 520, y: 1840, scale: 0.95, z: 20, action: wind_up, expr: determined, hold: {R: cup}, look: right,
+                keys: [{at: 0.45, action: point_R, hold: {}, expr: furious},
+                       {at: 0.95, action: dance, expr: happy, look: camera}]}
+    fx:
+      - {type: shake, at: 0.45, dur: 0.35, amp: 20}
+      - {type: flash, at: 0.45, dur: 0.12}
+    sfx:
+      - {at: 0.0, name: whoosh, gain: 0.7}
+      - {at: 0.45, name: cup_slam, gain: 0.9}
+      - {at: 0.95, name: victory, gain: 0.7}
+    lines:
+      - {id: L01, who: husband, at: 1.05, text: "GOTCHA! Who runs this house NOW?!"}
+
+  # ---------------------------------------------------------------- the call
+  - id: B
+    dur: 3.4
+    background: kitchen
+    camera: {x: 770, y: 1170, zoom: 2.2}
+    props: [*table, *box, *cup]
+    actors:
+      roach: {x: 770, y: 1326, scale: 1.0, z: 13, action: idle, expr: unbothered, look: camera,
+              keys: [{at: 0.4, action: phone, hold: {R: phone}, look: center}]}
+    sfx:
+      - {at: 0.5, name: phone_dial, gain: 0.7}
+    lines:
+      - {id: L02, who: roach, at: 1.75, text: "Yeah. Send Marcus."}
+
+  - id: C
+    dur: 3.4
+    background: kitchen
+    camera: {x: 600, y: 1300, zoom: 1.05}
+    props: [*table, *box, *cup]
+    actors:
+      roach: {x: 770, y: 1326, scale: 1.0, z: 13, action: idle, expr: smug}
+      husband: {x: 330, y: 1840, scale: 0.95, z: 20, action: hips, expr: happy, look: right,
+                keys: [{at: 1.7, expr: shocked, action: freeze}]}
+      roach@b1: {x: 1180, y: 1870, scale: 0.38, z: 25, action: walk, expr: determined, keys: [{at: 3.0, x: 760, from: 1.2, ease: linear}]}
+      roach@b2: {x: 1260, y: 1862, scale: 0.38, z: 25, action: walk, expr: determined, keys: [{at: 3.2, x: 860, from: 1.35, ease: linear}]}
+      roach@b3: {x: 1340, y: 1876, scale: 0.38, z: 25, action: walk, expr: determined, keys: [{at: 3.4, x: 960, from: 1.5, ease: linear}]}
+      roach@b4: {x: 1420, y: 1866, scale: 0.38, z: 25, action: walk, expr: determined, keys: [{at: 3.4, x: 1060, from: 1.65, ease: linear}]}
+    fx:
+      - {type: marks, at: 1.75, dur: 1.6, pos: [330, 760], text: "!!"}
+    sfx:
+      - {at: 1.3, name: scuttle, gain: 0.8}
+      - {at: 2.1, name: scuttle, gain: 0.8}
+    lines:
+      - {id: L03, who: husband, at: 0.2, text: "Who's MARCUS?"}
+
+  # ---------------------------------------------------------------- the lawyer arrives
+  - id: D
+    dur: 3.6
+    background: kitchen
+    camera: {x: 680, y: 1180, zoom: 1.6}
+    props: [*table, *box, *cup]
+    actors:
+      roach: {x: 770, y: 1326, scale: 1.0, z: 13, action: idle, expr: smug, look: left}
+      roach@lawyer: {x: 540, y: 1880, scale: 0.85, z: 11, action: idle, expr: determined, look: right,
+                     variants: *lawyer, hold: {R: briefcase},
+                     keys: [{at: 0.95, y: 1326, from: 0.25, ease: out}, {at: 0.25, action: jump}, {at: 0.95, action: idle, z: 15}]}
+    sfx:
+      - {at: 0.2, name: slide_whistle_up, gain: 0.5}
+      - {at: 1.15, name: briefcase_click, gain: 0.9}
+      - {at: 1.2, name: dun_dun_dun, gain: 0.5}
+    lines:
+      - {id: L04, who: roach@lawyer, at: 1.45, pitch: 0.78, speed: 0.9, text: "Marcus Antennae. Esquire."}
+
+  - id: E
+    dur: 3.9
+    background: kitchen
+    camera: {x: 560, y: 1170, zoom: 2.4, keys: [{at: 3.9, zoom: 2.6, from: 0.5}]}
+    props: [*table, *box, *cup]
+    actors:
+      roach@lawyer: {x: 540, y: 1326, scale: 0.85, z: 15, action: present, expr: smug, look: camera,
+                     variants: *lawyer, hold: {L: briefcase}}
+    lines:
+      - {id: L05, who: roach@lawyer, at: 0.25, pitch: 0.78, speed: 0.9,
+         text: "My client would like to discuss his security deposit."}
+
+  # ---------------------------------------------------------------- backup for the Husband?
+  - id: F
+    dur: 3.1
+    background: kitchen
+    camera: {x: 560, y: 1150, zoom: 1.0}
+    props: [*table, *box, *cup]
+    actors:
+      roach: {x: 770, y: 1326, scale: 1.0, z: 13, action: idle, expr: smug}
+      roach@lawyer: {x: 560, y: 1326, scale: 0.85, z: 15, action: cross_arms, expr: smug, variants: *lawyer}
+      husband: {x: 260, y: 1840, scale: 0.95, z: 20, action: shrug, expr: pleading, look: right}
+      wife: {x: 1320, y: 1880, scale: 1.0, z: 21, action: walk, expr: unbothered, look: left,
+             keys: [{at: 1.2, x: 900, ease: out}, {at: 1.2, action: hips}]}
+    lines:
+      - {id: L06, who: husband, at: 0.25, text: "Babe! He got a LAWYER!"}
+
+  # ---------------------------------------------------------------- PUNCHLINE
+  - id: G
+    dur: 3.9
+    background: kitchen
+    camera: {x: 860, y: 1260, zoom: 1.7, keys: [{at: 3.9, zoom: 1.95, from: 1.7}]}
+    props: [*table, *box, *cup]
+    actors:
+      wife: {x: 900, y: 1880, scale: 1.0, z: 21, action: hips, expr: sideeye, look: left,
+             keys: [{at: 1.7, expr: unbothered, look: camera}]}
+    sfx:
+      - {at: 3.15, name: record_scratch, gain: 0.7}
+      - {at: 3.3, name: gasp_sting, gain: 0.6}
+    lines:
+      - {id: L07, who: wife, at: 0.3, text: "HE has a lawyer..."}
+      - {id: L08, who: wife, at: 1.8, text: "...and YOU don't have a job?"}
+
+  # ---------------------------------------------------------------- LOOP ENDING
+  - id: H
+    dur: 3.7
+    background: kitchen
+    camera: {x: 600, y: 1200, zoom: 1.0}
+    props: [*table, *box]
+    actors:
+      husband: {x: 470, y: 1840, scale: 0.95, z: 20, action: wind_up, expr: nervous, hold: {R: cup}, look: right,
+                keys: [{at: 2.6, expr: determined}]}
+      roach: {x: 770, y: 1326, scale: 1.0, z: 13, action: walk, expr: smug, look: camera,
+              keys: [{at: 1.2, x: 880, ease: out}, {at: 1.2, action: hips}]}
+      roach@lawyer: {x: 600, y: 1326, scale: 0.85, z: 15, action: hips, expr: smug, variants: *lawyer, hold: {L: briefcase}}
+      roach@b1: {x: 760, y: 1870, scale: 0.38, z: 25, action: dance, expr: happy}
+      roach@b2: {x: 860, y: 1862, scale: 0.38, z: 25, action: dance, expr: happy, phase: 1}
+      roach@b3: {x: 960, y: 1876, scale: 0.38, z: 25, action: dance, expr: happy}
+      roach@b4: {x: 1060, y: 1866, scale: 0.38, z: 25, action: dance, expr: happy}
+    sfx:
+      - {at: 1.0, name: tiny_cheer, gain: 0.7}
+      - {at: 3.3, name: whoosh, gain: 0.6}
+    lines:
+      - {id: L09, who: roach, at: 1.35, text: "Pleasure doing business."}

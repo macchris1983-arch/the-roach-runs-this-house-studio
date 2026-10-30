@@ -2,6 +2,7 @@
 mixed audio and burned-in captions, using only Pillow, numpy and FFmpeg."""
 from __future__ import annotations
 
+import functools
 import hashlib
 import json
 import math
@@ -15,6 +16,7 @@ from PIL import Image, ImageOps
 
 from . import audio, captions, config, episode, rigs, world
 
+HELD = functools.partial(world.draw_prop, held=True)
 TALK_CLOSED = {"smile", "flat", "frown", "smirk", "wavy", "chew", "grimace"}
 
 
@@ -91,7 +93,7 @@ class FrameRenderer:
             if kind == "prop":
                 world.draw_prop(frame, name, sx, sy, st.get("rot", 0), k)
                 continue
-            layer, ax, ay = rigs.render_character(name, st, k, T, props_draw=world.draw_prop)
+            layer, ax, ay = rigs.render_character(name, st, k, T, props_draw=HELD)
             if st.get("flip"):
                 layer = ImageOps.mirror(layer)
                 ax = layer.size[0] - ax

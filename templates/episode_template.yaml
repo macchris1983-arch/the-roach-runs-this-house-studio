@@ -4,15 +4,19 @@
 #
 # Cheat sheet
 #   backgrounds: kitchen, living_room, bedroom
-#   characters:  wife, husband, roach
+#   characters:  wife, husband, roach  (extra copies: "roach@lawyer", "roach@b1"... same rig, own lines)
+#   costumes:    variants: {torso: apron} (husband) | {torso: tie, accessory: glasses} (roach) | {leg_R: bare} (wife)
 #   expressions: neutral happy smug unbothered shocked scared screaming angry furious
 #                sideeye confused nervous chewing pleading determined
 #   actions:     idle talk walk run tremble scream jump hips point_L point_R hold_up wind_up
-#                read shrug eat sit freeze cross_arms dance chase crouch wave
-#   props:       bowl cereal_box milk spoon paper slipper table
-#   fx:          flash darkness vignette speedlines text burst sweat marks dust shake
+#                read shrug eat sit freeze cross_arms dance chase crouch wave phone push fan present
+#   props:       bowl cereal_box milk spoon paper slipper table cup phone phone_big briefcase stove pan
+#                seasoning plate_food toast candle router sticky_note towel
+#   fx:          flash darkness vignette speedlines text burst sweat marks dust shake smoke blink
+#   lines:       optional pitch: 0.8 (lower/higher voice) and speed: 0.9 per line
 #   sfx:         run `python -m studio sfx` and look in assets/audio/sfx/
 #   Kitchen landmarks: countertop y=1150, floor y=1580, table top y=1330 at x=720
+#   Living room: TV stand top y=700 (x 110-560), couch x 60-1020, floor y=1560
 id: {{ID}}
 slug: {{SLUG}}
 season: {{SEASON}}

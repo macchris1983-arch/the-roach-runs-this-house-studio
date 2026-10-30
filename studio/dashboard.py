@@ -127,7 +127,7 @@ def episode_page(ep_id):
         video = '<div class="card muted">Not rendered yet.</div>'
     script_rows = []
     for sh in ep.get("shots") or []:
-        lines = "".join(f'<div><b class="who-{esc(l["who"])}">{esc(l["who"].upper())}</b>: {esc(l["text"])}</div>'
+        lines = "".join(f'<div><b class="who-{esc(l["who"].split("@")[0])}">{esc(l["who"].upper())}</b>: {esc(l["text"])}</div>'
                         for l in sh.get("lines") or [])
         sfx = ", ".join(x["name"] for x in sh.get("sfx") or [])
         script_rows.append(f"<tr><td><b>{esc(sh.get('id'))}</b><br><span class='muted'>{esc(sh.get('dur'))}s</span></td>"

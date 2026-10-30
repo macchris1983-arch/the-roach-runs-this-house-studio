@@ -14,10 +14,10 @@ IDEA → SCRIPT → SCENES → CHARACTER VISUALS → ANIMATION → VOICE → SOU
 | Stage | How it works here |
 |---|---|
 | Script, scenes, storyboard | One `episode.yaml` per episode: shots, camera moves, acting keyframes, dialogue, sound cues |
-| Character visuals | Cut-out 2D rigs for The Wife, The Husband and The Roach, drawn from `assets/characters/characters.yaml` (15 expressions, 22 actions) |
+| Character visuals | Cut-out 2D rigs for The Wife, The Husband and The Roach, drawn from `assets/characters/characters.yaml` (15 expressions, 26 actions, costume variants, extra roach cast) |
 | Animation | Keyframed positions/expressions + procedural acting (walk, scream, tremble, wind-up…), automatic blinking and lip-sync |
 | Voice | Built-in original "cartoon voice" synthesiser per character, **or** drop your own recordings in `voice/L01.wav` |
-| Sound | 17 original synthesised SFX + an original generated music bed that ducks under dialogue |
+| Sound | 26 original synthesised SFX + an original generated music bed that ducks under dialogue |
 | Captions | Speaker-coloured captions burned into the video + `.srt` file, placed above the Reels UI |
 | Render | 1080×1920, 30 fps, H.264/AAC, loudness-normalised to −14 LUFS |
 | Quality check | 23 automated checks + a 4-item human review checklist |
@@ -46,9 +46,9 @@ python -m studio export s01e01         # -> exports/season-01/s01e01-kitchen-roa
 | # | Episode | Stage |
 |---|---|---|
 | 1 | Kitchen Roach Panic | **Full production file; renders and passes QC** |
-| 2 | The Roach Called Backup | Outline (hook, 8 beats, payoff) |
-| 3 | The Dinner Disaster | Outline |
-| 4 | Who Changed My Password? | Outline |
+| 2 | The Roach Called Backup | **Full production file** (render + QC pending) |
+| 3 | The Dinner Disaster | **Full production file** (render + QC pending) |
+| 4 | Who Changed My Password? | **Full production file** (render + QC pending) |
 | 5 | The Midnight Snack | Outline |
 | 6 | The Roach Gets Promoted | Outline |
 | 7 | Don't Touch My Food | Outline |

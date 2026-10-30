@@ -95,7 +95,7 @@ def write_ass(cues, path: Path):
     for c in cues:
         txt = c["text"].replace("\n", "\\N")
         pop = "{\\fscx88\\fscy88\\t(0,90,\\fscx100\\fscy100)}"
-        events.append(f"Dialogue: 0,{_ts_ass(c['start'])},{_ts_ass(c['end'])},{c['who']},,0,0,0,,{pop}{txt}")
+        events.append(f"Dialogue: 0,{_ts_ass(c['start'])},{_ts_ass(c['end'])},{c['who'].split('@')[0]},,0,0,0,,{pop}{txt}")
     doc = f"""[Script Info]
 ScriptType: v4.00+
 PlayResX: {config.WIDTH}

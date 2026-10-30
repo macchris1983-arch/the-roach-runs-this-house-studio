@@ -165,10 +165,35 @@ def test_cannot_approve_or_export_without_render(sandbox):
 
 def test_outline_episodes_are_not_marked_scripted():
     for d in pipeline.all_episodes():
+        ep = episode.load(d)
         s = pipeline.status(d)
-        if s["id"] != "s01e01":
+        if not ep.get("shots"):
             assert s["stages"]["script"]["state"] != "done"
-            assert s["stages"]["render"]["state"] == "todo"
+            assert s["stages"]["render"]["state"] in ("todo", "stale")
+
+
+@pytest.mark.parametrize("ep_id", ["s01e01", "s01e02", "s01e03", "s01e04"])
+def test_produced_episodes_are_valid_with_clean_timing(ep_id):
+    ep = episode.load(pipeline.find(ep_id))
+    assert episode.validate(ep) == []
+    P = episode.plan(ep)
+    assert episode.timing_problems(P) == []
+    assert ep["hook"] and ep["punchline"] and ep.get("loop")
+
+
+def test_extra_cast_and_costumes_render():
+    from functools import partial
+    st = {"variants": {"torso": "tie", "accessory": "glasses"}, "hold": {"R": "briefcase"}}
+    layer, _, _ = rigs.render_character("roach@lawyer", st, 0.5, 0.1, props_draw=partial(world.draw_prop, held=True))
+    plain, _, _ = rigs.render_character("roach", {}, 0.5, 0.1)
+    assert layer.getbbox() and layer.tobytes() != plain.tobytes()
+    apron, _, _ = rigs.render_character("husband", {"variants": {"torso": "apron"}}, 0.3, 0.1)
+    assert apron.getbbox()
+    ep = {"id": "x", "title": "x", "logline": "x", "hook": "x", "punchline": "x",
+          "shots": [{"id": "A", "dur": 25, "background": "kitchen", "actors": {"roach@b1": {}, "wizard@1": {}}}]}
+    errs = episode.validate(ep)
+    assert any("unknown character 'wizard@1'" in e for e in errs)
+    assert not any("roach@b1" in e for e in errs)
 
 
 def test_season_one_has_ten_distinct_episodes():
@@ -202,3 +227,8 @@ def test_full_render_qc_approve_export(sandbox):
     info = json.loads((ex / "export.json").read_text())
     assert info["published"] is False and (ex / info["video"]).exists()
     assert pipeline.status(dst)["complete"]
+
+
+def test_voice_handles_words_without_vowels():
+    a, onsets = audio.babble("Mm-hm. Hmm. Shh! 123", rigs.bible()["roach"]["voice"], seed=1)
+    assert len(a) > 0 and len(onsets) >= 3

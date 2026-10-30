@@ -187,8 +187,123 @@ def _table(p):
     p.rrect(-320, 34, 320, 70, 8, fill="#8A5A33", width=5)
 
 
+
+
+def _cup(p):   # big drinking glass, upside down (rim on the table)
+    body = [(-150, 0), (150, 0), (128, -440), (-128, -440)]
+    p.poly(body, fill=(190, 225, 245, 70), outline=None, width=0)
+    p.poly(body, fill=None, width=6)
+    p.rrect(-134, -460, 134, -430, 10, fill=(170, 210, 235, 150), width=6)
+    p.line([(-110, -40), (-96, -380)], color=(255, 255, 255, 200), width=14)
+    p.line([(-80, -60), (-72, -200)], color=(255, 255, 255, 160), width=7)
+    p.ellipse(0, 0, 150, 12, fill=None, outline=(30, 20, 16, 200), width=5)
+
+
+def _phone(p):  # roach-sized phone
+    p.rrect(-22, -45, 22, 45, 8, fill="#1E1E24", width=4)
+    p.rrect(-16, -36, 16, 30, 4, fill="#7FD3FF", outline=None, width=0)
+    p.circle(0, 37, 4, fill="#555555", outline=None, width=0)
+
+
+def _phone_big(p):  # human phone showing a loading spinner
+    p.rrect(-48, -90, 48, 90, 14, fill="#1E1E24", width=5)
+    p.rrect(-40, -76, 40, 72, 6, fill="#F4F6FA", outline=None, width=0)
+    for i in range(8):
+        a = math.radians(i * 45)
+        c = 60 + i * 22
+        p.circle(math.cos(a) * 22, -10 + math.sin(a) * 22, 6, fill=(c, c, c), outline=None, width=0)
+    p.rrect(-26, 34, 26, 48, 6, fill="#E86A5B", outline=None, width=0)
+
+
+def _briefcase(p):
+    p.arc(0, -40, 22, 20, 180, 360, width=9)
+    p.rrect(-58, -42, 58, 34, 8, fill="#6B4226", width=5)
+    p.line([(-58, -14), (58, -14)], color="#4A2D18", width=5)
+    p.rrect(-10, -22, 10, -6, 3, fill="#E2B13C", width=3)
+
+
+def _stove(p):
+    p.rrect(-170, -420, 170, 0, 14, fill="#F4F4F2", width=7)
+    p.rect(-170, -420, 170, -380, fill="#2A2A2E")
+    p.rrect(-170, -420, 170, 0, 14, fill=None, width=7)
+    for x in (-100, 100):
+        p.ellipse(x, -400, 60, 10, fill="#4A4A50", outline="#1E1410", width=3)
+    for i in range(4):
+        p.circle(-105 + i * 70, -345, 13, fill="#2A2A2E", width=4)
+    p.rrect(-140, -300, 140, -60, 12, fill="#3B3B42", width=6)
+    p.rrect(-110, -270, 110, -100, 10, fill="#6A4A2E", outline="#1E1410", width=4)
+    p.rrect(-120, -320, 120, -306, 6, fill="#BFC4C8", width=4)
+
+
+def _pan(p):
+    p.line([(120, -22), (250, -40)], color="#1E1410", width=26)
+    p.line([(120, -22), (250, -40)], color="#3A3A40", width=14)
+    p.ellipse(0, -20, 140, 30, fill="#2E2E34", width=6)
+    p.ellipse(0, -26, 112, 20, fill="#1B1210", outline=None, width=0)
+    for i in range(6):
+        r = random.Random(40 + i)
+        p.circle(-70 + r.random() * 140, -28 + r.random() * 10, 16, fill="#2A1A10", width=3)
+
+
+def _seasoning(p):
+    p.rrect(-30, -80, 30, 0, 10, fill="#FFF3D6", width=5)
+    p.rrect(-32, -100, 32, -78, 6, fill="#E86A5B", width=5)
+    p.rect(-30, -60, 30, -24, fill="#3E8E4A")
+    for i in range(5):
+        p.circle(-16 + i * 8, -90, 2.5, fill="#1E1410", outline=None, width=0)
+    p.rrect(-30, -80, 30, 0, 10, fill=None, width=5)
+
+
+def _plate_food(p):
+    p.ellipse(0, -18, 120, 28, fill="#FFFFFF", width=5)
+    p.ellipse(0, -22, 86, 18, fill="#F2F2F2", outline=None, width=0)
+    for i in range(10):
+        r = random.Random(60 + i)
+        p.arc(-40 + r.random() * 80, -28 + r.random() * 8, 22, 9, 180, 360, color="#F2C14E", width=7)
+    p.circle(-10, -36, 18, fill="#C0392B", width=3)
+    p.circle(26, -32, 10, fill="#3E8E4A", width=3)
+    p.circle(-34, -30, 8, fill="#3E8E4A", width=3)
+
+
+def _toast(p):
+    p.rrect(-48, -60, 48, 8, 18, fill="#2B1A10", width=5)
+    p.circle(-32, -54, 18, fill="#2B1A10", width=5)
+    p.circle(32, -54, 18, fill="#2B1A10", width=5)
+    p.rrect(-46, -60, 46, 6, 16, fill="#2B1A10", outline=None, width=0)
+    p.line([(-20, -30), (10, -14)], color="#140C08", width=6)
+
+
+def _candle(p):
+    p.rrect(-16, -120, 16, 0, 5, fill="#FFF6E0", width=4)
+    p.ellipse(0, -150, 12, 26, fill="#FFB33F", outline=None, width=0)
+    p.ellipse(0, -144, 6, 13, fill="#FFF2A8", outline=None, width=0)
+    p.line([(0, -122), (0, -132)], color="#1E1410", width=3)
+
+
+def _router(p):
+    for x, a in ((-80, -12), (80, 12)):
+        p.line([(x, -40), (x + math.sin(math.radians(a)) * 110, -40 - 110)], color="#1E1410", width=12)
+    p.rrect(-110, -50, 110, 5, 12, fill="#2A2A2E", width=6)
+    for i in range(5):
+        p.circle(-60 + i * 30, -22, 7, fill="#4BE37A" if i != 3 else "#FFC542", outline=None, width=0)
+
+
+def _sticky(p):
+    p.rect(-42, -86, 42, 0, fill="#FFE45C")
+    p.poly([(-42, -86), (42, -86), (42, 0), (-42, 0)], fill=None, width=4)
+    for i in range(3):
+        p.line([(-28, -64 + i * 20), (24 - i * 10, -64 + i * 20)], color="#3A6FD8", width=5)
+
+
+def _towel(p):
+    p.rrect(-34, -150, 34, 0, 6, fill="#FFFFFF", width=5)
+    for i in range(4):
+        p.rect(-32, -140 + i * 36, 32, -122 + i * 36, fill="#E86A5B")
+    p.rrect(-34, -150, 34, 0, 6, fill=None, width=5)
+
 PROPS = {
     # name: (bbox, draw, (grip_x, grip_y) in prop coords, hand rotation offset)
+    # A rotation offset of None means the prop stays upright when held.
     "bowl": ((-130, -100, 130, 10), _bowl, (0, 0), 0),
     "cereal_box": ((-90, -300, 90, 10), _cereal_box, (0, 0), 0),
     "milk": ((-70, -285, 70, 10), _milk, (0, 0), 0),
@@ -196,6 +311,19 @@ PROPS = {
     "paper": ((-70, -165, 70, 20), _paper, (0, -10), 180),
     "slipper": ((-125, -50, 70, 45), _slipper, (40, 0), 90),
     "table": ((-340, -25, 340, 570), _table, (0, 0), 0),
+    "cup": ((-160, -470, 160, 20), _cup, (0, 0), None),
+    "phone": ((-30, -52, 30, 52), _phone, (0, 0), None),
+    "phone_big": ((-56, -98, 56, 98), _phone_big, (0, 20), None),
+    "briefcase": ((-66, -70, 66, 42), _briefcase, (0, -58), None),
+    "stove": ((-180, -430, 180, 12), _stove, (0, 0), 0),
+    "pan": ((-150, -60, 262, 12), _pan, (0, 0), 0),
+    "seasoning": ((-40, -108, 40, 8), _seasoning, (0, -40), None),
+    "plate_food": ((-128, -60, 128, 16), _plate_food, (0, 0), 0),
+    "toast": ((-70, -80, 70, 14), _toast, (0, -10), None),
+    "candle": ((-30, -182, 30, 8), _candle, (0, 0), 0),
+    "router": ((-125, -160, 125, 12), _router, (0, 0), 0),
+    "sticky_note": ((-48, -92, 48, 6), _sticky, (0, -20), None),
+    "towel": ((-40, -158, 40, 8), _towel, (0, -146), 180),
 }
 
 PROP_RES = 2.5
@@ -228,10 +356,15 @@ def prop_image(name: str, k_q: int, ang_q: int):
     return img, px, py
 
 
-def draw_prop(layer: Image.Image, name: str, x: float, y: float, angle: float, k: float, extra_rot: float = 0):
+def draw_prop(layer: Image.Image, name: str, x: float, y: float, angle: float, k: float, extra_rot: float = 0,
+              held: bool = False):
     if name not in PROPS:
         raise KeyError(f"Unknown prop '{name}'. Known: {sorted(PROPS)}")
-    ang = int(round(angle + PROPS[name][3] + extra_rot)) % 360
+    off = PROPS[name][3]
+    if held and off is None:
+        ang = int(round(extra_rot)) % 360          # upright props ignore the hand angle
+    else:
+        ang = int(round(angle + (off or 0) + extra_rot)) % 360
     img, px, py = prop_image(name, max(5, int(round(k * 100))), ang)
     layer.alpha_composite(img, (int(round(x - px)), int(round(y - py))))
 
@@ -306,11 +439,30 @@ def fx_overlay(frame: Image.Image, fx: dict, t: float, cam):
             rr = 40 + 30 * math.sin(t * 6 + i)
             cx, cy = x + math.cos(a) * r, y + math.sin(a) * r * 0.5
             d.ellipse([cx - rr, cy - rr, cx + rr, cy + rr], fill=(235, 228, 214), outline=(30, 20, 16), width=5)
+    elif kind == "smoke":   # grey puffs rising from a point
+        x, y = cam.to_screen(*fx["pos"])
+        over = Image.new("RGBA", frame.size, (0, 0, 0, 0))
+        d = ImageDraw.Draw(over)
+        for i in range(12):
+            ph = (t * 0.55 + i / 12) % 1
+            rnd = random.Random(i)
+            r = (30 + ph * 110) * cam.zoom * fx.get("size", 1.0)
+            cx = x + (rnd.random() - 0.5) * 80 * cam.zoom + math.sin(ph * 5 + i) * 40 * cam.zoom
+            cy = y - ph * 520 * cam.zoom * fx.get("size", 1.0)
+            a = int(200 * (1 - ph))
+            d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(110, 110, 118, a))
+        frame.paste(Image.alpha_composite(frame.convert("RGBA"), over).convert("RGB"))
+    elif kind == "blink":   # small flashing light (router LEDs, alarms)
+        if int(t * fx.get("rate", 4) * 2) % 2 == 0:
+            x, y = cam.to_screen(*fx["pos"])
+            r = fx.get("radius", 10) * cam.zoom
+            d = ImageDraw.Draw(frame)
+            d.ellipse([x - r, y - r, x + r, y + r], fill=rgba(fx.get("color", "#FF3B30")))
     else:
         raise KeyError(f"Unknown fx '{kind}'")
 
 
-FX_TYPES = ["flash", "darkness", "vignette", "speedlines", "text", "burst", "sweat", "marks", "dust", "shake"]
+FX_TYPES = ["flash", "darkness", "vignette", "speedlines", "text", "burst", "sweat", "marks", "dust", "shake", "smoke", "blink"]
 
 
 @functools.lru_cache(maxsize=4)

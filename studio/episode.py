@@ -71,7 +71,7 @@ def validate(ep: dict) -> list[str]:
         if bg not in world.BACKGROUNDS:
             errs.append(f"{tag}: unknown background '{bg}'")
         for name, a in (s.get("actors") or {}).items():
-            if name not in rigs.BUILDERS:
+            if rigs.char_of(name) not in rigs.BUILDERS:
                 errs.append(f"{tag}: unknown character '{name}'")
                 continue
             for k in [a] + list(a.get("keys", [])):
@@ -98,7 +98,7 @@ def validate(ep: dict) -> list[str]:
             if sc.get("at", 0) > (d or 0):
                 errs.append(f"{tag}: sfx '{sc.get('name')}' at {sc.get('at')}s is after the shot ends")
         for ln in s.get("lines") or []:
-            if ln.get("who") not in rigs.BUILDERS:
+            if rigs.char_of(ln.get("who", "")) not in rigs.BUILDERS:
                 errs.append(f"{tag}: line by unknown character '{ln.get('who')}'")
             if not str(ln.get("text", "")).strip():
                 errs.append(f"{tag}: empty dialogue line")
@@ -171,7 +171,11 @@ def plan(ep: dict) -> Plan:
                 a, src = audio.load_wav(wav), f"file:{wav.name}"
             else:
                 seed = sum(ord(c) for c in ln["id"]) + si
-                a, _ = audio.babble(ln["text"], bible[ln["who"]]["voice"], seed=seed, shout=ln.get("shout", False))
+                voice = dict(bible[rigs.char_of(ln["who"])]["voice"])
+                voice["pitch_hz"] = voice["pitch_hz"] * ln.get("pitch", 1.0)
+                if "speed" in ln:
+                    voice["syllable_s"] = voice["syllable_s"] / ln["speed"]
+                a, _ = audio.babble(ln["text"], voice, seed=seed, shout=ln.get("shout", False))
                 src = "synth:babble"
             P.lines.append(Line(ln["id"], ln["who"], ln["text"], start, a, audio.envelope_per_frame(a), src,
                                 ln.get("shout", False)))

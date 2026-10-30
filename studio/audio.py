@@ -191,6 +191,86 @@ def sfx_paper_rustle():
     return _norm(_bp(_noise(0.5, 13), 2000, 8000) * (0.5 + 0.5 * np.abs(np.sin(2 * np.pi * 7 * t))) * _env(len(t), 0.02, 0.1), 0.45)
 
 
+def sfx_smoke_alarm():   # three loud beeps
+    out = []
+    for _ in range(3):
+        t = _t(0.22)
+        out += [np.sign(np.sin(2 * np.pi * 3150 * t)) * 0.5 * _env(len(t), 0.003, 0.01), np.zeros(int(0.12 * SR))]
+    return _norm(_lp(np.concatenate(out), 7000), 0.55)
+
+
+def sfx_alarm_chirp():   # single low-battery chirp
+    t = _t(0.12)
+    return _norm(np.sin(2 * np.pi * 3300 * t) * _env(len(t), 0.003, 0.03), 0.5)
+
+
+def sfx_phone_dial():    # tiny touch-tone dial + ring
+    out = []
+    pairs = [(697, 1209), (770, 1336), (852, 1477), (941, 1336)]
+    for lo, hi in pairs:
+        t = _t(0.1)
+        out += [(np.sin(2 * np.pi * lo * t) + np.sin(2 * np.pi * hi * t)) * _env(len(t), 0.004, 0.01), np.zeros(int(0.05 * SR))]
+    t = _t(0.7)
+    ring = (np.sin(2 * np.pi * 440 * t) + np.sin(2 * np.pi * 480 * t)) * (np.sin(2 * np.pi * 8 * t) > 0) * _env(len(t), 0.01, 0.1)
+    return _norm(np.concatenate(out + [np.zeros(int(0.1 * SR)), ring * 0.6]), 0.5)
+
+
+def sfx_sizzle():
+    t = _t(1.4)
+    x = _hp(_noise(1.4, 21), 2500) * (0.6 + 0.4 * np.abs(np.sin(2 * np.pi * 11 * t)))
+    pops = np.zeros_like(x)
+    rnd = random.Random(22)
+    for _ in range(30):
+        s0 = int(rnd.random() * (len(x) - 500))
+        pops[s0:s0 + 400] += _noise(400 / SR, rnd.randint(0, 999))[:400] * np.exp(-np.arange(400) / 60)
+    return _norm((x + pops) * _env(len(t), 0.05, 0.3), 0.5)
+
+
+def sfx_cup_slam():
+    t = _t(0.6)
+    thud = np.sin(2 * np.pi * 85 * t) * np.exp(-t * 18)
+    clink = sum(np.sin(2 * np.pi * f * t) * np.exp(-t * d) for f, d in ((2300, 9), (3400, 12), (5100, 16)))
+    return _norm(thud + clink * 0.35 + _hp(_noise(0.6, 23), 800) * np.exp(-t * 40) * 0.5, 0.9)
+
+
+def sfx_victory():       # short original fanfare
+    notes = [(523, 0.12), (659, 0.12), (784, 0.12), (1047, 0.45)]
+    out = []
+    for f, d in notes:
+        t = _t(d)
+        x = (np.sign(np.sin(2 * np.pi * f * t)) * 0.4 + np.sin(2 * np.pi * f * t)) * _env(len(t), 0.005, 0.05)
+        out.append(_lp(x, 5000))
+    return _norm(np.concatenate(out), 0.6)
+
+
+def sfx_buzzer():        # wrong-answer buzzer
+    t = _t(0.6)
+    x = sum(np.sign(np.sin(2 * np.pi * f * t)) for f in (110, 116))
+    return _norm(_lp(x, 2500) * _env(len(t), 0.01, 0.05), 0.6)
+
+
+def sfx_tiny_cheer():    # crowd of tiny roaches cheering
+    out = np.zeros(int(1.4 * SR))
+    rnd = random.Random(31)
+    for i in range(14):
+        f0 = 600 + rnd.random() * 500
+        d = 0.5 + rnd.random() * 0.6
+        t = _t(d)
+        f = f0 * (1 + 0.3 * np.sin(2 * np.pi * (3 + rnd.random() * 3) * t))
+        x = np.sin(2 * np.pi * np.cumsum(f) / SR) * _env(len(t), 0.05, 0.2)
+        s0 = int(rnd.random() * 0.6 * SR)
+        out[s0:s0 + len(x)] += x[: len(out) - s0]
+    return _norm(out + _bp(_noise(1.4, 32), 1500, 6000) * 0.15, 0.55)
+
+
+def sfx_briefcase_click():
+    out = np.zeros(int(0.3 * SR))
+    for s0 in (0, int(0.12 * SR)):
+        c = _bp(_noise(0.02, 33 + s0), 1500, 6000) * np.exp(-_t(0.02) * 200)
+        out[s0:s0 + len(c)] += c
+    return _norm(out, 0.7)
+
+
 SFX = {name[4:]: fn for name, fn in globals().items() if name.startswith("sfx_") and callable(fn)}
 
 
@@ -218,7 +298,7 @@ VOWEL_FORMANTS = {"a": (800, 1250), "e": (520, 1850), "i": (330, 2300), "o": (52
 def _syllables(word: str):
     groups = re.findall(r"[aeiouyAEIOUY]+", word)
     if not groups:
-        return ["e"] if re.search(r"[A-Za-z0-9]", word) else []
+        return [("e", 1)] if re.search(r"[A-Za-z0-9]", word) else []
     out = []
     for g in groups:
         reps = len(g)
