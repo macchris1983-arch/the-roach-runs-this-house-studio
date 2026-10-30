@@ -414,6 +414,13 @@ def build_husband() -> Rig:
         p.arc(0, -112, 18, 11, 20, 160, color=pal["skin_shadow"], width=5)
     r.add(PartDef("head", "torso", (0, -350), 6, _const_bbox((-145, -300, 145, 25)), head))
 
+    def accessory(p: Pen, v):
+        if v == "label":   # costume variant: DON'T TOUCH sticker on the forehead
+            p.poly([(-62, -30), (62, -38), (66, 18), (-58, 26)], fill="#FFE45C", width=5)
+            from .draw import font as _font
+            p.d.text(p.p(2, -6), "DON'T TOUCH", font=_font(max(6, int(17 * p.s))), fill=(30, 20, 16, 255), anchor="mm")
+    r.add(PartDef("accessory", "head", (0, -232), 9, _const_bbox((-75, -50, 75, 40)), accessory, "none"))
+
     fs = FaceSpec(eye_dx=43, eye_rx=21, eye_ry=25, lid=skin, brow_color=pal["hair"], brow_w=14,
                   brow_len=50, mouth_w=66, lips=pal["lips"])
     r.face = fs
@@ -452,6 +459,11 @@ def build_roach() -> Rig:
             y = -118 + i * 22
             p.arc(0, y, 38 - abs(i - 2) * 3, 8, 15, 165, color=pal["shell_dark"], width=4)
         p.ellipse(-30, -120, 9, 18, fill=pal["highlight"], outline=None, width=0)
+        if v == "badge":   # costume variant: HEAD OF PEST CONTROL name tag
+            p.rrect(-44, -120, 44, -78, 6, fill="#FFFFFF", width=4)
+            p.rect(-44, -120, 44, -108, fill="#3A6FD8")
+            p.line([(-30, -96), (30, -96)], color="#1E1410", width=4)
+            p.line([(-22, -86), (22, -86)], color="#1E1410", width=3)
         if v == "tie":   # costume variant: lawyer's collar + tie
             p.poly([(-34, -158), (0, -138), (34, -158), (30, -140), (0, -126), (-30, -140)], fill="#FFFFFF", width=4)
             p.poly([(0, -134), (14, -118), (8, -40), (0, -26), (-8, -40), (-14, -118)], fill="#2E5FA8", width=4)

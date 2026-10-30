@@ -271,6 +271,13 @@ def sfx_briefcase_click():
     return _norm(out, 0.7)
 
 
+def sfx_whistle():       # referee whistle with a trill
+    t = _t(0.55)
+    f = 2900 + 120 * np.sign(np.sin(2 * np.pi * 38 * t))
+    x = np.sin(2 * np.pi * np.cumsum(f) / SR) + _hp(_noise(0.55, 41), 3000) * 0.15
+    return _norm(x * _env(len(t), 0.01, 0.08), 0.5)
+
+
 SFX = {name[4:]: fn for name, fn in globals().items() if name.startswith("sfx_") and callable(fn)}
 
 

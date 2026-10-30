@@ -103,7 +103,7 @@ class FrameRenderer:
             if fx["type"] == "shake":
                 continue
             ft = t - fx.get("at", 0)
-            until = fx.get("until", fx.get("at", 0) + fx.get("dur", 0.6) if fx["type"] not in ("darkness", "vignette") else shot["dur"])
+            until = fx.get("until", fx.get("at", 0) + fx.get("dur", 0.6) if fx["type"] not in ("darkness", "vignette", "spotlight", "camfeed") else shot["dur"])
             if 0 <= ft and t < until:
                 world.fx_overlay(frame, fx, ft, cam)
         return frame

@@ -1,27 +1,164 @@
-# The Midnight Snack - OUTLINE STAGE. Break the beats into shots (see s01e01) to produce it.
+# The Roach Runs This House - S01E05 "The Midnight Snack"
+# Kitchen landmarks: countertop y=1150, floor y=1580. The fridge stands at x 820-1090;
+# the fridge_open prop sits at its bottom-left corner (820, 1580), shelves at y=980/1160/1340.
 id: s01e05
 slug: the-midnight-snack
 season: 1
 episode: 5
 title: The Midnight Snack
-logline: At 3 a.m. the Husband sneaks to the fridge for the Wife's leftover cake, but the Roach is already in there
-  with a fork.
-hook: Fridge door opens in the dark, light reveals the Roach mid-bite inside.
-punchline: 'They swear a pact of silence and fist-bump. The Wife flips on the light, and the Roach instantly points
-  at the Husband: "He told me to hold it."'
-outline: '1. Darkness; Husband tiptoes in socks
-
+logline: At 3 a.m. the Husband sneaks to the fridge for the Wife's cake, but the Roach is already in there with a fork.
+hook: The fridge door swings open in the dark kitchen and the Roach is inside, mid-bite.
+punchline: >-
+  They swear a pact of silence. The Wife flips on the light and the Roach instantly points at the
+  Husband: "He told me to hold it."
+loop: Ends with the light clicking off on the empty kitchen, back to the dark opening.
+outline: |-
+  1. Darkness; Husband tiptoes in
   2. Opens fridge: Roach inside with a fork in the cake
-
-  3. Both freeze; whispered argument
-
-  4. They agree to split it and fist-bump: "Pact."
-
-  5. Lights snap on: Wife in the doorway with arms crossed
-
-  6. Roach drops fork, points at Husband: "He told me to hold it."
-
+  3. Whispered argument
+  4. They agree to split it: "Pact."
+  5. Lights snap on: Wife in the doorway
+  6. Roach points at Husband: "He told me to hold it."
   7. Husband: "WE HAD A PACT!"
+  8. Wife takes the cake; Roach follows her out
+thumbnail_at: 5.4
+thumbnail_text: "3 AM cake heist"
+cover_at: 5.0
+voice_provider: babble
+music: {enabled: true, mood: suspense, bpm: 92, root_midi: 44, seed: 505, gain: 0.18}
+reels:
+  title: "The Midnight Snack | The Roach Runs This House Ep. 5"
+  caption: "3 AM. Fridge light on. The roach was ALREADY in the cake 🍰🪳\n\nThey made a pact... watch how long it lasts 😭\n\nTag the person who'd snitch on you first 👇\n\nEp. 5 of The Roach Runs This House, an original animated comedy. Follow for new episodes."
+  hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#reels"]
 
-  8. Wife takes the cake; Roach follows her out (loop to dark kitchen)'
-shots: []
+common:
+  fridge: &fridge {name: fridge_open, x: 820, y: 1580, z: 6}
+  cake: &cake {name: cake, x: 900, y: 1160, z: 7, scale: 0.8}
+  dark: &dark {type: spotlight, at: 0, pos: [955, 1170], radius: [260, 520], amount: 0.82, tint: "#FFF3B0"}
+  roach_in_fridge: &rif {x: 1000, y: 1160, scale: 0.6, z: 8}
+
+shots:
+  # ---------------------------------------------------------------- HOOK
+  - id: A
+    dur: 3.2
+    background: kitchen
+    camera: {x: 540, y: 1250, zoom: 1.1}
+    actors:
+      husband: {x: 180, y: 1860, scale: 0.95, z: 20, action: walk, expr: determined, look: right,
+                keys: [{at: 2.4, x: 600, ease: linear}, {at: 2.4, action: hips, expr: smug}]}
+    fx:
+      - {type: darkness, at: 0, until: 3.2, amount: 0.74}
+    lines:
+      - {id: L01, who: husband, at: 0.9, pitch: 0.95, speed: 0.9, text: "Shh... cake time."}
+
+  - id: B
+    dur: 3.8
+    background: kitchen
+    camera: {x: 820, y: 1260, zoom: 1.3}
+    props: [*fridge, *cake]
+    actors:
+      roach: {<<: *rif, action: eat, expr: chewing, hold: {R: fork}, keys: [{at: 0.5, action: freeze, expr: unbothered, look: left}]}
+      husband: {x: 600, y: 1860, scale: 0.95, z: 20, action: hips, expr: smug, look: right,
+                keys: [{at: 0.45, expr: shocked, action: freeze}]}
+    fx:
+      - *dark
+      - {type: marks, at: 0.5, dur: 1.2, pos: [600, 780], text: "!!"}
+    sfx:
+      - {at: 0.0, name: whoosh, gain: 0.5}
+      - {at: 0.45, name: record_scratch, gain: 0.7}
+    lines:
+      - {id: L02, who: roach, at: 1.3, text: "Close the door. You're letting the cold out."}
+
+  - id: C
+    dur: 3.4
+    background: kitchen
+    camera: {x: 820, y: 1120, zoom: 1.8}
+    props: [*fridge, *cake]
+    actors:
+      roach: {<<: *rif, action: idle, expr: smug, hold: {R: fork}, look: left}
+      husband: {x: 640, y: 1860, scale: 0.95, z: 20, action: point_R, expr: angry, look: right}
+    fx: [*dark]
+    lines:
+      - {id: L03, who: husband, at: 0.2, pitch: 0.95, text: "That's my WIFE'S cake!"}
+      - {id: L04, who: roach, at: 2.3, text: "And?"}
+
+  - id: D
+    dur: 3.8
+    background: kitchen
+    camera: {x: 820, y: 1120, zoom: 1.8}
+    props: [*fridge, *cake]
+    actors:
+      roach: {<<: *rif, action: idle, expr: smug, hold: {R: fork}, look: left,
+              keys: [{at: 2.9, action: point_L, expr: happy}]}
+      husband: {x: 640, y: 1860, scale: 0.95, z: 20, action: shrug, expr: nervous, look: left,
+                keys: [{at: 0.7, look: right}, {at: 2.9, action: point_R, expr: happy}]}
+    fx: [*dark]
+    sfx:
+      - {at: 3.0, name: pop, gain: 0.7}
+    lines:
+      - {id: L05, who: husband, at: 0.2, pitch: 0.95, text: "Okay. Half. And nobody says NOTHING."}
+      - {id: L06, who: roach, at: 3.1, text: "Pact."}
+
+  # ---------------------------------------------------------------- CAUGHT
+  - id: E
+    dur: 2.6
+    background: kitchen
+    camera: {x: 540, y: 1150, zoom: 1.0}
+    props: [*fridge, *cake]
+    actors:
+      wife: {x: 250, y: 1880, scale: 1.0, z: 21, action: cross_arms, expr: angry, look: right}
+      husband: {x: 640, y: 1860, scale: 0.95, z: 20, action: freeze, expr: shocked, look: left}
+      roach: {<<: *rif, action: freeze, expr: shocked, hold: {R: fork}, look: left}
+    fx:
+      - {type: darkness, at: 0, until: 0.3, amount: 0.78}
+      - {type: flash, at: 0.3, dur: 0.2}
+    sfx:
+      - {at: 0.25, name: light_switch, gain: 0.9}
+      - {at: 0.5, name: dun_dun_dun, gain: 0.6}
+    lines:
+      - {id: L07, who: wife, at: 1.6, text: "Mm-hm."}
+
+  # ---------------------------------------------------------------- PUNCHLINE
+  - id: F
+    dur: 3.0
+    background: kitchen
+    camera: {x: 960, y: 1060, zoom: 2.3}
+    props: [*fridge, *cake]
+    actors:
+      roach: {<<: *rif, action: idle, expr: nervous, hold: {R: fork}, look: camera,
+              keys: [{at: 0.4, hold: {}, action: point_L, expr: unbothered, look: left}]}
+    sfx:
+      - {at: 0.4, name: pop, gain: 0.5}
+    lines:
+      - {id: L08, who: roach, at: 0.7, text: "He told me to hold it."}
+
+  - id: G
+    dur: 2.6
+    background: kitchen
+    camera: {x: 640, y: 1100, zoom: 1.7}
+    actors:
+      husband: {x: 640, y: 1860, scale: 0.95, z: 20, action: scream, expr: screaming, look: right}
+    fx:
+      - {type: shake, at: 0.1, dur: 1.4, amp: 18}
+    sfx:
+      - {at: 0.1, name: scream_sting, gain: 0.6}
+    lines:
+      - {id: L09, who: husband, at: 0.15, text: "WE HAD A PACT!"}
+
+  # ---------------------------------------------------------------- LOOP ENDING
+  - id: H
+    dur: 3.6
+    background: kitchen
+    camera: {x: 540, y: 1200, zoom: 1.0}
+    props: [*fridge]
+    actors:
+      wife: {x: 760, y: 1880, scale: 1.0, z: 21, action: walk, expr: smug, look: camera, hold: {R: cake},
+             keys: [{at: 2.4, x: 1350, from: 0.3, ease: in}]}
+      roach: {x: 640, y: 1890, scale: 0.4, z: 22, action: walk, expr: happy,
+              keys: [{at: 2.7, x: 1250, from: 0.6, ease: in}]}
+      husband: {x: 300, y: 1860, scale: 0.95, z: 20, action: shrug, expr: pleading, look: right}
+    fx:
+      - {type: darkness, at: 3.1, until: 3.6, amount: 0.78}
+    sfx:
+      - {at: 0.3, name: footsteps_run, gain: 0.4}
+      - {at: 3.05, name: light_switch, gain: 0.9}

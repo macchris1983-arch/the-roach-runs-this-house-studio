@@ -1,27 +1,167 @@
-# Couples Game Night - OUTLINE STAGE. Break the beats into shots (see s01e01) to produce it.
+# The Roach Runs This House - S01E10 "Couples Game Night"
+# Living room landmarks: couch x 60-1020, floor y=1560. A floor lamp stands at x=990 (shade top y=1000).
 id: s01e10
 slug: couples-game-night
 season: 1
 episode: 10
 title: Couples Game Night
-logline: It's couples trivia night. The Husband doesn't know a single answer about his wife, but the Roach knows
-  everything.
-hook: 'A game-show style title card: COUPLES GAME NIGHT!'
-punchline: 'The Wife switches partners to the Roach and they sweep the game. Husband: "How do YOU know her mom''s
-  birthday?!" Roach: "I''ve been to every cookout."'
-outline: '1. Game-show title card; couch, scorecards
-
-  2. Q1: "What''s her favorite color?" Husband: "...Green?" (buzzer)
-
+logline: It's couples trivia night. The Husband doesn't know a single answer about his wife, but the Roach knows everything.
+hook: A game-show title card - COUPLES GAME NIGHT! - and the couple holding scorecards.
+punchline: >-
+  The Wife switches partners to the Roach. "How do YOU know her mom's birthday?!" "I've been to every
+  cookout." The Husband ends up partnered with the cereal bowl.
+loop: Ends on the Husband and his new partner, the cereal bowl from Episode 1.
+outline: |-
+  1. Game-show title card; couch, scorecards
+  2. Q1: "What's my favorite color?" Husband: "...Green?" (buzzer)
   3. Roach from the lamp: "Purple. Obviously."
+  4. Q2: her mom's birthday; Husband panics
+  5. Roach: "March third." (ding)
+  6. Wife switches to the Roach
+  7. Husband: "How do YOU know her mom's birthday?!"
+  8. Roach: "I've been to every cookout." Husband gets paired with the cereal bowl
+thumbnail_at: 1.2
+thumbnail_text: "Couples game night"
+cover_at: 1.2
+voice_provider: babble
+music: {enabled: true, mood: sitcom_bounce, bpm: 120, root_midi: 48, seed: 1010, gain: 0.2}
+reels:
+  title: "Couples Game Night | The Roach Runs This House Ep. 10"
+  caption: "Couples game night... and the ROACH knows her better than her husband 🎲🪳\n\nWait for who her new partner is 😭\n\nCould your partner pass this quiz? Tag them 👇\n\nEp. 10, the Season 1 finale of The Roach Runs This House, an original animated comedy. Follow for Season 2."
+  hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#reels"]
 
-  4. Q2: her mom''s birthday; Husband panics
+common:
+  lamp: &lamp {name: lamp, x: 990, y: 1600, z: 8}
+  roach_lamp: &roach_lamp {x: 990, y: 1000, scale: 0.55, z: 9, action: sit}
 
-  5. Roach: "March 3rd." (ding)
+shots:
+  # ---------------------------------------------------------------- HOOK
+  - id: A
+    dur: 3.0
+    background: living_room
+    camera: {x: 560, y: 1200, zoom: 1.0}
+    props: [*lamp]
+    actors:
+      husband: {x: 300, y: 1880, scale: 0.95, z: 20, action: hold_up, expr: happy, look: camera, hold: {R: scorecard}}
+      wife: {x: 680, y: 1880, scale: 1.0, z: 21, action: read, expr: happy, look: camera, hold: {R: scorecard}}
+      roach: {<<: *roach_lamp, expr: smug, look: camera}
+    fx:
+      - {type: burst, at: 0.05, dur: 2.9, pos: [540, 330], world: false, text: "COUPLES GAME NIGHT!", size: 64, bg: "#FFD23F"}
+      - {type: flash, at: 0.0, dur: 0.15}
+    sfx:
+      - {at: 0.0, name: victory, gain: 0.6}
+    lines:
+      - {id: L01, who: wife, at: 1.2, text: "Question one!"}
 
-  6. Wife switches seats next to the Roach
+  - id: B
+    dur: 3.4
+    background: living_room
+    camera: {x: 500, y: 1180, zoom: 1.35}
+    props: [*lamp]
+    actors:
+      husband: {x: 300, y: 1880, scale: 0.95, z: 20, action: hold_up, expr: confused, look: right, hold: {R: scorecard},
+                keys: [{at: 1.9, expr: nervous, action: shrug}]}
+      wife: {x: 680, y: 1880, scale: 1.0, z: 21, action: read, expr: smug, look: left, hold: {R: scorecard}}
+    fx:
+      - {type: burst, at: 2.8, dur: 0.6, pos: [300, 760], text: "X", size: 90, bg: "#E86A5B"}
+    sfx:
+      - {at: 2.8, name: buzzer, gain: 0.7}
+    lines:
+      - {id: L02, who: wife, at: 0.15, text: "What's my favorite color?"}
+      - {id: L03, who: husband, at: 1.95, text: "...Green?"}
 
-  7. Husband: "How do YOU know her mom''s birthday?!"
+  - id: C
+    dur: 2.8
+    background: living_room
+    camera: {x: 990, y: 900, zoom: 2.5}
+    props: [*lamp]
+    actors:
+      roach: {<<: *roach_lamp, expr: smug, look: camera}
+    sfx:
+      - {at: 2.0, name: ding, gain: 0.6}
+    lines:
+      - {id: L04, who: roach, at: 0.2, text: "Purple. Obviously."}
 
-  8. Roach: "I''ve been to every cookout." Husband gets paired with the cereal bowl'
-shots: []
+  # ---------------------------------------------------------------- ROUND TWO
+  - id: D
+    dur: 3.4
+    background: living_room
+    camera: {x: 500, y: 1180, zoom: 1.35}
+    props: [*lamp]
+    actors:
+      husband: {x: 300, y: 1880, scale: 0.95, z: 20, action: hold_up, expr: nervous, look: right, hold: {R: scorecard},
+                keys: [{at: 2.2, action: tremble, expr: scared}]}
+      wife: {x: 680, y: 1880, scale: 1.0, z: 21, action: read, expr: smug, look: left, hold: {R: scorecard}}
+    fx:
+      - {type: sweat, at: 2.2, pos: [430, 870], dur: 1.2}
+    lines:
+      - {id: L05, who: wife, at: 0.15, text: "Question two. My mom's birthday?"}
+
+  - id: E
+    dur: 2.4
+    background: living_room
+    camera: {x: 990, y: 900, zoom: 2.5}
+    props: [*lamp]
+    actors:
+      roach: {<<: *roach_lamp, expr: happy, look: camera}
+    sfx:
+      - {at: 1.6, name: ding, gain: 0.6}
+    lines:
+      - {id: L06, who: roach, at: 0.2, text: "March third."}
+
+  # ---------------------------------------------------------------- PUNCHLINE
+  - id: F
+    dur: 3.0
+    background: living_room
+    camera: {x: 620, y: 1200, zoom: 1.05}
+    props: [*lamp]
+    actors:
+      husband: {x: 300, y: 1880, scale: 0.95, z: 20, action: freeze, expr: shocked, look: right, hold: {R: scorecard}}
+      wife: {x: 680, y: 1880, scale: 1.0, z: 21, action: walk, expr: happy, look: right, hold: {R: scorecard},
+             keys: [{at: 1.2, x: 860, ease: out}, {at: 1.2, action: hold_up}]}
+      roach: {<<: *roach_lamp, expr: happy, look: left, action: wave}
+    sfx:
+      - {at: 1.3, name: pop, gain: 0.6}
+    lines:
+      - {id: L07, who: wife, at: 1.4, text: "New partner."}
+
+  - id: G
+    dur: 3.2
+    background: living_room
+    camera: {x: 320, y: 1150, zoom: 1.6}
+    actors:
+      husband: {x: 300, y: 1880, scale: 0.95, z: 20, action: scream, expr: screaming, look: right, hold: {R: scorecard}}
+    fx:
+      - {type: shake, at: 0.1, dur: 1.6, amp: 16}
+    sfx:
+      - {at: 0.1, name: record_scratch, gain: 0.6}
+    lines:
+      - {id: L08, who: husband, at: 0.15, text: "How do YOU know her mom's birthday?!"}
+
+  - id: H
+    dur: 2.8
+    background: living_room
+    camera: {x: 990, y: 900, zoom: 2.5}
+    props: [*lamp]
+    actors:
+      roach: {<<: *roach_lamp, expr: smug, look: camera}
+    sfx:
+      - {at: 2.2, name: gasp_sting, gain: 0.6}
+    lines:
+      - {id: L09, who: roach, at: 0.2, text: "I've been to every cookout."}
+
+  # ---------------------------------------------------------------- LOOP ENDING
+  - id: I
+    dur: 3.2
+    background: living_room
+    camera: {x: 330, y: 1350, zoom: 1.6}
+    props:
+      - {name: bowl, x: 470, y: 1300, z: 22, scale: 0.9}
+    actors:
+      husband: {x: 280, y: 1880, scale: 0.95, z: 20, action: shrug, expr: pleading, look: right}
+    fx:
+      - {type: vignette, at: 0, amount: 0.5}
+    sfx:
+      - {at: 2.6, name: alarm_chirp, gain: 0.3}
+    lines:
+      - {id: L10, who: husband, at: 0.4, pitch: 0.92, speed: 0.85, text: "...It's you and me, bowl."}

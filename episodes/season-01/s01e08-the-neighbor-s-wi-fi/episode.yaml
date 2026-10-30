@@ -1,27 +1,158 @@
-# The Neighbor's Wi-Fi - OUTLINE STAGE. Break the beats into shots (see s01e01) to produce it.
+# The Roach Runs This House - S01E08 "The Neighbor's Wi-Fi"
+# Living room landmarks: TV stand top y=700 (x 110-560), couch x 60-1020, floor y=1560.
+# A wall vent sits at x=860 with its bottom edge at y=900.
 id: s01e08
 slug: the-neighbor-s-wi-fi
 season: 1
 episode: 8
 title: The Neighbor's Wi-Fi
-logline: The Wi-Fi is down, so the Husband tries to guess the neighbor's password, and the Roach comes back through
-  the vent with it.
-hook: Husband holding his phone to the wall like an antenna.
-punchline: 'The Roach knows the password because he lives over there too. Wife: "You have a SIDE house?!" Roach:
-  "I got two families. I''m a busy man."'
-outline: '1. Husband guessing passwords out loud: "password123... Kevin..."
-
-  2. Wife watching, unimpressed
-
+logline: The Wi-Fi is down, so the Husband tries to guess the neighbor's password, and the Roach comes back through the vent with it.
+hook: The Husband guessing passwords out loud, buzzer after buzzer.
+punchline: >-
+  The Roach knows Kevin's password because he lives over there too. "You have a SIDE house?!"
+  "Two families. I'm a busy man."
+loop: Ends with the Roach climbing back into the vent, leaving the Husband guessing again.
+outline: |-
+  1. Husband guessing passwords out loud: "password123... Kevin..."
+  2. Wife: "You're stealing Kevin's Wi-Fi now?"
   3. Vent rattles; Roach drops out with a sticky note
+  4. Roach: "It's KevinsMom1972."
+  5. Husband: "How do YOU know that?" Roach: "I live over there too."
+  6. Wife: "You have a SIDE house?!"
+  7. Roach: "Two families. I'm a busy man." (climbs back in the vent)
+thumbnail_at: 1.0
+thumbnail_text: "Stealing the neighbor's Wi-Fi"
+cover_at: 1.0
+voice_provider: babble
+music: {enabled: true, mood: sneaky_funk, bpm: 100, root_midi: 42, seed: 808, gain: 0.2}
+reels:
+  title: "The Neighbor's Wi-Fi | The Roach Runs This House Ep. 8"
+  caption: "He was guessing the neighbor's Wi-Fi password... the roach came through the vent WITH it 📶🪳\n\nWait for how he knows it 👀😭\n\nWhat's the worst Wi-Fi password you've ever guessed? 👇\n\nEp. 8 of The Roach Runs This House, an original animated comedy. Follow for new episodes."
+  hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#wifi", "#reels"]
 
-  4. Roach: "It''s KevinsMom1972."
+common:
+  vent: &vent {name: vent, x: 860, y: 900, z: 5}
 
-  5. Husband: "How do YOU know?"
+shots:
+  # ---------------------------------------------------------------- HOOK
+  - id: A
+    dur: 3.0
+    background: living_room
+    camera: {x: 560, y: 1180, zoom: 1.5}
+    props: [*vent]
+    actors:
+      husband: {x: 380, y: 1880, scale: 0.95, z: 20, action: present, expr: determined, look: right, hold: {R: phone_big}}
+    fx:
+      - {type: burst, at: 2.2, dur: 0.8, pos: [560, 380], world: false, text: "WRONG", size: 80, bg: "#E86A5B"}
+    sfx:
+      - {at: 2.2, name: buzzer, gain: 0.6}
+    lines:
+      - {id: L01, who: husband, at: 0.2, text: "password123... nope."}
 
-  6. Roach: "I live over there too."
+  - id: B
+    dur: 3.0
+    background: living_room
+    camera: {x: 560, y: 1180, zoom: 1.5}
+    props: [*vent]
+    actors:
+      husband: {x: 380, y: 1880, scale: 0.95, z: 20, action: present, expr: angry, look: right, hold: {R: phone_big},
+                keys: [{at: 2.2, action: scream, expr: screaming}]}
+    fx:
+      - {type: burst, at: 2.2, dur: 0.8, pos: [560, 380], world: false, text: "WRONG", size: 80, bg: "#E86A5B"}
+    sfx:
+      - {at: 1.2, name: buzzer, gain: 0.5}
+      - {at: 2.2, name: buzzer, gain: 0.6}
+    lines:
+      - {id: L02, who: husband, at: 0.2, text: "Kevin... KEVIN1... nope!"}
 
-  7. Wife: "You have a SIDE house?!"
+  - id: C
+    dur: 3.0
+    background: living_room
+    camera: {x: 800, y: 1180, zoom: 1.5}
+    props: [*vent]
+    actors:
+      wife: {x: 800, y: 1880, scale: 1.0, z: 21, action: cross_arms, expr: sideeye, look: left}
+    lines:
+      - {id: L03, who: wife, at: 0.2, text: "You're stealing Kevin's Wi-Fi now?"}
 
-  8. Roach: "I got two families. I''m a busy man." (climbs back in vent)'
-shots: []
+  # ---------------------------------------------------------------- THE VENT
+  - id: D
+    dur: 3.0
+    background: living_room
+    camera: {x: 600, y: 1150, zoom: 1.0}
+    props: [*vent]
+    actors:
+      husband: {x: 330, y: 1880, scale: 0.95, z: 20, action: idle, expr: angry, look: right, hold: {R: phone_big},
+                keys: [{at: 0.4, expr: shocked, look: right}]}
+      wife: {x: 640, y: 1880, scale: 1.0, z: 21, action: cross_arms, expr: sideeye, look: right,
+             keys: [{at: 0.4, expr: shocked}]}
+      roach: {x: 860, y: 880, scale: 0.6, z: 6, action: jump, expr: smug, hold: {R: sticky_note},
+              keys: [{at: 1.6, y: 1880, from: 0.9, ease: in}, {at: 1.6, action: hips, z: 22, look: camera}]}
+    fx:
+      - {type: shake, at: 0.1, dur: 0.6, amp: 8}
+      - {type: marks, at: 0.4, dur: 1.4, pos: [330, 760], text: "!!"}
+    sfx:
+      - {at: 0.1, name: scuttle, gain: 0.7}
+      - {at: 0.9, name: slide_whistle_down, gain: 0.6}
+      - {at: 1.6, name: boing, gain: 0.7}
+
+  - id: E
+    dur: 3.2
+    background: living_room
+    camera: {x: 860, y: 1640, zoom: 2.4}
+    props: [*vent]
+    actors:
+      roach: {x: 860, y: 1880, scale: 0.6, z: 22, action: hold_up, expr: smug, look: camera, hold: {R: sticky_note}}
+    lines:
+      - {id: L04, who: roach, at: 0.2, text: "It's KevinsMom1972."}
+
+  - id: F
+    dur: 2.6
+    background: living_room
+    camera: {x: 420, y: 1180, zoom: 1.5}
+    actors:
+      husband: {x: 380, y: 1880, scale: 0.95, z: 20, action: shrug, expr: confused, look: right, hold: {R: phone_big}}
+    lines:
+      - {id: L05, who: husband, at: 0.2, text: "How do YOU know that?"}
+
+  # ---------------------------------------------------------------- PUNCHLINE
+  - id: G
+    dur: 2.6
+    background: living_room
+    camera: {x: 860, y: 1640, zoom: 2.4}
+    props: [*vent]
+    actors:
+      roach: {x: 860, y: 1880, scale: 0.6, z: 22, action: hips, expr: unbothered, look: camera, hold: {R: sticky_note}}
+    lines:
+      - {id: L06, who: roach, at: 0.2, text: "I live over there too."}
+
+  - id: H
+    dur: 2.6
+    background: living_room
+    camera: {x: 700, y: 1180, zoom: 1.6}
+    actors:
+      wife: {x: 700, y: 1880, scale: 1.0, z: 21, action: scream, expr: shocked, look: right}
+    fx:
+      - {type: shake, at: 0.1, dur: 0.6, amp: 12}
+    sfx:
+      - {at: 0.05, name: record_scratch, gain: 0.7}
+      - {at: 1.9, name: gasp_sting, gain: 0.6}
+    lines:
+      - {id: L07, who: wife, at: 0.2, text: "You have a SIDE house?!"}
+
+  # ---------------------------------------------------------------- LOOP ENDING
+  - id: I
+    dur: 3.4
+    background: living_room
+    camera: {x: 700, y: 1200, zoom: 1.0}
+    props: [*vent]
+    actors:
+      husband: {x: 330, y: 1880, scale: 0.95, z: 20, action: present, expr: pleading, look: right, hold: {R: phone_big}}
+      wife: {x: 600, y: 1880, scale: 1.0, z: 21, action: hips, expr: furious, look: right}
+      roach: {x: 860, y: 1880, scale: 0.6, z: 22, action: wave, expr: happy, look: camera,
+              keys: [{at: 2.3, action: jump, z: 6}, {at: 3.0, y: 880, from: 2.3, ease: out}, {at: 3.0, visible: false}]}
+    sfx:
+      - {at: 2.3, name: slide_whistle_up, gain: 0.6}
+      - {at: 3.0, name: scuttle, gain: 0.6}
+    lines:
+      - {id: L08, who: roach, at: 0.2, text: "Two families. I'm a busy man."}

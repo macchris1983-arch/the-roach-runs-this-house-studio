@@ -407,11 +407,13 @@ def fx_overlay(frame: Image.Image, fx: dict, t: float, cam):
         if kind == "burst":
             pts = []
             n = 14
-            R = size * (1.6 + 0.25 * len(txt) / 3)
+            tw = f.getlength(txt)
+            rx = max(size * 2.0, tw * 0.5 / 0.72 + size * 0.45)   # inner points clear the text
+            ry = max(size * 1.36, size * 0.8 / 0.72 + size * 0.35)
             for i in range(2 * n):
-                rr = R if i % 2 == 0 else R * 0.72
+                k = 1.0 if i % 2 == 0 else 0.72
                 a = math.pi * i / n + t * 0.8
-                pts.append((x + math.cos(a) * rr * 1.25, y + math.sin(a) * rr * 0.85))
+                pts.append((x + math.cos(a) * rx * k, y + math.sin(a) * ry * k))
             d.polygon(pts, fill=rgba(fx.get("bg", "#FFD23F")), outline=(30, 20, 16), width=8)
         d.text((x, y), txt, font=f, fill=rgba(fx.get("color", "#FFFFFF")), anchor="mm",
                stroke_width=max(4, size // 12), stroke_fill=(30, 20, 16))
@@ -458,11 +460,36 @@ def fx_overlay(frame: Image.Image, fx: dict, t: float, cam):
             r = fx.get("radius", 10) * cam.zoom
             d = ImageDraw.Draw(frame)
             d.ellipse([x - r, y - r, x + r, y + r], fill=rgba(fx.get("color", "#FF3B30")))
+    elif kind == "spotlight":   # dark room lit by one soft pool of light (fridge, phone, lamp)
+        x, y = cam.to_screen(*fx["pos"])
+        rx, ry = fx.get("radius", (260, 420))
+        rx, ry = rx * cam.zoom, ry * cam.zoom
+        W2, H2 = W // 4, H // 4
+        m = Image.new("L", (W2, H2), 0)
+        ImageDraw.Draw(m).ellipse([(x - rx) / 4, (y - ry) / 4, (x + rx) / 4, (y + ry) / 4], fill=255)
+        m = m.filter(ImageFilter.GaussianBlur(max(4, int(rx / 12)))).resize((W, H), Image.BILINEAR)
+        dark = Image.blend(frame, Image.new("RGB", frame.size, (12, 14, 40)), fx.get("amount", 0.8))
+        if fx.get("tint"):
+            lit = Image.blend(frame, Image.new("RGB", frame.size, fx["tint"]), 0.12)
+        else:
+            lit = frame
+        frame.paste(Image.composite(lit, dark, m))
+    elif kind == "camfeed":   # grainy security-camera look
+        g = frame.convert("L").convert("RGB")
+        g = Image.blend(g, Image.new("RGB", frame.size, (40, 70, 40)), 0.18)
+        d = ImageDraw.Draw(g)
+        for yy in range(0, H, 6):
+            d.line([(0, yy), (W, yy)], fill=(0, 0, 0), width=1)
+        if int(t * 2) % 2 == 0:
+            d.ellipse([60, 120, 100, 160], fill=(230, 40, 40))
+        d.text((120, 140), "REC  CAM 2  KITCHEN", font=font(44), fill=(235, 235, 235), anchor="lm")
+        d.text((W - 60, 140), fx.get("stamp", "03:12:44"), font=font(40), fill=(235, 235, 235), anchor="rm")
+        frame.paste(g)
     else:
         raise KeyError(f"Unknown fx '{kind}'")
 
 
-FX_TYPES = ["flash", "darkness", "vignette", "speedlines", "text", "burst", "sweat", "marks", "dust", "shake", "smoke", "blink"]
+FX_TYPES = ["flash", "darkness", "vignette", "speedlines", "text", "burst", "sweat", "marks", "dust", "shake", "smoke", "blink", "spotlight", "camfeed"]
 
 
 @functools.lru_cache(maxsize=4)
@@ -478,3 +505,179 @@ def _vignette_mask(size, amount):
 def _vignette(frame, amount):
     black = Image.new("RGB", frame.size, (10, 8, 20))
     frame.paste(Image.composite(frame, black, _vignette_mask(frame.size, amount)))
+
+
+
+# ----------------------------------------------------------------------------
+# Season 1, episodes 5-10 props
+# ----------------------------------------------------------------------------
+def _label_text(p, x, y, text, size, color="#1E1410"):
+    f = font(max(6, int(size * p.s)))
+    p.d.text(p.p(x, y), text, font=f, fill=rgba(color), anchor="mm")
+
+
+def _fridge_open(p):   # open fridge interior + door, placed at the fridge's bottom-left (x=820, y=1580)
+    p.rrect(0, -820, 270, 0, 22, fill="#FFF8DC", width=7)
+    p.rrect(18, -800, 252, -20, 14, fill="#FFFDF0", outline="#E6DDB8", width=4)
+    for y in (-600, -420, -240):
+        p.line([(22, y), (248, y)], color="#B9C4C8", width=10, round_caps=False)
+    p.circle(135, -770, 16, fill="#FFF3A0", width=3)
+    p.rrect(40, -680, 110, -600, 10, fill="#F49AC1", width=4)       # leftovers
+    p.rrect(150, -470, 220, -420, 8, fill="#3E8E4A", width=4)
+    p.rrect(40, -330, 120, -240, 8, fill="#FFFFFF", width=4)
+    p.poly([(-150, -820), (0, -800), (0, -20), (-150, 0)], fill="#EEF2F3", width=7)   # door swung open
+    p.rrect(-120, -700, -100, -520, 6, fill="#B7C2C6", width=4)
+
+
+def _cake(p):
+    p.ellipse(0, -8, 100, 22, fill="#FFFFFF", width=5)
+    p.poly([(-80, -8), (80, -8), (70, -90), (-70, -90)], fill="#7A4A2A", width=5)
+    p.ellipse(0, -90, 72, 18, fill="#F6A8D3", width=5)
+    p.poly([(-70, -90), (-50, -60), (-30, -88), (-10, -62), (10, -88), (30, -60), (50, -88), (70, -90)], fill="#F6A8D3", outline=None, width=0)
+    p.circle(0, -110, 14, fill="#E03A3A", width=4)
+    p.poly([(60, -95), (95, -12), (60, -12)], fill="#FFFFFF", outline=None, width=0)  # a slice missing
+
+
+def _fork(p):
+    p.line([(0, 0), (0, -80)], color="#1E1410", width=13)
+    p.line([(0, 0), (0, -80)], color="#C9D2D6", width=7)
+    p.rrect(-16, -110, 16, -78, 4, fill="#C9D2D6", width=4)
+    for x in (-10, 0, 10):
+        p.line([(x, -110), (x, -132)], color="#1E1410", width=6)
+
+
+def _clipboard(p):
+    p.rrect(-48, -130, 48, 0, 8, fill="#B47C4B", width=5)
+    p.rect(-38, -112, 38, -10, fill="#FFFFFF")
+    for i in range(4):
+        p.line([(-28, -95 + i * 20), (24, -95 + i * 20)], color="#9AA4AE", width=4)
+    p.rrect(-20, -140, 20, -118, 4, fill="#C9D2D6", width=4)
+
+
+def _whistle(p):
+    p.ellipse(0, 0, 26, 20, fill="#E2B13C", width=5)
+    p.rrect(10, -16, 52, 6, 4, fill="#E2B13C", width=5)
+    p.circle(0, 0, 7, fill="#1E1410", outline=None, width=0)
+
+
+def _plate_dirty(p):
+    p.ellipse(0, -14, 110, 26, fill="#FFFFFF", width=5)
+    for i in range(7):
+        r = random.Random(80 + i)
+        p.circle(-60 + r.random() * 120, -18 + r.random() * 10, 9 + r.random() * 6, fill=r.choice(["#8A5A33", "#C0392B", "#6B4226"]), outline=None, width=0)
+
+
+def _chips(p):
+    p.poly([(-55, 0), (55, 0), (62, -160), (-62, -160)], fill="#E86A5B", width=5)
+    p.poly([(-62, -160), (62, -160), (50, -175), (-50, -175)], fill="#C9473A", width=4)
+    p.circle(0, -90, 34, fill="#F2D06B", width=4)
+    for i in range(4):
+        p.circle(-30 + i * 20, -168 - (i % 2) * 14, 14, fill="#F2C14E", width=3)
+
+
+def _sock(p):
+    p.poly([(-25, -120), (25, -120), (25, -30), (60, -10), (55, 15), (-25, 15)], fill="#FFFFFF", width=5)
+    p.rect(-25, -120, 25, -100, fill="#E86A5B")
+    p.rect(-25, -95, 25, -85, fill="#3E8E4A")
+
+
+def _takeout(p):
+    p.poly([(-75, 0), (75, 0), (95, -130), (-95, -130)], fill="#FFFFFF", width=6)
+    p.arc(0, -150, 46, 40, 200, 340, color="#9AA4AE", width=6)
+    p.rect(-70, -100, 70, -48, fill="#FFE45C")
+    p.poly([(-70, -100), (70, -100), (70, -48), (-70, -48)], fill=None, width=4)
+    _label_text(p, 0, -74, "DON'T TOUCH", 22)
+
+
+def _dumpling(p):
+    p.ellipse(0, -24, 52, 30, fill="#F6E7C8", width=5)
+    for i in range(5):
+        p.arc(-30 + i * 15, -46, 8, 10, 200, 340, width=4)
+
+
+def _envelope(p):
+    p.rect(-60, -80, 60, 0, fill="#F4EBD0")
+    p.poly([(-60, -80), (60, -80), (60, 0), (-60, 0)], fill=None, width=5)
+    p.line([(-60, -80), (0, -36), (60, -80)], width=5)
+    p.circle(0, -36, 10, fill="#C0392B", width=3)
+
+
+def _vent(p):   # wall vent, pivot at its bottom centre
+    p.rrect(-110, -110, 110, 0, 10, fill="#D7DCE0", width=6)
+    for i in range(6):
+        p.line([(-90, -92 + i * 16), (90, -92 + i * 16)], color="#7E8A92", width=7, round_caps=False)
+
+
+def _money(p):
+    p.rrect(-80, -40, 80, 0, 6, fill="#8FD19E", width=5)
+    p.circle(0, -20, 14, fill="#5BAF6E", width=3)
+    _label_text(p, -55, -20, "20", 20, "#1E5E28")
+    _label_text(p, 55, -20, "20", 20, "#1E5E28")
+
+
+def _grocery_bag(p):
+    p.poly([(-90, 0), (90, 0), (78, -200), (-78, -200)], fill="#C9A26B", width=6)
+    p.arc(-30, -200, 22, 30, 180, 360, width=6)
+    p.arc(30, -200, 22, 30, 180, 360, width=6)
+    p.line([(-60, -150), (60, -150)], color="#A9824F", width=4)
+
+
+def _soda(p):
+    p.rrect(-26, -110, 26, 0, 10, fill="#C0392B", width=5)
+    p.rect(-26, -78, 26, -40, fill="#FFFFFF")
+    p.rrect(-26, -110, 26, 0, 10, fill=None, width=5)
+    p.ellipse(0, -110, 26, 6, fill="#C9D2D6", width=3)
+
+
+def _lottery(p):
+    p.rrect(-48, -90, 48, 0, 6, fill="#FFD23F", width=5)
+    for i in range(3):
+        for j in range(2):
+            p.rrect(-36 + i * 26, -76 + j * 30, -16 + i * 26, -56 + j * 30, 4, fill="#BFC4C8", outline=None, width=0)
+    _label_text(p, 0, -12, "LUCKY 7", 14)
+
+
+def _eggs(p):
+    p.rrect(-80, -40, 80, 0, 6, fill="#D7C7A8", width=5)
+    for i in range(4):
+        p.ellipse(-60 + i * 40, -46, 15, 19, fill="#FFF6E8", width=4)
+
+
+def _scorecard(p):
+    p.rrect(-60, -110, 60, 0, 8, fill="#FFFFFF", width=5)
+    p.rect(-60, -110, 60, -84, fill="#5E3594")
+    p.poly([(-60, -110), (60, -110), (60, 0), (-60, 0)], fill=None, width=5)
+
+
+def _lamp(p):   # floor lamp, pivot at its base; shade top at y=-600
+    p.ellipse(0, -6, 60, 14, fill="#3A3A40", width=5)
+    p.line([(0, -10), (0, -470)], color="#1E1410", width=16)
+    p.line([(0, -10), (0, -470)], color="#C9A26B", width=8)
+    p.poly([(-95, -470), (95, -470), (60, -600), (-60, -600)], fill="#F2D49B", width=6)
+
+
+def _title_card(p):
+    pass
+
+
+PROPS.update({
+    "fridge_open": ((-160, -830, 280, 10), _fridge_open, (0, 0), 0),
+    "cake": ((-110, -130, 110, 20), _cake, (0, -40), None),
+    "fork": ((-25, -140, 25, 10), _fork, (0, -10), 180),
+    "clipboard": ((-55, -148, 55, 8), _clipboard, (0, -40), None),
+    "whistle": ((-35, -25, 60, 25), _whistle, (0, 0), None),
+    "plate_dirty": ((-118, -45, 118, 16), _plate_dirty, (0, 0), 0),
+    "chips": ((-75, -195, 75, 8), _chips, (0, -60), None),
+    "sock": ((-35, -128, 68, 22), _sock, (0, 0), 0),
+    "takeout": ((-105, -195, 105, 10), _takeout, (0, -10), None),
+    "dumpling": ((-60, -60, 60, 10), _dumpling, (0, -20), None),
+    "envelope": ((-68, -88, 68, 8), _envelope, (0, -20), None),
+    "vent": ((-118, -118, 118, 8), _vent, (0, 0), 0),
+    "money": ((-88, -48, 88, 8), _money, (0, -20), None),
+    "grocery_bag": ((-98, -235, 98, 8), _grocery_bag, (0, -200), None),
+    "soda": ((-34, -120, 34, 8), _soda, (0, -40), None),
+    "lottery": ((-56, -98, 56, 8), _lottery, (0, -20), None),
+    "eggs": ((-88, -70, 88, 8), _eggs, (0, -10), None),
+    "scorecard": ((-68, -118, 68, 8), _scorecard, (0, -10), None),
+    "lamp": ((-100, -610, 100, 24), _lamp, (0, 0), 0),
+})

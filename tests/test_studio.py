@@ -172,7 +172,7 @@ def test_outline_episodes_are_not_marked_scripted():
             assert s["stages"]["render"]["state"] in ("todo", "stale")
 
 
-@pytest.mark.parametrize("ep_id", ["s01e01", "s01e02", "s01e03", "s01e04"])
+@pytest.mark.parametrize("ep_id", [f"s01e{n:02d}" for n in range(1, 11)])
 def test_produced_episodes_are_valid_with_clean_timing(ep_id):
     ep = episode.load(pipeline.find(ep_id))
     assert episode.validate(ep) == []
@@ -232,3 +232,26 @@ def test_full_render_qc_approve_export(sandbox):
 def test_voice_handles_words_without_vowels():
     a, onsets = audio.babble("Mm-hm. Hmm. Shh! 123", rigs.bible()["roach"]["voice"], seed=1)
     assert len(a) > 0 and len(onsets) >= 3
+
+
+def test_new_season_one_props_effects_and_costumes():
+    from functools import partial
+    for name in ("fridge_open", "cake", "clipboard", "takeout", "vent", "grocery_bag", "lamp", "scorecard"):
+        img, _, _ = world.prop_image(name, 100, 0)
+        assert img.getbbox() is not None
+    assert "spotlight" in world.FX_TYPES and "camfeed" in world.FX_TYPES
+    badge, _, _ = rigs.render_character("roach", {"variants": {"torso": "badge"}}, 0.5, 0.1)
+    label, _, _ = rigs.render_character("husband", {"variants": {"accessory": "label"}}, 0.3, 0.1)
+    assert badge.getbbox() and label.getbbox()
+    assert audio.sfx("whistle").max() > 0.2
+
+
+def test_spotlight_lasts_the_whole_shot():
+    P = episode.plan(episode.load(pipeline.find("s01e05")))
+    fr = render.FrameRenderer(P)
+    shot = next(s for s in P.shots if s["id"] == "B")
+    early = fr.render(int((shot["_start"] + 0.2) * 30)).convert("L")
+    late = fr.render(int((shot["_end"] - 0.2) * 30)).convert("L")
+    # the room stays dark outside the fridge light late in the shot too
+    corner = (40, 1700, 240, 1900)
+    assert sum(late.crop(corner).getdata()) < sum(early.crop(corner).getdata()) * 1.3

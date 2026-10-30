@@ -1,26 +1,168 @@
-# The Roach Gets Promoted - OUTLINE STAGE. Break the beats into shots (see s01e01) to produce it.
+# The Roach Runs This House - S01E06 "The Roach Gets Promoted"
+# Kitchen landmarks: countertop y=1150, floor y=1580, table top y=1330 at x=720.
 id: s01e06
 slug: the-roach-gets-promoted
 season: 1
 episode: 6
 title: The Roach Gets Promoted
 logline: The Wife makes the Roach Head of Pest Control to keep other bugs out, and he takes the job very seriously.
-hook: 'The Wife pins a tiny name tag on the Roach: HEAD OF PEST CONTROL.'
-punchline: The Roach starts writing the Husband up for violations (dirty dishes, open chips, socks on the floor)
-  and pays his rent with the fines.
-outline: '1. Wife pins the tiny name tag on the Roach
-
+hook: The Wife pins a tiny name tag on the Roach - HEAD OF PEST CONTROL.
+punchline: >-
+  The Roach writes the Husband up for every mess in the house and pays his rent with the fines.
+  "You're paying rent with MY fines?!" "Code nine. Yelling."
+loop: Ends on a whistle blast, the same sound that starts his first ticket.
+outline: |-
+  1. Wife pins the name tag on the Roach
   2. Roach salutes, gets a clipboard
+  3. Husband leaves a dirty plate; whistle; "Code twelve. Crumbs."
+  4. Montage of tickets: chips left open, sock on the floor
+  5. Husband: "How much do I OWE?!"
+  6. Roach hands the Wife an envelope: "Your rent, ma'am."
+  7. Husband: "You're paying rent with MY fines?!"
+  8. Roach: "Code nine. Yelling." *whistle*
+thumbnail_at: 3.6
+thumbnail_text: "Head of pest control"
+cover_at: 3.0
+voice_provider: babble
+music: {enabled: true, mood: sitcom_bounce, bpm: 116, root_midi: 47, seed: 606, gain: 0.2}
+reels:
+  title: "The Roach Gets Promoted | The Roach Runs This House Ep. 6"
+  caption: "She gave the roach ONE job. Now he's writing tickets 🪳📋\n\nWait for what he does with the fines 😭\n\nTag the person who'd get the most tickets in your house 👇\n\nEp. 6 of The Roach Runs This House, an original animated comedy. Follow for new episodes."
+  hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#reels"]
 
-  3. Husband leaves a dirty plate: Roach blows a whistle
+common:
+  table: &table {name: table, x: 720, y: 1330, z: 12}
+  badge: &badge {torso: badge}
 
-  4. Roach writes a ticket: "Code 12: crumbs."
+shots:
+  # ---------------------------------------------------------------- HOOK
+  - id: A
+    dur: 3.2
+    background: kitchen
+    camera: {x: 760, y: 1220, zoom: 1.6}
+    props: [*table]
+    actors:
+      roach: {x: 640, y: 1326, scale: 1.0, z: 13, action: idle, expr: neutral, look: right,
+              keys: [{at: 1.4, variants: *badge, expr: happy, look: camera}]}
+      wife: {x: 900, y: 1880, scale: 1.0, z: 20, action: point_L, expr: happy, look: left,
+             keys: [{at: 1.4, action: hips}]}
+    fx:
+      - {type: flash, at: 1.4, dur: 0.15}
+      - {type: text, at: 1.45, dur: 1.6, pos: [640, 900], text: "PROMOTED!", size: 80, color: "#FFE45C"}
+    sfx:
+      - {at: 1.4, name: ding, gain: 0.6}
+      - {at: 1.45, name: victory, gain: 0.5}
+    lines:
+      - {id: L01, who: wife, at: 0.15, text: "Congratulations. Head of Pest Control."}
 
-  5. Montage: chips open, sock on floor, more tickets
+  - id: B
+    dur: 2.8
+    background: kitchen
+    camera: {x: 640, y: 1150, zoom: 2.3}
+    props: [*table]
+    actors:
+      roach: {x: 640, y: 1326, scale: 1.0, z: 13, action: phone, expr: determined, look: camera,
+              variants: *badge, hold: {L: clipboard}}
+    lines:
+      - {id: L02, who: roach, at: 0.2, text: "I won't let you down, ma'am."}
 
-  6. Husband: "How much do I owe?!"
+  # ---------------------------------------------------------------- FIRST TICKET
+  - id: C
+    dur: 3.4
+    background: kitchen
+    camera: {x: 560, y: 1250, zoom: 1.05}
+    props:
+      - *table
+      - {name: plate_dirty, x: 520, y: 1322, z: 14, visible: false, keys: [{at: 0.7, visible: true}]}
+    actors:
+      husband: {x: 330, y: 1840, scale: 0.95, z: 20, action: present, expr: unbothered, look: right,
+                keys: [{at: 0.7, action: walk}, {at: 1.2, action: freeze, expr: shocked, look: right}]}
+      roach: {x: 720, y: 1326, scale: 1.0, z: 13, action: idle, expr: smug, variants: *badge, hold: {R: whistle},
+              keys: [{at: 1.0, action: hold_up, expr: angry}]}
+    fx:
+      - {type: marks, at: 1.1, dur: 1.2, pos: [330, 760], text: "!!"}
+    sfx:
+      - {at: 0.7, name: pop, gain: 0.5}
+      - {at: 1.0, name: whistle, gain: 0.7}
+    lines:
+      - {id: L03, who: roach, at: 1.5, text: "HOLD IT. Code twelve. Crumbs."}
 
-  7. Roach hands the Wife an envelope: "Rent."
+  - id: D
+    dur: 2.8
+    background: kitchen
+    camera: {x: 720, y: 1150, zoom: 2.2}
+    props: [*table]
+    actors:
+      roach: {x: 720, y: 1326, scale: 1.0, z: 13, action: read, expr: determined, variants: *badge, hold: {R: clipboard}}
+    fx:
+      - {type: burst, at: 1.5, dur: 1.3, pos: [540, 520], world: false, text: "TICKET!", size: 90, bg: "#FFD23F"}
+    sfx:
+      - {at: 1.5, name: ding, gain: 0.5}
+    lines:
+      - {id: L04, who: husband, at: 0.2, text: "Are you SERIOUS?"}
 
-  8. Husband: "You''re paying rent with MY fines?!"'
-shots: []
+  # ---------------------------------------------------------------- MONTAGE
+  - id: E
+    dur: 3.8
+    background: kitchen
+    camera: {x: 560, y: 1250, zoom: 1.05}
+    props:
+      - *table
+      - {name: plate_dirty, x: 520, y: 1322, z: 14}
+      - {name: chips, x: 900, y: 1322, z: 14, scale: 0.8}
+      - {name: sock, x: 640, y: 1890, z: 25, scale: 0.8}
+    actors:
+      husband: {x: 280, y: 1840, scale: 0.95, z: 20, action: shrug, expr: nervous, look: right,
+                keys: [{at: 2.5, action: tremble, expr: scared}]}
+      roach: {x: 720, y: 1326, scale: 1.0, z: 13, action: hold_up, expr: angry, variants: *badge, hold: {R: whistle}}
+    fx:
+      - {type: burst, at: 0.2, dur: 0.8, pos: [520, 1150], text: "$5", size: 70, bg: "#FFD23F"}
+      - {type: burst, at: 1.0, dur: 0.8, pos: [900, 1070], text: "$10", size: 70, bg: "#FFD23F"}
+      - {type: burst, at: 1.8, dur: 0.8, pos: [640, 1700], text: "$15", size: 70, bg: "#FFD23F"}
+    sfx:
+      - {at: 0.2, name: whistle, gain: 0.55}
+      - {at: 1.0, name: whistle, gain: 0.55}
+      - {at: 1.8, name: whistle, gain: 0.55}
+    lines:
+      - {id: L05, who: husband, at: 2.55, text: "How much do I OWE?!"}
+
+  # ---------------------------------------------------------------- PUNCHLINE
+  - id: F
+    dur: 3.8
+    background: kitchen
+    camera: {x: 850, y: 1180, zoom: 1.35}
+    props: [*table]
+    actors:
+      roach: {x: 720, y: 1326, scale: 1.0, z: 13, action: hold_up, expr: happy, look: right, variants: *badge, hold: {R: envelope},
+              keys: [{at: 1.8, hold: {}, action: hips, expr: smug}]}
+      wife: {x: 1010, y: 1880, scale: 1.0, z: 20, action: idle, expr: neutral, look: left,
+             keys: [{at: 1.8, action: read, hold: {R: envelope}, expr: happy, look: camera}]}
+    sfx:
+      - {at: 1.8, name: ding, gain: 0.5}
+    lines:
+      - {id: L06, who: roach, at: 0.2, text: "Your rent, ma'am."}
+      - {id: L07, who: wife, at: 2.3, text: "Good man."}
+
+  - id: G
+    dur: 3.0
+    background: kitchen
+    camera: {x: 330, y: 1100, zoom: 1.7}
+    actors:
+      husband: {x: 330, y: 1840, scale: 0.95, z: 20, action: scream, expr: screaming, look: right}
+    fx:
+      - {type: shake, at: 0.1, dur: 1.6, amp: 16}
+    lines:
+      - {id: L08, who: husband, at: 0.15, text: "You're paying rent with MY fines?!"}
+
+  # ---------------------------------------------------------------- LOOP ENDING
+  - id: H
+    dur: 2.8
+    background: kitchen
+    camera: {x: 720, y: 1150, zoom: 2.3}
+    props: [*table]
+    actors:
+      roach: {x: 720, y: 1326, scale: 1.0, z: 13, action: hold_up, expr: smug, look: camera, variants: *badge, hold: {R: whistle}}
+    sfx:
+      - {at: 2.0, name: whistle, gain: 0.7}
+    lines:
+      - {id: L09, who: roach, at: 0.2, text: "Code nine. Yelling."}
