@@ -22,11 +22,14 @@ outline: |-
   7. Roach behind him holds up the jar
   8. Wife slides the Husband's plate to the Roach: "Family, huh?" Roach: "Merci."
   9. Husband alone with burnt toast: "...It's crunchy."
+thumbnail_at: 11.4
+thumbnail_text: "The roach can cook?!"
 cover_at: 0.8
 voice_provider: babble
 music: {enabled: true, mood: sitcom_bounce, bpm: 112, root_midi: 48, seed: 303, gain: 0.2}
 reels:
-  caption: "He said 'secret family recipe' with his whole chest 😭🪳 #TheRoachRunsThisHouse"
+  title: "The Dinner Disaster | The Roach Runs This House Ep. 3"
+  caption: "He burned the romantic dinner. The roach saved it. Then he said \"secret family recipe\" with his WHOLE chest 🔥🍝🪳\n\nWatch who gets his plate 😭\n\nTag someone who takes credit for everything 👇\n\nEp. 3 of The Roach Runs This House, an original animated comedy. Follow for new episodes."
   hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#reels"]
 
 common:

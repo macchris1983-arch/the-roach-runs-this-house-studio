@@ -14,12 +14,15 @@ logline: >
 hook: Lights flick on and a roach is calmly eating the Husband's cereal with a spoon.
 punchline: "\"Since HE stopped.\" The slipper turns on the Husband."
 loop: Ends with the Roach clicking the light off mid-bite, which loops into the dark opening.
+thumbnail_at: 15.2
+thumbnail_text: "The roach pays rent?!"
 cover_at: 1.4
 voice_provider: babble   # put recorded WAVs in voice/<line id>.wav to replace any line
 music: {enabled: true, mood: sneaky_funk, bpm: 104, root_midi: 45, seed: 101, gain: 0.2}
 
 reels:
-  caption: "He said 'BABE' like the roach was the problem 😭 #TheRoachRunsThisHouse"
+  title: "Kitchen Roach Panic | The Roach Runs This House Ep. 1"
+  caption: "He screamed for backup over ONE roach... then the roach pulled out a rent receipt 🧾🪳\n\nWait for who STOPPED paying 👀\n\nTag the person in your house who'd lose this argument 😭\n\nEp. 1 of The Roach Runs This House, an original animated comedy. Follow for new episodes."
   hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#reels"]
 
 common:

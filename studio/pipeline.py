@@ -235,7 +235,9 @@ def export(ep_dir: Path) -> Path:
     name = f"{ep['id']}-{ep.get('slug', 'episode')}"
     shutil.copy2(rd / man["video"], ex / f"{name}.mp4")
     shutil.copy2(rd / "captions.srt", ex / f"{name}.en_US.srt")
-    for f in ("cover.jpg", "qc_report.md", "contact_sheet.jpg"):
+    from . import thumbnail
+    thumbnail.make_thumbnail(ep_dir, rd / "thumbnail.jpg")
+    for f in ("thumbnail.jpg", "cover.jpg", "qc_report.md", "contact_sheet.jpg"):
         if (rd / f).exists():
             shutil.copy2(rd / f, ex / f)
     reels = ep.get("reels") or {}
@@ -244,6 +246,7 @@ def export(ep_dir: Path) -> Path:
     if tags and not all(t in caption for t in reels.get("hashtags", [])):
         caption = f"{caption}\n\n{tags}"
     (ex / "post.txt").write_text(caption + "\n")
+    (ex / "title.txt").write_text(reels.get("title", ep["title"]) + "\n")
     (ex / "POSTING_CHECKLIST.md").write_text(
         f"# Posting checklist - {ep['title']}\n\n"
         "Nothing has been posted. This package is ready for YOU to upload.\n\n"
@@ -251,10 +254,11 @@ def export(ep_dir: Path) -> Path:
         "2. Paste the caption from `post.txt`\n"
         "3. Captions are already burned into the video. Facebook also accepts `.srt` files on some upload\n"
         "   screens; if yours offers it, upload the `.srt` too (the filename's `en_US` tells Facebook the language).\n"
-        "4. Pick `cover.jpg` (or a frame from the first 2 seconds) as the cover\n"
+        "4. Upload `thumbnail.jpg` as the custom cover (title from `title.txt`)\n"
         "5. Audience: Public. Check the preview on your phone before posting\n")
     rec = {"episode_id": ep["id"], "exported_at": _now(), "video": f"{name}.mp4",
            "video_sha256": sha256(ex / f"{name}.mp4"), "captions": f"{name}.en_US.srt", "post_text": "post.txt",
+           "thumbnail": "thumbnail.jpg", "title": reels.get("title", ep["title"]),
            "duration": man["duration"], "published": False}
     (ex / "export.json").write_text(json.dumps(rec, indent=2))
     return ex

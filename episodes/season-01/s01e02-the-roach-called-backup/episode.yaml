@@ -21,11 +21,14 @@ outline: |-
   6. Husband looks to Wife for help
   7. Wife: "HE has a lawyer... and YOU don't have a job?"
   8. Husband lifts the cup; Roach walks out, backup roaches cheer
+thumbnail_at: 15.8
+thumbnail_text: "He called his lawyer"
 cover_at: 1.2
 voice_provider: babble
 music: {enabled: true, mood: sneaky_funk, bpm: 100, root_midi: 43, seed: 202, gain: 0.2}
 reels:
-  caption: "He trapped ONE roach. The roach called his lawyer 💼🪳 #TheRoachRunsThisHouse"
+  title: "The Roach Called Backup | The Roach Runs This House Ep. 2"
+  caption: "He finally trapped the roach under a cup. The roach made ONE phone call 📞🪳💼\n\nWait for what the wife says at the end 😭\n\nWho in your house needs a lawyer right now? 👇\n\nEp. 2 of The Roach Runs This House, an original animated comedy. Follow for new episodes."
   hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#reels"]
 
 common:

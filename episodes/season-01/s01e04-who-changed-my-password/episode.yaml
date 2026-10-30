@@ -22,11 +22,14 @@ outline: |-
   7. Husband: "THE ROACH RUNS THIS HOUSE!"
   8. Roach tosses the sticky note to the Wife. Husband: "WHY does SHE get it for free?!"
   9. Roach: "She pays."
+thumbnail_at: 9.2
+thumbnail_text: "Who changed the Wi-Fi?!"
 cover_at: 0.9
 voice_provider: babble
 music: {enabled: true, mood: sneaky_funk, bpm: 98, root_midi: 41, seed: 404, gain: 0.2}
 reels:
-  caption: "The password is... yeah. He had to say it 😭🪳 #TheRoachRunsThisHouse"
+  title: "Who Changed My Password? | The Roach Runs This House Ep. 4"
+  caption: "The Wi-Fi password changed overnight... and the new one is DISRESPECTFUL 📶🪳\n\nHe had to say it out loud 😭 Watch till the end for who gets it for free.\n\nWhat would you do for the Wi-Fi password? 👇\n\nEp. 4 of The Roach Runs This House, an original animated comedy. Follow for new episodes."
   hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#wifi", "#reels"]
 
 common:

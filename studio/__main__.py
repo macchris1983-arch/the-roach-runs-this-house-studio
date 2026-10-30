@@ -44,6 +44,8 @@ def main(argv=None):
     sub.add_parser("sfx", help="export the sound-effect library as WAV files")
     p = sub.add_parser("prompts", help="write image/video-generation prompts for each shot (for optional external tools)")
     p.add_argument("episode")
+    p = sub.add_parser("thumbnail", help="make the Reel cover thumbnail")
+    p.add_argument("episode")
     p = sub.add_parser("dashboard", help="start the local production dashboard")
     p.add_argument("--port", type=int, default=8765)
     p.add_argument("--host", default="127.0.0.1")
@@ -106,6 +108,9 @@ def main(argv=None):
     elif a.cmd == "prompts":
         from . import prompts
         print(prompts.write_prompts(pipeline.find(a.episode)))
+    elif a.cmd == "thumbnail":
+        from . import thumbnail
+        print(thumbnail.make_thumbnail(pipeline.find(a.episode)))
     elif a.cmd == "dashboard":
         from . import dashboard
         dashboard.serve(a.host, a.port)
