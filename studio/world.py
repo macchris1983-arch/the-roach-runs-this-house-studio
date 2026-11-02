@@ -656,6 +656,29 @@ def _lamp(p):   # floor lamp, pivot at its base; shade top at y=-600
     p.poly([(-95, -470), (95, -470), (60, -600), (-60, -600)], fill="#F2D49B", width=6)
 
 
+def _spray_can(p):   # bug spray, held by the can; nozzle at the top
+    p.rrect(-34, -190, 34, 0, 10, fill="#E8E8EC", width=5)
+    p.rect(-34, -150, 34, -50, fill="#2E8B3E")
+    _label_text(p, 0, -112, "BUG", 22, "#FFFFFF")
+    _label_text(p, 0, -80, "AWAY", 18, "#FFE45C")
+    p.rrect(-34, -190, 34, 0, 10, fill=None, width=5)
+    p.rrect(-16, -222, 16, -190, 4, fill="#C0392B", width=4)
+    p.rect(14, -214, 34, -204, fill="#1E1410")
+
+
+def _glue_trap(p):   # flat sticky trap, pivot at its bottom centre
+    p.poly([(-120, 0), (120, 0), (95, -46), (-95, -46)], fill="#FFE45C", width=6)
+    p.poly([(-92, -8), (92, -8), (76, -38), (-76, -38)], fill="#F2C94C", outline=None, width=0)
+    _label_text(p, 0, -23, "STICKY TRAP", 16, "#7A4A2A")
+
+
+def _boxing_glove(p):
+    p.ellipse(0, -60, 58, 62, fill="#D7263D", width=6)
+    p.ellipse(-48, -70, 22, 30, fill="#D7263D", width=5)
+    p.rrect(-40, -8, 40, 26, 8, fill="#FFFFFF", width=5)
+    p.arc(10, -80, 26, 16, 200, 330, color="#F27C8A", width=6)
+
+
 def _title_card(p):
     pass
 
@@ -680,4 +703,7 @@ PROPS.update({
     "eggs": ((-88, -70, 88, 8), _eggs, (0, -10), None),
     "scorecard": ((-68, -118, 68, 8), _scorecard, (0, -10), None),
     "lamp": ((-100, -610, 100, 24), _lamp, (0, 0), 0),
+    "spray_can": ((-40, -230, 40, 8), _spray_can, (0, -70), None),
+    "glue_trap": ((-128, -54, 128, 8), _glue_trap, (0, -20), 0),
+    "boxing_glove": ((-76, -128, 66, 34), _boxing_glove, (0, 0), None),
 })

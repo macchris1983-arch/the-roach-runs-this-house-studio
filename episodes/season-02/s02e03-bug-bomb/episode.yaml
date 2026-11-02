@@ -1,0 +1,175 @@
+# The Roach Runs This House - S02E03 "Bug Bomb"  (Roach Wars, part 3)
+# Kitchen landmarks: countertop y=1150 (x 0-820), fridge x 820-1090, floor y=1580, table top y=1330 at x=720.
+id: s02e03
+slug: bug-bomb
+season: 2
+episode: 3
+title: Bug Bomb
+logline: Roach Wars, round two. The Husband fogs the kitchen with military-grade bug spray; the Roach comes out of the fog in a towel, thanking him for the sauna.
+hook: "BUG BOMB! The Husband holds up a giant spray can: \"Military grade.\""
+punchline: >-
+  The fog clears and the Roach is relaxing on the table in a towel: "Ahh. Thanks for the sauna." The can says
+  lavender scent, and the Wife loves how the kitchen smells.
+loop: Ends with the Husband spraying himself in the face and the Roach repeating "Military grade."
+outline: |-
+  1. BUG BOMB! Husband: "Military grade."
+  2. He sprays the whole kitchen: "Nothing survives this!"
+  3. Total fog. "*cough* ...nothing."
+  4. Fog clears: the Roach in a towel. "Ahh. Thanks for the sauna."
+  5. Husband: "That was MILITARY GRADE!"
+  6. Roach reads the can: "Says here... lavender scent."
+  7. Wife walks in: "Why does my kitchen smell like a spa?"
+  8. Wife: "...Honestly? It's nice."  Roach: "I added eucalyptus."
+  9. Husband sprays again, backwards, into his own face. Roach: "Military grade."
+thumbnail_at: 1.1
+thumbnail_text: "Bug spray vs roach"
+cover_at: 1.1
+voice_provider: babble
+music: {enabled: true, mood: sneaky_funk, bpm: 102, root_midi: 44, seed: 2303, gain: 0.2}
+reels:
+  title: "Bug Bomb | The Roach Runs This House S2 Ep. 3"
+  caption: "He bug-bombed the whole kitchen... and the roach came out RELAXED 🧴🪳\n\nWait for what the can actually says 😭\n\nWho in your house thinks bug spray works? 👇\n\nROACH WARS, Season 2, Ep. 3 of The Roach Runs This House, an original animated comedy. Follow for the next round."
+  hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#reels"]
+
+common:
+  table: &table {name: table, x: 720, y: 1330, z: 12}
+  roach_table: &roach_table {x: 700, y: 1326, scale: 1.0, z: 13}
+  husband_spot: &husband_spot {x: 280, y: 1880, scale: 0.95, z: 20}
+  fog_in: &fog_in {type: flash, color: "#D9D4C8", at: 0.0, dur: 6.0}
+
+shots:
+  # ---------------------------------------------------------------- HOOK
+  - id: A
+    dur: 2.8
+    background: kitchen
+    camera: {x: 520, y: 1250, zoom: 1.0, keys: [{at: 2.6, x: 360, zoom: 1.35, from: 0.4}]}
+    props: [*table]
+    actors:
+      husband: {<<: *husband_spot, action: hold_up, expr: determined, look: camera, hold: {R: spray_can}}
+      roach: {<<: *roach_table, action: eat, expr: chewing, look: left, hold: {R: toast}}
+    fx:
+      - {type: burst, at: 0.05, dur: 1.5, pos: [540, 330], world: false, text: "BUG BOMB!", size: 72, bg: "#7BC96F"}
+      - {type: flash, at: 0.0, dur: 0.15}
+    sfx:
+      - {at: 0.0, name: dun_dun_dun, gain: 0.55}
+    lines:
+      - {id: L01, who: husband, at: 1.2, pitch: 0.88, speed: 0.85, text: "Military grade."}
+
+  - id: B
+    dur: 2.8
+    background: kitchen
+    camera: {x: 520, y: 1250, zoom: 1.0}
+    props: [*table]
+    actors:
+      husband: {<<: *husband_spot, action: point_R, expr: furious, look: right, hold: {R: spray_can}}
+      roach: {<<: *roach_table, action: freeze, expr: unbothered, look: left, hold: {R: toast}}
+    fx:
+      - {type: smoke, at: 0.1, pos: [480, 1180], dur: 2.7, size: 1.0}
+      - {type: smoke, at: 0.5, pos: [700, 1300], dur: 2.3, size: 1.4}
+      - {type: smoke, at: 0.9, pos: [300, 1500], dur: 1.9, size: 1.6}
+      - {type: shake, at: 0.1, dur: 2.6, amp: 6}
+    sfx:
+      - {at: 0.1, name: sizzle, gain: 0.8}
+    lines:
+      - {id: L02, who: husband, at: 0.3, shout: true, text: "Nothing survives this!"}
+
+  - id: C
+    dur: 2.4
+    background: kitchen
+    camera: {x: 300, y: 1250, zoom: 1.6}
+    props: [*table]
+    actors:
+      husband: {<<: *husband_spot, action: tremble, expr: pleading, look: camera, hold: {R: spray_can}}
+    fx:
+      - {type: flash, color: "#D9D4C8", at: 0.0, dur: 2.9}
+      - {type: smoke, at: 0.0, pos: [300, 1400], dur: 2.4, size: 1.8}
+      - {type: text, at: 0.2, dur: 1.0, pos: [300, 760], text: "*COUGH*", size: 80, color: "#FFE45C"}
+    lines:
+      - {id: L03, who: husband, at: 1.0, pitch: 0.95, speed: 0.85, text: "...nothing."}
+
+  # ---------------------------------------------------------------- THE SAUNA
+  - id: D
+    dur: 3.2
+    background: kitchen
+    camera: {x: 700, y: 1150, zoom: 2.3}
+    props: [*table]
+    actors:
+      roach: {<<: *roach_table, action: hips, expr: happy, look: camera, hold: {L: towel}}
+    fx:
+      - *fog_in
+      - {type: smoke, at: 0.0, pos: [700, 1330], dur: 1.6, size: 0.8}
+    sfx:
+      - {at: 0.4, name: tiny_cheer, gain: 0.3}
+    lines:
+      - {id: L04, who: roach, at: 0.6, text: "Ahh. Thanks for the sauna."}
+
+  - id: E
+    dur: 2.6
+    background: kitchen
+    camera: {x: 320, y: 1250, zoom: 1.7}
+    props: [*table]
+    actors:
+      husband: {<<: *husband_spot, action: scream, expr: screaming, look: right, hold: {R: spray_can}}
+    fx:
+      - {type: shake, at: 0.1, dur: 1.4, amp: 16}
+    sfx:
+      - {at: 0.1, name: record_scratch, gain: 0.6}
+    lines:
+      - {id: L05, who: husband, at: 0.15, shout: true, text: "That was MILITARY GRADE!"}
+
+  - id: F
+    dur: 3.2
+    background: kitchen
+    camera: {x: 700, y: 1150, zoom: 2.3}
+    props: [*table]
+    actors:
+      roach: {<<: *roach_table, action: read, expr: sideeye, look: down, hold: {R: spray_can}}
+    sfx:
+      - {at: 0.2, name: paper_rustle, gain: 0.4}
+    lines:
+      - {id: L06, who: roach, at: 0.4, text: "Says here... lavender scent."}
+
+  # ---------------------------------------------------------------- PUNCHLINE
+  - id: G
+    dur: 3.2
+    background: kitchen
+    camera: {x: 620, y: 1250, zoom: 1.0}
+    props: [*table]
+    actors:
+      husband: {<<: *husband_spot, action: point_R, expr: angry, look: right, hold: {L: spray_can}}
+      roach: {<<: *roach_table, action: idle, expr: smug, look: right, hold: {L: towel}}
+      wife: {x: 1180, y: 1880, scale: 1.0, z: 21, action: walk, expr: confused, look: left,
+             keys: [{at: 1.0, x: 930, ease: out}, {at: 1.0, action: fan}]}
+    lines:
+      - {id: L07, who: wife, at: 1.0, text: "Why does my kitchen smell like a spa?"}
+
+  - id: H
+    dur: 3.6
+    background: kitchen
+    camera: {x: 800, y: 1200, zoom: 1.4}
+    props: [*table]
+    actors:
+      roach: {<<: *roach_table, action: idle, expr: happy, look: right, hold: {L: towel}}
+      wife: {x: 990, y: 1880, scale: 1.0, z: 21, action: hips, expr: happy, look: left}
+    lines:
+      - {id: L08, who: wife, at: 0.2, text: "Honestly? It's nice."}
+      - {id: L09, who: roach, at: 1.9, text: "I added eucalyptus."}
+
+  # ---------------------------------------------------------------- LOOP ENDING
+  - id: I
+    dur: 3.4
+    background: kitchen
+    camera: {x: 450, y: 1200, zoom: 1.3}
+    props: [*table]
+    actors:
+      husband: {<<: *husband_spot, action: hold_up, expr: determined, look: up, hold: {R: spray_can},
+                keys: [{at: 0.8, action: tremble, expr: screaming}]}
+      roach: {<<: *roach_table, action: hips, expr: smug, look: left, hold: {L: towel}}
+    fx:
+      - {type: smoke, at: 0.8, pos: [300, 1000], dur: 2.0, size: 0.9}
+      - {type: flash, color: "#D9D4C8", at: 0.8, dur: 1.6}
+      - {type: text, at: 1.0, dur: 1.0, pos: [300, 700], text: "*COUGH*", size: 80, color: "#FFE45C"}
+    sfx:
+      - {at: 0.8, name: sizzle, gain: 0.8}
+    lines:
+      - {id: L10, who: roach, at: 2.2, pitch: 0.9, speed: 0.85, text: "Military grade."}

@@ -1,0 +1,157 @@
+# The Roach Runs This House - S02E02 "The Roach Works From Home"
+# Living room landmarks: TV stand top y=700 (x 110-560), couch x 60-1020, floor y=1560.
+# A floor lamp stands at x=990 (shade top y=1000); the Roach works from the top of it.
+id: s02e02
+slug: the-roach-works-from-home
+season: 2
+episode: 2
+title: The Roach Works From Home
+logline: The Husband's day off gets interrupted by the Roach, who is working from home on the lamp, and turns out to be his new manager.
+hook: DAY OFF! The Husband celebrates with a bag of chips.
+punchline: >-
+  The Husband's phone rings: it's his job, introducing his new manager. The Roach waves: "Hi. It's me."
+  Then he confiscates the chips as company property.
+loop: Ends with the Husband handing over the chips he was celebrating with at the start.
+outline: |-
+  1. DAY OFF! Husband with chips: "Day off, baby!"
+  2. Roach on the lamp in a tie, on the phone: "Can you keep it down? I'm on a call."
+  3. Husband: "You don't even have a job."
+  4. Roach: "Head of Pest Control. Remote." (callback to S01E06)
+  5. Husband's phone rings: "Hello? ...My NEW manager?"
+  6. Roach waves: "Hi. It's me."
+  7. Husband: "YOU'RE my BOSS?!"
+  8. Roach: "Let's circle back on that tone."
+  9. Roach: "And the chips. Company property." Husband hands them over.
+thumbnail_at: 1.0
+thumbnail_text: "My new boss is a roach"
+cover_at: 1.0
+voice_provider: babble
+music: {enabled: true, mood: sitcom_bounce, bpm: 114, root_midi: 46, seed: 2202, gain: 0.2}
+reels:
+  title: "The Roach Works From Home | The Roach Runs This House S2 Ep. 2"
+  caption: "His day off got interrupted by a roach... on a work call 💼🪳\n\nWait for who his new manager is 😭\n\nTag your coworker who's always \"on a call\" 👇\n\nSeason 2, Ep. 2 of The Roach Runs This House, an original animated comedy. Follow for new episodes."
+  hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#workfromhome", "#reels"]
+
+common:
+  lamp: &lamp {name: lamp, x: 990, y: 1600, z: 8}
+  roach_lamp: &roach_lamp {x: 990, y: 1000, scale: 0.55, z: 9, action: sit}
+  suit: &suit {torso: tie, accessory: glasses}
+  husband_spot: &husband_spot {x: 330, y: 1880, scale: 0.95, z: 20}
+
+shots:
+  # ---------------------------------------------------------------- HOOK
+  - id: A
+    dur: 2.8
+    background: living_room
+    camera: {x: 560, y: 1200, zoom: 1.0}
+    props: [*lamp]
+    actors:
+      husband: {<<: *husband_spot, action: dance, expr: happy, look: camera, hold: {R: chips}}
+      roach: {<<: *roach_lamp, action: phone, expr: neutral, look: left, variants: *suit, hold: {R: phone}}
+    fx:
+      - {type: burst, at: 0.05, dur: 2.6, pos: [540, 330], world: false, text: "DAY OFF!", size: 72, bg: "#FFD23F"}
+      - {type: flash, at: 0.0, dur: 0.15}
+    sfx:
+      - {at: 0.0, name: victory, gain: 0.6}
+    lines:
+      - {id: L01, who: husband, at: 0.9, text: "Day off, baby!"}
+
+  - id: B
+    dur: 3.0
+    background: living_room
+    camera: {x: 990, y: 900, zoom: 2.5}
+    props: [*lamp]
+    actors:
+      roach: {<<: *roach_lamp, action: phone, expr: sideeye, look: left, variants: *suit, hold: {R: phone}}
+    lines:
+      - {id: L02, who: roach, at: 0.2, text: "Can you keep it down? I'm on a call."}
+
+  - id: C
+    dur: 2.6
+    background: living_room
+    camera: {x: 420, y: 1250, zoom: 1.6}
+    props: [*lamp]
+    actors:
+      husband: {<<: *husband_spot, action: point_R, expr: confused, look: right, hold: {L: chips}}
+    lines:
+      - {id: L03, who: husband, at: 0.2, text: "You don't even have a job."}
+
+  - id: D
+    dur: 2.8
+    background: living_room
+    camera: {x: 990, y: 900, zoom: 2.5}
+    props: [*lamp]
+    actors:
+      roach: {<<: *roach_lamp, action: hips, expr: smug, look: camera, variants: *suit}
+    lines:
+      - {id: L04, who: roach, at: 0.2, text: "Head of Pest Control. Remote."}
+
+  # ---------------------------------------------------------------- THE CALL
+  - id: E
+    dur: 3.4
+    background: living_room
+    camera: {x: 420, y: 1250, zoom: 1.6}
+    props: [*lamp]
+    actors:
+      husband: {<<: *husband_spot, action: phone, expr: happy, look: camera, hold: {R: phone_big, L: chips},
+                keys: [{at: 1.9, expr: shocked, look: right}]}
+    sfx:
+      - {at: 0.0, name: phone_dial, gain: 0.6}
+    lines:
+      - {id: L05, who: husband, at: 0.5, text: "Hello? ...My NEW manager?"}
+
+  - id: F
+    dur: 2.4
+    background: living_room
+    camera: {x: 990, y: 900, zoom: 2.5}
+    props: [*lamp]
+    actors:
+      roach: {<<: *roach_lamp, action: wave, expr: happy, look: camera, variants: *suit}
+    sfx:
+      - {at: 1.5, name: dun_dun_dun, gain: 0.6}
+    lines:
+      - {id: L06, who: roach, at: 0.2, text: "Hi. It's me."}
+
+  # ---------------------------------------------------------------- PUNCHLINE
+  - id: G
+    dur: 2.8
+    background: living_room
+    camera: {x: 380, y: 1150, zoom: 1.6}
+    props: [*lamp]
+    actors:
+      husband: {<<: *husband_spot, action: scream, expr: screaming, look: right, hold: {R: phone_big}}
+    fx:
+      - {type: shake, at: 0.1, dur: 1.6, amp: 16}
+    sfx:
+      - {at: 0.1, name: record_scratch, gain: 0.6}
+    lines:
+      - {id: L07, who: husband, at: 0.15, shout: true, text: "YOU'RE my BOSS?!"}
+
+  - id: H
+    dur: 2.8
+    background: living_room
+    camera: {x: 990, y: 900, zoom: 2.5}
+    props: [*lamp]
+    actors:
+      roach: {<<: *roach_lamp, action: cross_arms, expr: unbothered, look: camera, variants: *suit}
+    lines:
+      - {id: L08, who: roach, at: 0.2, text: "Let's circle back on that tone."}
+
+  # ---------------------------------------------------------------- LOOP ENDING
+  - id: I
+    dur: 3.6
+    background: living_room
+    camera: {x: 640, y: 1200, zoom: 1.05}
+    props: [*lamp]
+    actors:
+      husband: {<<: *husband_spot, action: hold_up, expr: pleading, look: right, hold: {R: chips},
+                keys: [{at: 2.2, action: freeze, expr: shocked, hold: {}}]}
+      roach: {<<: *roach_lamp, action: point_L, expr: smug, look: left, variants: *suit,
+              keys: [{at: 2.2, action: hips, hold: {R: chips}, expr: happy}]}
+    fx:
+      - {type: vignette, at: 0, amount: 0.4}
+    sfx:
+      - {at: 2.2, name: pop, gain: 0.6}
+      - {at: 2.5, name: crunch, gain: 0.5}
+    lines:
+      - {id: L09, who: roach, at: 0.2, text: "And the chips. Company property."}

@@ -1,0 +1,174 @@
+# The Roach Runs This House - S02E05 "Grandma's Secret Powder"  (Roach Wars, part 5)
+# Kitchen landmarks: countertop y=1150 (x 0-820), fridge x 820-1090, floor y=1580, table top y=1330 at x=720.
+# The Roach family cookout happens on the table.
+id: s02e05
+slug: grandma-s-secret-powder
+season: 2
+episode: 5
+title: Grandma's Secret Powder
+logline: Roach Wars, round four. The Husband breaks out his grandma's secret anti-roach powder; the Roach family uses it to season their cookout.
+hook: SECRET WEAPON. The Husband holds up his grandma's powder. "Roaches HATE this."
+punchline: >-
+  The family is having a full cookout on the table, seasoned with the powder. "Baby, that's FLAVOR." The Wife
+  tastes it and asks who seasoned it. Grandma Roach: "His grandma." The Wife: "You never cook like this."
+loop: Ends with the Husband pulling out Grandma's OTHER powder, and the family holding up their plates for more.
+outline: |-
+  1. SECRET WEAPON. Husband: "My grandma's powder. Roaches HATE this."
+  2. He shakes it everywhere: "Goodbye, roaches."
+  3. The Roach family cookout on the table. Roach: "Pass the seasoning."
+  4. Husband: "That's POISON!"
+  5. Grandma Roach: "Baby, that's FLAVOR."  Kids: "More!"
+  6. Wife tastes it: "Mm! Who seasoned this?"  Grandma Roach: "His grandma."
+  7. Wife: "...You never cook like this."
+  8. Grandma Roach: "Tell her it needs garlic."
+  9. Husband: "Grandma's OTHER powder." The family: "Ooh!"
+thumbnail_at: 7.0
+thumbnail_text: "Roach cookout"
+cover_at: 7.0
+voice_provider: babble
+music: {enabled: true, mood: sitcom_bounce, bpm: 110, root_midi: 47, seed: 2505, gain: 0.2}
+reels:
+  title: "Grandma's Secret Powder | The Roach Runs This House S2 Ep. 5"
+  caption: "He used his grandma's secret anti-roach powder... and the roaches started a COOKOUT 🧂🪳🍗\n\nWait for what Grandma Roach says about it 😭\n\nWhat's your family's old-school roach remedy? 👇\n\nROACH WARS, Season 2, Ep. 5 of The Roach Runs This House, an original animated comedy. Follow for the next round."
+  hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#reels"]
+
+common:
+  table: &table {name: table, x: 720, y: 1330, z: 12}
+  plate: &plate {name: plate_food, x: 720, y: 1328, z: 13, scale: 1.1}
+  grandma: &grandma {accessory: glasses}
+  husband_spot: &husband_spot {x: 260, y: 1880, scale: 0.95, z: 20}
+
+shots:
+  # ---------------------------------------------------------------- HOOK
+  - id: A
+    dur: 3.0
+    background: kitchen
+    camera: {x: 300, y: 1250, zoom: 1.5}
+    actors:
+      husband: {<<: *husband_spot, action: hold_up, expr: smug, look: camera, hold: {R: seasoning}}
+    fx:
+      - {type: burst, at: 0.05, dur: 1.4, pos: [540, 330], world: false, text: "SECRET WEAPON", size: 62, bg: "#F2D06B"}
+      - {type: flash, at: 0.0, dur: 0.15}
+    sfx:
+      - {at: 0.0, name: dun_dun_dun, gain: 0.5}
+    lines:
+      - {id: L01, who: husband, at: 1.0, text: "My grandma's powder. Roaches HATE this."}
+
+  - id: B
+    dur: 2.6
+    background: kitchen
+    camera: {x: 420, y: 1250, zoom: 1.1}
+    actors:
+      husband: {<<: *husband_spot, action: fan, expr: determined, look: right, hold: {R: seasoning},
+                keys: [{at: 2.2, x: 560, from: 0.2}]}
+    fx:
+      - {type: dust, at: 0.2, dur: 2.2, pos: [640, 1170]}
+    sfx:
+      - {at: 0.2, name: paper_rustle, gain: 0.6}
+      - {at: 1.0, name: paper_rustle, gain: 0.6}
+    lines:
+      - {id: L02, who: husband, at: 0.6, pitch: 0.92, text: "Goodbye, roaches."}
+
+  # ---------------------------------------------------------------- THE COOKOUT
+  - id: C
+    dur: 3.2
+    background: kitchen
+    camera: {x: 720, y: 1200, zoom: 1.9}
+    props: [*table, *plate]
+    actors:
+      roach: {x: 560, y: 1326, scale: 0.8, z: 15, action: point_R, expr: happy, look: right}
+      roach@grandma: {x: 850, y: 1326, scale: 0.85, z: 15, action: hold_up, expr: happy, look: left, variants: *grandma, hold: {R: seasoning}}
+      roach@kid1: {x: 650, y: 1326, scale: 0.5, z: 16, action: eat, expr: chewing, look: camera, hold: {R: dumpling}}
+      roach@kid2: {x: 770, y: 1326, scale: 0.5, z: 16, action: dance, expr: happy, look: camera}
+      roach@cousin: {x: 960, y: 1326, scale: 0.8, z: 14, action: eat, expr: chewing, look: left, hold: {R: fork}}
+    fx:
+      - {type: smoke, at: 0.0, pos: [720, 1300], dur: 3.2, size: 0.35}
+    sfx:
+      - {at: 0.0, name: sizzle, gain: 0.5}
+      - {at: 0.2, name: tiny_cheer, gain: 0.4}
+    lines:
+      - {id: L03, who: roach, at: 0.4, text: "Pass the seasoning."}
+
+  - id: D
+    dur: 2.4
+    background: kitchen
+    camera: {x: 300, y: 1200, zoom: 1.7}
+    actors:
+      husband: {<<: *husband_spot, action: scream, expr: screaming, look: right, hold: {R: seasoning}}
+    fx:
+      - {type: shake, at: 0.1, dur: 1.2, amp: 16}
+    sfx:
+      - {at: 0.1, name: record_scratch, gain: 0.6}
+    lines:
+      - {id: L04, who: husband, at: 0.15, shout: true, text: "That's POISON!"}
+
+  - id: E
+    dur: 3.2
+    background: kitchen
+    camera: {x: 820, y: 1180, zoom: 2.5}
+    props: [*table, *plate]
+    actors:
+      roach@grandma: {x: 850, y: 1326, scale: 0.85, z: 15, action: hips, expr: unbothered, look: camera, variants: *grandma}
+      roach@kid2: {x: 750, y: 1326, scale: 0.5, z: 16, action: jump, expr: happy, look: camera}
+    sfx:
+      - {at: 2.3, name: tiny_cheer, gain: 0.5}
+    lines:
+      - {id: L05, who: roach@grandma, at: 0.2, pitch: 1.12, text: "Baby, that's FLAVOR."}
+      - {id: L06, who: roach@kid2, at: 2.1, pitch: 1.35, speed: 1.1, text: "More!"}
+
+  # ---------------------------------------------------------------- PUNCHLINE
+  - id: F
+    dur: 3.6
+    background: kitchen
+    camera: {x: 720, y: 1250, zoom: 1.1}
+    props: [*table, *plate]
+    actors:
+      husband: {<<: *husband_spot, action: point_R, expr: angry, look: right, hold: {L: seasoning}}
+      roach@grandma: {x: 850, y: 1326, scale: 0.85, z: 15, action: hips, expr: smug, look: right, variants: *grandma}
+      roach: {x: 560, y: 1326, scale: 0.8, z: 15, action: eat, expr: chewing, look: right}
+      wife: {x: 1090, y: 1880, scale: 1.0, z: 21, action: eat, expr: happy, look: left, hold: {R: fork}}
+    lines:
+      - {id: L07, who: wife, at: 0.2, text: "Mm! Who seasoned this?"}
+      - {id: L08, who: roach@grandma, at: 2.1, pitch: 1.12, text: "His grandma."}
+
+  - id: G
+    dur: 2.8
+    background: kitchen
+    camera: {x: 620, y: 1300, zoom: 1.05}
+    props: [*table, *plate]
+    actors:
+      husband: {<<: *husband_spot, action: freeze, expr: shocked, look: right, hold: {L: seasoning}}
+      wife: {x: 1000, y: 1880, scale: 1.0, z: 21, action: point_L, expr: sideeye, look: left, hold: {R: fork}}
+    sfx:
+      - {at: 1.6, name: gasp_sting, gain: 0.6}
+    lines:
+      - {id: L09, who: wife, at: 0.2, text: "...You never cook like this."}
+
+  - id: H
+    dur: 2.6
+    background: kitchen
+    camera: {x: 820, y: 1180, zoom: 2.5}
+    props: [*table, *plate]
+    actors:
+      roach@grandma: {x: 850, y: 1326, scale: 0.85, z: 15, action: point_L, expr: smug, look: camera, variants: *grandma}
+    lines:
+      - {id: L10, who: roach@grandma, at: 0.2, pitch: 1.12, text: "Tell her it needs garlic."}
+
+  # ---------------------------------------------------------------- LOOP ENDING
+  - id: I
+    dur: 3.4
+    background: kitchen
+    camera: {x: 600, y: 1350, zoom: 1.25}
+    props: [*table, *plate]
+    actors:
+      husband: {<<: *husband_spot, action: hold_up, expr: determined, look: camera, hold: {R: seasoning}}
+      roach: {x: 560, y: 1326, scale: 0.8, z: 15, action: hold_up, expr: happy, look: left}
+      roach@grandma: {x: 850, y: 1326, scale: 0.85, z: 15, action: hold_up, expr: happy, look: left, variants: *grandma}
+      roach@kid1: {x: 650, y: 1326, scale: 0.5, z: 16, action: jump, expr: happy, look: left}
+      roach@kid2: {x: 770, y: 1326, scale: 0.5, z: 16, action: jump, expr: happy, look: left}
+      roach@cousin: {x: 960, y: 1326, scale: 0.8, z: 14, action: hold_up, expr: happy, look: left}
+    sfx:
+      - {at: 1.9, name: tiny_cheer, gain: 0.7}
+    lines:
+      - {id: L11, who: husband, at: 0.2, text: "Grandma's OTHER powder."}
+      - {id: L12, who: roach@grandma, at: 2.0, pitch: 1.12, text: "Ooh!"}

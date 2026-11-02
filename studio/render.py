@@ -28,6 +28,17 @@ def rig_hash() -> str:
     return h.hexdigest()[:16]
 
 
+def _rotate_about(layer, ax, ay, deg):
+    """Rotate an RGBA layer clockwise by deg around its anchor; return the new layer and anchor."""
+    import math
+    W, H = layer.size
+    rot = layer.rotate(-deg, resample=Image.BICUBIC, expand=True)
+    a = math.radians(deg)
+    vx, vy = ax - W / 2, ay - H / 2
+    return (rot, rot.size[0] / 2 + vx * math.cos(a) - vy * math.sin(a),
+            rot.size[1] / 2 + vx * math.sin(a) + vy * math.cos(a))
+
+
 def _mouth_for(state, env_val):
     eyes, brows, mouth = rigs.EXPRESSIONS.get(state.get("expr", "neutral"), rigs.EXPRESSIONS["neutral"])
     shout = state.get("expr") in rigs.SHOUT_EXPRESSIONS
@@ -71,7 +82,7 @@ class FrameRenderer:
             if st.get("visible", True):
                 drawables.append((st["z"], "prop", p["name"], st))
         for i, (name, a) in enumerate((shot.get("actors") or {}).items()):
-            base = {"x": a.get("x", 540), "y": a.get("y", 1700), "scale": a.get("scale", 1.0), "rot": 0,
+            base = {"x": a.get("x", 540), "y": a.get("y", 1700), "scale": a.get("scale", 1.0), "rot": a.get("rot", 0),
                     "expr": a.get("expr", "neutral"), "action": a.get("action", "idle"), "look": a.get("look", "center"),
                     "flip": a.get("flip", False), "hold": a.get("hold", {}), "z": a.get("z", 10),
                     "visible": a.get("visible", True), "variants": a.get("variants", {})}
@@ -97,6 +108,8 @@ class FrameRenderer:
             if st.get("flip"):
                 layer = ImageOps.mirror(layer)
                 ax = layer.size[0] - ax
+            if st.get("rot"):   # tip the whole character over around its feet (knock-downs, falls)
+                layer, ax, ay = _rotate_about(layer, ax, ay, st["rot"])
             frame.alpha_composite(layer, (int(round(sx - ax)), int(round(sy - ay))))
         frame = frame.convert("RGB")
         for fx in shot.get("fx") or []:

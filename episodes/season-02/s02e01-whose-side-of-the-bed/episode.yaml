@@ -1,0 +1,166 @@
+# The Roach Runs This House - S02E01 "Whose Side of the Bed"
+# Bedroom landmarks: bed x 40-1040 (top of mattress y=1100), floor y=1560.
+# Pillows: Husband's (left) x 80-480, Wife's (right) x 560-1000, top y=980.
+id: s02e01
+slug: whose-side-of-the-bed
+season: 2
+episode: 1
+title: Whose Side of the Bed
+logline: The Husband comes to bed and finds the Roach on his pillow, the Wife takes the Roach's side because he doesn't snore, and the Husband declares war. (Season 2 "Roach Wars" opener.)
+hook: The Husband freezes at the bedside; the Roach is tucked in on HIS pillow.
+punchline: >-
+  The Roach has recordings of the Husband snoring. Forty-two of them. The Wife says goodnight to the Roach,
+  the lights go out, and the Husband declares war... then starts snoring mid-threat.
+loop: Ends in the dark on the Husband's snore, which the opening bedside freeze answers again.
+outline: |-
+  1. Husband at the bedside: "That's MY pillow."
+  2. Roach, tucked in: "Not tonight."
+  3. Husband: "Babe. Tell him."
+  4. Wife, reading: "He doesn't snore."
+  5. Husband: "I DON'T snore!"
+  6. Roach holds up his phone: "I have recordings."
+  7. Husband: "...How many recordings?"  Roach: "Forty-two."
+  8. Wife: "Goodnight, baby." Roach: "Goodnight."
+  9. Lights out. Husband: "This. Means. WAR." ...*SNORE*
+thumbnail_at: 1.4
+thumbnail_text: "He took my side of the bed"
+cover_at: 1.4
+voice_provider: babble
+music: {enabled: true, mood: sneaky_funk, bpm: 96, root_midi: 43, seed: 2101, gain: 0.18}
+reels:
+  title: "Whose Side of the Bed | The Roach Runs This House S2 Ep. 1"
+  caption: "He came to bed and the ROACH was already on his pillow 🛏️🪳\n\nWait for what the roach has on his phone 😭\n\nTag the person who swears they don't snore 👇\n\nROACH WARS begins. Season 2, Ep. 1 of The Roach Runs This House, an original animated comedy. Follow for new episodes."
+  hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#reels"]
+
+common:
+  roach_pillow: &roach_pillow {x: 410, y: 1040, scale: 0.6, z: 9, action: sit}
+  husband_side: &husband_side {x: 160, y: 1880, scale: 0.95, z: 20}
+  wife_side: &wife_side {x: 840, y: 1880, scale: 1.0, z: 21}
+
+shots:
+  # ---------------------------------------------------------------- HOOK
+  - id: A
+    dur: 3.0
+    background: bedroom
+    camera: {x: 540, y: 1250, zoom: 1.0}
+    actors:
+      roach: {<<: *roach_pillow, expr: unbothered, look: camera}
+      husband: {<<: *husband_side, action: walk, expr: happy, look: right,
+                keys: [{at: 0.9, action: freeze, expr: shocked, look: up}, {at: 1.5, action: point_R, expr: angry}]}
+    fx:
+      - {type: vignette, at: 0, amount: 0.35}
+      - {type: flash, at: 0.9, dur: 0.12}
+    sfx:
+      - {at: 0.9, name: record_scratch, gain: 0.6}
+    lines:
+      - {id: L01, who: husband, at: 1.5, text: "That's MY pillow."}
+
+  - id: B
+    dur: 2.4
+    background: bedroom
+    camera: {x: 410, y: 960, zoom: 2.6}
+    actors:
+      roach: {<<: *roach_pillow, expr: unbothered, look: camera}
+    lines:
+      - {id: L02, who: roach, at: 0.25, text: "Not tonight."}
+
+  - id: C
+    dur: 2.6
+    background: bedroom
+    camera: {x: 540, y: 1300, zoom: 1.1}
+    actors:
+      husband: {<<: *husband_side, action: point_R, expr: pleading, look: right}
+      wife: {<<: *wife_side, action: read, expr: unbothered, look: down, hold: {R: paper}}
+    lines:
+      - {id: L03, who: husband, at: 0.2, text: "Babe. Tell him."}
+
+  - id: D
+    dur: 2.6
+    background: bedroom
+    camera: {x: 820, y: 1250, zoom: 1.7}
+    actors:
+      wife: {<<: *wife_side, action: read, expr: unbothered, look: down, hold: {R: paper},
+             keys: [{at: 1.0, expr: sideeye, look: left}]}
+    sfx:
+      - {at: 0.9, name: paper_rustle, gain: 0.5}
+    lines:
+      - {id: L04, who: wife, at: 0.3, text: "He doesn't snore."}
+
+  - id: E
+    dur: 2.8
+    background: bedroom
+    camera: {x: 220, y: 1250, zoom: 1.7}
+    actors:
+      husband: {<<: *husband_side, action: scream, expr: furious, look: right}
+    fx:
+      - {type: shake, at: 0.15, dur: 1.2, amp: 14}
+      - {type: marks, at: 0.2, dur: 1.2, pos: [300, 860]}
+    lines:
+      - {id: L05, who: husband, at: 0.15, shout: true, text: "I DON'T snore!"}
+
+  # ---------------------------------------------------------------- THE EVIDENCE
+  - id: F
+    dur: 2.8
+    background: bedroom
+    camera: {x: 410, y: 960, zoom: 2.6}
+    actors:
+      roach: {<<: *roach_pillow, expr: smug, look: camera,
+              keys: [{at: 0.5, action: phone, hold: {R: phone}}]}
+    fx:
+      - {type: text, at: 1.6, dur: 1.1, pos: [570, 800], text: "*SNORE*", size: 72, color: "#FFE45C"}
+    sfx:
+      - {at: 0.5, name: pop, gain: 0.5}
+    lines:
+      - {id: L06, who: roach, at: 0.3, text: "I have recordings."}
+
+  - id: G
+    dur: 2.6
+    background: bedroom
+    camera: {x: 220, y: 1250, zoom: 1.7}
+    actors:
+      husband: {<<: *husband_side, action: freeze, expr: nervous, look: right}
+    fx:
+      - {type: sweat, at: 0.4, pos: [300, 870], dur: 1.6}
+    lines:
+      - {id: L07, who: husband, at: 0.25, pitch: 0.95, text: "...How many recordings?"}
+
+  - id: H
+    dur: 2.4
+    background: bedroom
+    camera: {x: 410, y: 960, zoom: 2.9}
+    actors:
+      roach: {<<: *roach_pillow, expr: smug, look: camera, action: phone, hold: {R: phone}}
+    sfx:
+      - {at: 1.2, name: dun_dun_dun, gain: 0.6}
+    lines:
+      - {id: L08, who: roach, at: 0.2, text: "Forty-two."}
+
+  # ---------------------------------------------------------------- PUNCHLINE
+  - id: I
+    dur: 3.2
+    background: bedroom
+    camera: {x: 540, y: 1250, zoom: 1.0}
+    actors:
+      roach: {<<: *roach_pillow, expr: happy, look: right}
+      husband: {<<: *husband_side, action: freeze, expr: shocked, look: right}
+      wife: {<<: *wife_side, action: wave, expr: happy, look: left}
+    lines:
+      - {id: L09, who: wife, at: 0.2, text: "Goodnight, baby."}
+      - {id: L10, who: roach, at: 1.7, text: "Goodnight."}
+
+  # ---------------------------------------------------------------- LOOP ENDING
+  - id: J
+    dur: 4.0
+    background: bedroom
+    camera: {x: 240, y: 1300, zoom: 1.5, keys: [{at: 1.6, zoom: 1.9, from: 0.6}]}
+    actors:
+      husband: {<<: *husband_side, action: cross_arms, expr: determined, look: camera,
+                keys: [{at: 2.6, action: idle, expr: unbothered}]}
+    fx:
+      - {type: darkness, at: 0.3, until: 4.0, amount: 0.8}
+      - {type: text, at: 2.7, dur: 1.3, pos: [330, 860], text: "*SNORE*", size: 84, color: "#FFE45C"}
+    sfx:
+      - {at: 0.3, name: light_switch, gain: 0.9}
+      - {at: 1.6, name: dun_dun_dun, gain: 0.6}
+    lines:
+      - {id: L11, who: husband, at: 0.6, text: "This. Means. WAR."}

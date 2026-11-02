@@ -1,0 +1,172 @@
+# The Roach Runs This House - S02E06 "The Exterminator"  (Roach Wars, part 6)
+# Living room landmarks: couch x 60-1020, couch-back top y=1080, floor y=1560.
+# The Roach works from the top of the couch back.
+id: s02e06
+slug: the-exterminator
+season: 2
+episode: 6
+title: The Exterminator
+logline: Roach Wars, round five. The Husband gives up and calls a professional exterminator, and the professional who shows up is the Roach.
+hook: 'CALL A PRO. The Husband on the phone: "I need a PROFESSIONAL. Today."'
+punchline: >-
+  The Roach "inspects" the house and finds the pest: "Six foot. Beard. Very loud." The Wife agrees, and the Roach
+  bills the Husband two hundred dollars for emotional damage.
+loop: Ends with the Husband calling for a second opinion, and the Roach's phone ringing. "Pest Control."
+outline: |-
+  1. CALL A PRO. Husband: "I need a PROFESSIONAL. Today."
+  2. Ding. Husband: "Wow. That was fast."
+  3. The Roach in a badge and glasses with a clipboard: "Pest Control. You called?"
+  4. Husband: "YOU'RE the exterminator?!"
+  5. Roach inspects: "Mm-hm. Mm-hm. I found the problem."  Husband: "Where?!"
+  6. Roach points at him: "Six foot. Beard. Very loud."
+  7. Wife: "Yep. That's the pest."
+  8. Roach hands over a bill: "Two hundred dollars."  Husband: "For WHAT?!"  Roach: "Emotional damage."
+  9. Husband dials again: "I need a SECOND opinion." The Roach's phone rings: "Pest Control."
+thumbnail_at: 6.6
+thumbnail_text: "The exterminator is a roach"
+cover_at: 6.6
+voice_provider: babble
+music: {enabled: true, mood: sneaky_funk, bpm: 100, root_midi: 45, seed: 2606, gain: 0.2}
+reels:
+  title: "The Exterminator | The Roach Runs This House S2 Ep. 6"
+  caption: "He finally called a professional exterminator... guess who showed up 📋🪳\n\nWait for who the roach says the REAL pest is 😭\n\nTag the person who'd get billed for emotional damage 👇\n\nROACH WARS, Season 2, Ep. 6 of The Roach Runs This House, an original animated comedy. Next week: the main event."
+  hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#reels"]
+
+common:
+  pro: &pro {torso: badge, accessory: glasses}
+  roach_couch: &roach_couch {x: 760, y: 1095, scale: 0.7, z: 9}
+  husband_spot: &husband_spot {x: 280, y: 1880, scale: 0.95, z: 20}
+
+shots:
+  # ---------------------------------------------------------------- HOOK
+  - id: A
+    dur: 2.8
+    background: living_room
+    camera: {x: 320, y: 1250, zoom: 1.6}
+    actors:
+      husband: {<<: *husband_spot, action: phone, expr: furious, look: camera, hold: {R: phone_big}}
+    fx:
+      - {type: burst, at: 0.05, dur: 1.4, pos: [540, 330], world: false, text: "CALL A PRO", size: 70, bg: "#6FB7E8"}
+    sfx:
+      - {at: 0.0, name: phone_dial, gain: 0.6}
+    lines:
+      - {id: L01, who: husband, at: 0.6, shout: true, text: "I need a PROFESSIONAL. Today."}
+
+  - id: B
+    dur: 2.2
+    background: living_room
+    camera: {x: 420, y: 1300, zoom: 1.2}
+    actors:
+      husband: {<<: *husband_spot, action: idle, expr: confused, look: right, hold: {R: phone_big}}
+    sfx:
+      - {at: 0.0, name: ding, gain: 0.7}
+    lines:
+      - {id: L02, who: husband, at: 0.5, text: "Wow. That was fast."}
+
+  - id: C
+    dur: 3.4
+    background: living_room
+    camera: {x: 620, y: 1250, zoom: 1.0}
+    actors:
+      husband: {<<: *husband_spot, action: idle, expr: happy, look: right, hold: {R: phone_big},
+                keys: [{at: 1.4, expr: shocked, action: freeze}]}
+      roach: {<<: *roach_couch, x: 1080, action: walk, expr: determined, look: left, variants: *pro, hold: {L: clipboard},
+              keys: [{at: 1.0, x: 760, ease: out}, {at: 1.0, action: hips}]}
+    sfx:
+      - {at: 0.0, name: briefcase_click, gain: 0.7}
+    lines:
+      - {id: L03, who: roach, at: 1.2, text: "Pest Control. You called?"}
+
+  - id: D
+    dur: 2.6
+    background: living_room
+    camera: {x: 320, y: 1150, zoom: 1.6}
+    actors:
+      husband: {<<: *husband_spot, action: scream, expr: screaming, look: right, hold: {R: phone_big}}
+    fx:
+      - {type: shake, at: 0.1, dur: 1.4, amp: 16}
+    sfx:
+      - {at: 0.1, name: record_scratch, gain: 0.6}
+    lines:
+      - {id: L04, who: husband, at: 0.15, shout: true, text: "YOU'RE the exterminator?!"}
+
+  # ---------------------------------------------------------------- THE INSPECTION
+  - id: E
+    dur: 3.6
+    background: living_room
+    camera: {x: 620, y: 1000, zoom: 2.0, keys: [{at: 2.4, x: 480, from: 0.2}]}
+    actors:
+      roach: {<<: *roach_couch, action: walk, expr: determined, look: down, variants: *pro, hold: {R: clipboard},
+              keys: [{at: 2.4, x: 480, from: 0.2}, {at: 2.4, action: read, look: camera}]}
+    sfx:
+      - {at: 0.4, name: paper_rustle, gain: 0.5}
+      - {at: 1.6, name: paper_rustle, gain: 0.5}
+    lines:
+      - {id: L05, who: roach, at: 0.2, text: "Mm-hm. Mm-hm."}
+      - {id: L06, who: roach, at: 2.1, text: "I found the problem."}
+
+  - id: F
+    dur: 1.8
+    background: living_room
+    camera: {x: 300, y: 1250, zoom: 1.8}
+    actors:
+      husband: {<<: *husband_spot, action: hold_up, expr: scared, look: right}
+    lines:
+      - {id: L07, who: husband, at: 0.15, shout: true, text: "Where?!"}
+
+  - id: G
+    dur: 3.2
+    background: living_room
+    camera: {x: 420, y: 1250, zoom: 1.15}
+    actors:
+      roach: {<<: *roach_couch, x: 480, action: point_L, expr: smug, look: left, variants: *pro, hold: {R: clipboard}}
+      husband: {<<: *husband_spot, action: freeze, expr: confused, look: right,
+                keys: [{at: 1.6, expr: shocked}]}
+    fx:
+      - {type: spotlight, at: 0.4, pos: [280, 1400], radius: [260, 520], amount: 0.6, tint: "#FFF3B0"}
+    sfx:
+      - {at: 0.4, name: dun_dun_dun, gain: 0.5}
+    lines:
+      - {id: L08, who: roach, at: 0.4, text: "Six foot. Beard. Very loud."}
+
+  # ---------------------------------------------------------------- PUNCHLINE
+  - id: H
+    dur: 2.4
+    background: living_room
+    camera: {x: 860, y: 1300, zoom: 1.7}
+    actors:
+      wife: {x: 880, y: 1880, scale: 1.0, z: 21, action: cross_arms, expr: unbothered, look: left}
+    lines:
+      - {id: L09, who: wife, at: 0.2, text: "Yep. That's the pest."}
+
+  - id: I
+    dur: 4.4
+    background: living_room
+    camera: {x: 420, y: 1250, zoom: 1.15}
+    actors:
+      roach: {<<: *roach_couch, x: 480, action: present, expr: happy, look: left, variants: *pro, hold: {R: envelope}}
+      husband: {<<: *husband_spot, action: hold_up, expr: furious, look: right,
+                keys: [{at: 2.7, action: freeze, expr: shocked}]}
+    sfx:
+      - {at: 0.1, name: paper_rustle, gain: 0.5}
+      - {at: 3.4, name: gasp_sting, gain: 0.6}
+    lines:
+      - {id: L10, who: roach, at: 0.2, text: "Two hundred dollars."}
+      - {id: L11, who: husband, at: 1.5, shout: true, text: "For WHAT?!"}
+      - {id: L12, who: roach, at: 2.7, text: "Emotional damage."}
+
+  # ---------------------------------------------------------------- LOOP ENDING
+  - id: J
+    dur: 3.6
+    background: living_room
+    camera: {x: 420, y: 1250, zoom: 1.15}
+    actors:
+      husband: {<<: *husband_spot, action: phone, expr: determined, look: camera, hold: {R: phone_big},
+                keys: [{at: 2.2, expr: shocked, look: right}]}
+      roach: {<<: *roach_couch, x: 480, action: idle, expr: smug, look: left, variants: *pro,
+              keys: [{at: 2.0, action: phone, hold: {R: phone}, look: camera}]}
+    sfx:
+      - {at: 1.7, name: phone_dial, gain: 0.6}
+    lines:
+      - {id: L13, who: husband, at: 0.2, text: "I need a SECOND opinion."}
+      - {id: L14, who: roach, at: 2.3, text: "Pest Control."}

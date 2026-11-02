@@ -1,0 +1,180 @@
+# The Roach Runs This House - S02E02 "The Slipper"  (Roach Wars, part 2)
+# Living room landmarks: couch x 60-1020, couch-back top y=1080, seat cushions y=1290, floor y=1560.
+id: s02e02
+slug: the-slipper
+season: 2
+episode: 2
+title: The Slipper
+logline: Roach Wars, round one. The Husband goes old school with a slipper; the Roach dodges like it's slow motion, catches the Wife's slipper and sends it back.
+hook: Slow motion. The Husband winds up a slipper. "Say goodnight."
+punchline: >-
+  The Roach catches the Wife's slipper, says "Thank you," and throws it back. Direct hit. The Husband goes down,
+  and the Wife reminds him what happens if he misses: he's on the couch. The Roach: "I'll make room."
+loop: Ends on the Roach winding up the slipper with the same "Say goodnight." the Husband opened with.
+outline: |-
+  1. Slow-mo wind-up. Husband: "Say goodnight."
+  2. Throw. The Roach hops over it. MISS. Roach: "You throw like you're asking permission."
+  3. Husband: "Babe. I need your slipper." Wife: "Absolutely not."
+  4. Husband: "It's for the WAR."
+  5. Wife hands it over: "Miss, and you sleep on the couch."
+  6. Second throw. The Roach catches it. "Thank you."
+  7. Roach throws it back. BONK. Husband goes down.
+  8. Wife: "Couch." Roach pats the cushion: "I'll make room."
+  9. Roach winds up: "Say goodnight."
+thumbnail_at: 1.0
+thumbnail_text: "Slipper vs roach"
+cover_at: 1.0
+voice_provider: babble
+music: {enabled: true, mood: suspense, bpm: 100, root_midi: 45, seed: 2202, gain: 0.18}
+reels:
+  title: "The Slipper | The Roach Runs This House S2 Ep. 2"
+  caption: "Every household's #1 roach weapon... the SLIPPER 🩴🪳\n\nHe really thought this would work 😭 Watch the second throw.\n\nWho in your house throws the slipper? 👇\n\nROACH WARS, Season 2, Ep. 2 of The Roach Runs This House, an original animated comedy. Follow for the next round."
+  hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#reels"]
+
+common:
+  roach_couch: &roach_couch {x: 700, y: 1095, scale: 0.7, z: 9}
+  husband_spot: &husband_spot {x: 250, y: 1880, scale: 0.95, z: 20}
+  wife_spot: &wife_spot {x: 880, y: 1880, scale: 1.0, z: 21}
+  barefoot: &barefoot {leg_R: bare}
+
+shots:
+  # ---------------------------------------------------------------- HOOK
+  - id: A
+    dur: 2.8
+    background: living_room
+    camera: {x: 500, y: 1250, zoom: 1.0, keys: [{at: 2.6, zoom: 1.25, x: 400, from: 0.2}]}
+    actors:
+      husband: {<<: *husband_spot, action: wind_up, expr: determined, look: right, hold: {R: slipper}}
+      roach: {<<: *roach_couch, action: idle, expr: unbothered, look: left}
+    fx:
+      - {type: burst, at: 0.05, dur: 1.4, pos: [540, 330], world: false, text: "ROACH WARS", size: 70, bg: "#E86A5B"}
+      - {type: speedlines, at: 1.0, dur: 1.8, pos: [250, 1150]}
+    sfx:
+      - {at: 0.0, name: dun_dun_dun, gain: 0.55}
+    lines:
+      - {id: L01, who: husband, at: 1.2, pitch: 0.9, speed: 0.8, text: "Say goodnight."}
+
+  - id: B
+    dur: 3.4
+    background: living_room
+    camera: {x: 560, y: 1250, zoom: 1.0}
+    props:
+      - {name: slipper, x: 330, y: 1150, z: 30, rot: 0, visible: false,
+         keys: [{at: 0.35, visible: true}, {at: 0.75, x: 720, y: 1000, rot: 540, from: 0.35, ease: in},
+                {at: 1.1, x: 1250, y: 860, rot: 900, from: 0.75, ease: out}]}
+    actors:
+      husband: {<<: *husband_spot, action: wind_up, expr: determined, look: right, hold: {R: slipper},
+                keys: [{at: 0.35, action: point_R, hold: {}}, {at: 1.2, expr: shocked}]}
+      roach: {<<: *roach_couch, action: idle, expr: unbothered, look: left,
+              keys: [{at: 0.5, action: jump, y: 900, from: 0.4, ease: out}, {at: 0.9, y: 1095, from: 0.7, ease: in},
+                     {at: 1.0, action: hips, expr: smug}]}
+    fx:
+      - {type: text, at: 0.8, dur: 0.9, pos: [700, 760], text: "MISS!", size: 90, color: "#FFE45C"}
+    sfx:
+      - {at: 0.35, name: whoosh, gain: 0.7}
+      - {at: 1.05, name: crash, gain: 0.45}
+    lines:
+      - {id: L02, who: roach, at: 1.5, text: "You throw like you're asking permission."}
+
+  # ---------------------------------------------------------------- RELOAD
+  - id: C
+    dur: 3.0
+    background: living_room
+    camera: {x: 560, y: 1300, zoom: 1.05}
+    actors:
+      husband: {<<: *husband_spot, action: present, expr: pleading, look: right}
+      wife: {<<: *wife_spot, action: cross_arms, expr: unbothered, look: left}
+    lines:
+      - {id: L03, who: husband, at: 0.15, text: "Babe. I need your slipper."}
+      - {id: L04, who: wife, at: 2.1, text: "Absolutely not."}
+
+  - id: D
+    dur: 2.2
+    background: living_room
+    camera: {x: 260, y: 1250, zoom: 1.8}
+    actors:
+      husband: {<<: *husband_spot, action: hold_up, expr: furious, look: camera}
+    fx:
+      - {type: shake, at: 0.2, dur: 0.8, amp: 10}
+    lines:
+      - {id: L05, who: husband, at: 0.15, shout: true, text: "It's for the WAR!"}
+
+  - id: E
+    dur: 3.0
+    background: living_room
+    camera: {x: 860, y: 1300, zoom: 1.7}
+    actors:
+      wife: {<<: *wife_spot, action: hold_up, expr: sideeye, look: left, variants: *barefoot, hold: {L: slipper}}
+    lines:
+      - {id: L06, who: wife, at: 0.2, text: "Miss... and you sleep on the couch."}
+
+  # ---------------------------------------------------------------- THE CATCH
+  - id: F
+    dur: 3.0
+    background: living_room
+    camera: {x: 560, y: 1250, zoom: 1.0}
+    props:
+      - {name: slipper, x: 330, y: 1150, z: 30, rot: 0, visible: false,
+         keys: [{at: 0.35, visible: true}, {at: 0.8, x: 700, y: 1010, rot: 540, from: 0.35, ease: in},
+                {at: 0.8, visible: false}]}
+    actors:
+      husband: {<<: *husband_spot, action: wind_up, expr: determined, look: right, hold: {R: slipper},
+                keys: [{at: 0.35, action: point_R, hold: {}}, {at: 0.9, expr: shocked}]}
+      roach: {<<: *roach_couch, action: idle, expr: determined, look: left,
+              keys: [{at: 0.8, action: hold_up, hold: {R: slipper}, expr: happy}]}
+    fx:
+      - {type: speedlines, at: 0.35, dur: 0.5, pos: [700, 1010]}
+    sfx:
+      - {at: 0.35, name: whoosh, gain: 0.7}
+      - {at: 0.8, name: pop, gain: 0.7}
+    lines:
+      - {id: L07, who: roach, at: 1.3, text: "Thank you."}
+
+  - id: G
+    dur: 3.0
+    background: living_room
+    camera: {x: 480, y: 1250, zoom: 1.0}
+    props:
+      - {name: slipper, x: 680, y: 1000, z: 30, rot: 0, visible: false,
+         keys: [{at: 0.7, visible: true}, {at: 1.0, x: 270, y: 900, rot: -720, from: 0.7, ease: in},
+                {at: 1.0, visible: false}]}
+    actors:
+      roach: {<<: *roach_couch, action: wind_up, expr: smug, look: left, hold: {R: slipper},
+              keys: [{at: 0.7, action: point_L, hold: {}}]}
+      husband: {<<: *husband_spot, action: freeze, expr: scared, look: right,
+                keys: [{at: 1.0, expr: shocked}, {at: 1.5, rot: 80, x: 110, from: 1.0, ease: in}]}
+    fx:
+      - {type: flash, at: 1.0, dur: 0.15}
+      - {type: text, at: 1.0, dur: 1.0, pos: [260, 760], text: "BONK!", size: 96, color: "#FFE45C"}
+      - {type: marks, at: 1.6, dur: 1.4, pos: [900, 1640]}
+    sfx:
+      - {at: 0.7, name: whoosh, gain: 0.7}
+      - {at: 1.0, name: boing, gain: 0.8}
+      - {at: 1.5, name: crash, gain: 0.6}
+
+  # ---------------------------------------------------------------- PUNCHLINE
+  - id: H
+    dur: 3.4
+    background: living_room
+    camera: {x: 620, y: 1300, zoom: 1.0}
+    actors:
+      husband: {<<: *husband_spot, x: 110, rot: 80, action: freeze, expr: shocked, look: up}
+      roach: {<<: *roach_couch, action: idle, expr: happy, look: right, hold: {R: slipper}}
+      wife: {<<: *wife_spot, x: 470, action: hips, expr: unbothered, look: right, variants: *barefoot}
+    lines:
+      - {id: L08, who: wife, at: 0.2, text: "Couch."}
+      - {id: L09, who: roach, at: 1.4, text: "I'll make room."}
+
+  # ---------------------------------------------------------------- LOOP ENDING
+  - id: I
+    dur: 2.8
+    background: living_room
+    camera: {x: 700, y: 1000, zoom: 2.3}
+    actors:
+      roach: {<<: *roach_couch, action: wind_up, expr: smug, look: camera, hold: {R: slipper}}
+    fx:
+      - {type: speedlines, at: 0.6, dur: 2.2, pos: [700, 1000]}
+    sfx:
+      - {at: 0.4, name: dun_dun_dun, gain: 0.55}
+    lines:
+      - {id: L10, who: roach, at: 0.8, pitch: 0.9, speed: 0.8, text: "Say goodnight."}

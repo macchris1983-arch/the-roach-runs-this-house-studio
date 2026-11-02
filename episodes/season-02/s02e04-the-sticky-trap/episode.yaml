@@ -1,0 +1,192 @@
+# The Roach Runs This House - S02E04 "The Sticky Trap"  (Roach Wars, part 4)
+# Kitchen landmarks: countertop y=1150 (x 0-820), fridge x 820-1090, floor y=1580.
+# The trap sits on the floor at (600, 1720). The Roach family: Grandma (glasses), Cousin, and two kids.
+id: s02e04
+slug: the-sticky-trap
+season: 2
+episode: 4
+title: The Sticky Trap
+logline: Roach Wars, round three. The Husband baits a sticky trap with a dumpling; the Roach calls the whole family over for a buffet, and the only one who gets stuck is the Husband.
+hook: The Husband sets a STICKY TRAP with a dumpling on it. "He can't resist."
+punchline: >-
+  The family eats the bait without touching the sticky part and leaves a five-star review. The Husband stomps
+  over in a rage, and he's the one stuck to the floor. "It's a STRATEGY."
+loop: Ends with Grandma Roach waving from the counter, "Same time tomorrow, baby!", setting up the next trap.
+outline: |-
+  1. Husband sets the trap with a dumpling: "Five-star bait. He can't resist."
+  2. Night. The Roach sniffs it: "A free buffet? ...Bring the family."
+  3. THE FAMILY marches in: Grandma, Cousin, two kids. Grandma: "Ooh, dumplings!"
+  4. Roach: "Don't touch the yellow part." Kids: "Okaaay!"
+  5. Morning. Husband: "GOT HIM!" The trap holds one sticky note.
+  6. Note: "5 stars. Great service."
+  7. Husband stomps over: STUCK. "...Oh no."
+  8. Wife: "Why are you stuck to the floor?" Husband: "It's a STRATEGY."
+  9. Grandma from the counter: "Same time tomorrow, baby!"
+thumbnail_at: 9.0
+thumbnail_text: "He brought the whole family"
+cover_at: 9.0
+voice_provider: babble
+music: {enabled: true, mood: sneaky_funk, bpm: 104, root_midi: 42, seed: 2404, gain: 0.2}
+reels:
+  title: "The Sticky Trap | The Roach Runs This House S2 Ep. 4"
+  caption: "He set a roach trap... and the roach brought the WHOLE FAMILY 🪤🪳🪳🪳\n\nWait for the review they left 😭\n\nTag the person who always gets stuck in their own plan 👇\n\nROACH WARS, Season 2, Ep. 4 of The Roach Runs This House, an original animated comedy. Follow for the next round."
+  hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#reels"]
+
+common:
+  trap: &trap {name: glue_trap, x: 600, y: 1720, z: 14, scale: 1.4}
+  bait: &bait {name: dumpling, x: 600, y: 1700, z: 15, scale: 0.8}
+  night: &night {type: darkness, at: 0, amount: 0.55}
+  grandma: &grandma {accessory: glasses}
+
+shots:
+  # ---------------------------------------------------------------- HOOK
+  - id: A
+    dur: 3.0
+    background: kitchen
+    camera: {x: 500, y: 1450, zoom: 1.25}
+    props: [*trap, *bait]
+    actors:
+      husband: {x: 330, y: 1880, scale: 0.95, z: 20, action: crouch, expr: smug, look: right,
+                keys: [{at: 1.2, action: point_R, expr: determined, look: camera}]}
+    fx:
+      - {type: burst, at: 0.05, dur: 1.4, pos: [540, 330], world: false, text: "STICKY TRAP", size: 66, bg: "#FFE45C"}
+    sfx:
+      - {at: 0.0, name: dun_dun_dun, gain: 0.5}
+    lines:
+      - {id: L01, who: husband, at: 1.0, text: "Five-star bait. He can't resist."}
+
+  - id: B
+    dur: 3.4
+    background: kitchen
+    camera: {x: 620, y: 1550, zoom: 1.9}
+    props: [*trap, *bait]
+    actors:
+      roach: {x: 1000, y: 1730, scale: 0.8, z: 16, action: walk, expr: neutral, look: left,
+              keys: [{at: 0.9, x: 780, ease: out}, {at: 0.9, action: idle, expr: smug},
+                     {at: 1.8, action: phone, hold: {R: phone}, look: camera}]}
+    fx: [*night]
+    sfx:
+      - {at: 0.0, name: scuttle, gain: 0.6}
+    lines:
+      - {id: L02, who: roach, at: 1.0, text: "A free buffet?"}
+      - {id: L03, who: roach, at: 2.3, text: "...Bring the family."}
+
+  # ---------------------------------------------------------------- THE FAMILY
+  - id: C
+    dur: 3.4
+    background: kitchen
+    camera: {x: 620, y: 1550, zoom: 1.6}
+    props: [*trap, *bait]
+    actors:
+      roach: {x: 780, y: 1730, scale: 0.8, z: 16, action: wave, expr: happy, look: right}
+      roach@grandma: {x: 1150, y: 1735, scale: 0.85, z: 17, action: walk, expr: happy, look: left, variants: *grandma,
+                      keys: [{at: 1.0, x: 900, ease: out}, {at: 1.0, action: hips}]}
+      roach@cousin: {x: 1250, y: 1760, scale: 0.8, z: 18, action: walk, expr: smug, look: left,
+                     keys: [{at: 1.2, x: 1000, ease: out}, {at: 1.2, action: dance}]}
+      roach@kid1: {x: 1200, y: 1800, scale: 0.55, z: 19, action: run, expr: happy, look: left,
+                   keys: [{at: 1.1, x: 450, ease: out}, {at: 1.1, action: jump}]}
+      roach@kid2: {x: 1300, y: 1810, scale: 0.55, z: 19, action: run, expr: happy, look: left,
+                   keys: [{at: 1.3, x: 760, ease: out}, {at: 1.3, action: jump}]}
+    fx:
+      - *night
+      - {type: burst, at: 0.4, dur: 1.4, pos: [540, 420], world: false, text: "THE FAMILY", size: 66, bg: "#E86A5B"}
+    sfx:
+      - {at: 0.1, name: scuttle, gain: 0.8}
+      - {at: 0.5, name: tiny_cheer, gain: 0.6}
+    lines:
+      - {id: L04, who: roach@grandma, at: 2.0, pitch: 1.12, text: "Ooh, dumplings!"}
+
+  - id: D
+    dur: 3.2
+    background: kitchen
+    camera: {x: 620, y: 1600, zoom: 2.0}
+    props: [*trap]
+    actors:
+      roach: {x: 780, y: 1730, scale: 0.8, z: 16, action: point_L, expr: determined, look: left}
+      roach@grandma: {x: 470, y: 1735, scale: 0.85, z: 17, action: eat, expr: chewing, look: right, variants: *grandma, hold: {R: dumpling}}
+      roach@kid1: {x: 400, y: 1800, scale: 0.55, z: 19, action: dance, expr: happy, look: right}
+      roach@kid2: {x: 860, y: 1810, scale: 0.55, z: 19, action: dance, expr: happy, look: left}
+    fx: [*night]
+    sfx:
+      - {at: 2.4, name: tiny_cheer, gain: 0.5}
+    lines:
+      - {id: L05, who: roach, at: 0.2, text: "Don't touch the yellow part."}
+      - {id: L06, who: roach@kid1, at: 2.0, pitch: 1.35, speed: 1.1, text: "Okaaay!"}
+
+  # ---------------------------------------------------------------- MORNING
+  - id: E
+    dur: 2.6
+    background: kitchen
+    camera: {x: 500, y: 1450, zoom: 1.25}
+    props:
+      - *trap
+      - {name: sticky_note, x: 600, y: 1700, z: 15, scale: 0.8}
+    actors:
+      husband: {x: 120, y: 1880, scale: 0.95, z: 20, action: run, expr: happy, look: right,
+                keys: [{at: 0.8, x: 330, ease: out}, {at: 0.8, action: hold_up}]}
+    fx:
+      - {type: flash, at: 0.0, dur: 0.2, color: "#FFF3B0"}
+    sfx:
+      - {at: 0.0, name: footsteps_run, gain: 0.6}
+    lines:
+      - {id: L07, who: husband, at: 0.8, shout: true, text: "GOT HIM!"}
+
+  - id: F
+    dur: 2.6
+    background: kitchen
+    camera: {x: 600, y: 1650, zoom: 3.0}
+    props:
+      - *trap
+      - {name: sticky_note, x: 600, y: 1700, z: 15, scale: 0.8}
+    fx:
+      - {type: burst, at: 0.2, dur: 2.4, pos: [540, 620], world: false, text: "5 STARS. GREAT SERVICE.", size: 52, bg: "#FFE45C", color: "#1E1410"}
+    sfx:
+      - {at: 0.3, name: gasp_sting, gain: 0.6}
+    lines:
+      - {id: L08, who: husband, at: 0.9, pitch: 0.95, text: "...Five stars?!"}
+
+  # ---------------------------------------------------------------- PUNCHLINE
+  - id: G
+    dur: 3.0
+    background: kitchen
+    camera: {x: 560, y: 1450, zoom: 1.25}
+    props: [*trap]
+    actors:
+      husband: {x: 330, y: 1880, scale: 0.95, z: 20, action: walk, expr: furious, look: right,
+                keys: [{at: 0.7, x: 600, y: 1735, ease: out}, {at: 0.75, action: tremble, expr: shocked, look: down}]}
+    fx:
+      - {type: text, at: 0.8, dur: 1.6, pos: [600, 800], text: "STUCK!", size: 100, color: "#FFE45C"}
+      - {type: shake, at: 0.75, dur: 0.5, amp: 12}
+    sfx:
+      - {at: 0.0, name: footsteps_run, gain: 0.5}
+      - {at: 0.75, name: boing, gain: 0.8}
+    lines:
+      - {id: L09, who: husband, at: 1.6, pitch: 0.9, text: "...Oh no."}
+
+  - id: H
+    dur: 3.4
+    background: kitchen
+    camera: {x: 700, y: 1400, zoom: 1.15}
+    props: [*trap]
+    actors:
+      husband: {x: 600, y: 1735, scale: 0.95, z: 20, action: tremble, expr: pleading, look: right}
+      wife: {x: 930, y: 1880, scale: 1.0, z: 21, action: cross_arms, expr: sideeye, look: left}
+    lines:
+      - {id: L10, who: wife, at: 0.2, text: "Why are you stuck to the floor?"}
+      - {id: L11, who: husband, at: 2.0, shout: true, text: "It's a STRATEGY."}
+
+  # ---------------------------------------------------------------- LOOP ENDING
+  - id: I
+    dur: 3.4
+    background: kitchen
+    camera: {x: 420, y: 1120, zoom: 1.4}
+    actors:
+      roach@cousin: {x: 110, y: 1150, scale: 0.8, z: 15, action: cross_arms, expr: smug, look: camera}
+      roach@kid1: {x: 255, y: 1150, scale: 0.55, z: 18, action: jump, expr: happy, look: camera}
+      roach@grandma: {x: 400, y: 1150, scale: 0.85, z: 17, action: wave, expr: happy, look: camera, variants: *grandma}
+      roach@kid2: {x: 545, y: 1150, scale: 0.55, z: 18, action: dance, expr: happy, look: camera}
+      roach: {x: 690, y: 1150, scale: 0.8, z: 16, action: hips, expr: smug, look: camera}
+    sfx:
+      - {at: 1.8, name: tiny_cheer, gain: 0.6}
+    lines:
+      - {id: L12, who: roach@grandma, at: 0.3, pitch: 1.12, text: "Same time tomorrow, baby!"}

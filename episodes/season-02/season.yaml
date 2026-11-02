@@ -1,0 +1,29 @@
+season: 2
+title: The Roach Runs This House - Season 2 "Roach Wars"
+format: Facebook Reels, 9:16 1080x1920, 30 fps, 20-40 s
+arc: >-
+  The Husband declares war on the Roach and tries every traditional way to get rid of him: the slipper, bug spray,
+  a sticky trap, his grandma's powder, a professional exterminator. Every method backfires, and the Roach's family
+  (Grandma, Cousin and two kids) moves in along the way. The finale is a fight: the Husband vs the Roach.
+episodes:
+- id: s02e01
+  title: Whose Side of the Bed
+  status: full production file (war declared)
+- id: s02e02
+  title: The Slipper
+  status: full production file
+- id: s02e03
+  title: Bug Bomb
+  status: full production file
+- id: s02e04
+  title: The Sticky Trap
+  status: full production file (Roach family introduced)
+- id: s02e05
+  title: Grandma's Secret Powder
+  status: full production file
+- id: s02e06
+  title: The Exterminator
+  status: full production file
+- id: s02e07
+  title: The Main Event
+  status: full production file (season finale - the fight)
