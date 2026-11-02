@@ -13,15 +13,15 @@ punchline: >-
   over in a rage, and he's the one stuck to the floor. "It's a STRATEGY."
 loop: Ends with Grandma Roach waving from the counter, "Same time tomorrow, baby!", setting up the next trap.
 outline: |-
-  1. Husband sets the trap with a dumpling: "Five-star bait. He can't resist."
+  1. Husband sets the trap with a dumpling: "Five-star bait. That roach greedy just like his momma."
   2. Night. The Roach sniffs it: "A free buffet? ...Bring the family."
-  3. THE FAMILY marches in: Grandma, Cousin, two kids. Grandma: "Ooh, dumplings!"
+  3. THE FAMILY marches in: Grandma, Cousin, two kids. Grandma: "Ooh, dumplings! Is this the one with the beard? Baby, that ain't a beard. That's a cry for help."
   4. Roach: "Don't touch the yellow part." Kids: "Okaaay!"
   5. Morning. Husband: "GOT HIM!" The trap holds one sticky note.
-  6. Note: "5 stars. Great service."
+  6. Note: "5 STARS. FOOD GOOD. HOST UGLY."
   7. Husband stomps over: STUCK. "...Oh no."
-  8. Wife: "Why are you stuck to the floor?" Husband: "It's a STRATEGY."
-  9. Grandma from the counter: "Same time tomorrow, baby!"
+  8. Wife: "Why are you stuck to the floor?" Husband: "It's a STRATEGY."  Wife: "Your whole life is stuck to the floor."
+  9. Grandma from the counter: "Same time tomorrow, baby! Bring hot sauce!"
 thumbnail_at: 9.0
 thumbnail_text: "He brought the whole family"
 cover_at: 9.0
@@ -41,7 +41,7 @@ common:
 shots:
   # ---------------------------------------------------------------- HOOK
   - id: A
-    dur: 3.0
+    dur: 4.8
     background: kitchen
     camera: {x: 500, y: 1450, zoom: 1.25}
     props: [*trap, *bait]
@@ -53,10 +53,10 @@ shots:
     sfx:
       - {at: 0.0, name: dun_dun_dun, gain: 0.5}
     lines:
-      - {id: L01, who: husband, at: 1.0, text: "Five-star bait. He can't resist."}
+      - {id: L01, who: husband, at: 1.0, text: "Five-star bait. That roach greedy just like his momma."}
 
   - id: B
-    dur: 3.4
+    dur: 4.0
     background: kitchen
     camera: {x: 620, y: 1550, zoom: 1.9}
     props: [*trap, *bait]
@@ -73,7 +73,7 @@ shots:
 
   # ---------------------------------------------------------------- THE FAMILY
   - id: C
-    dur: 3.4
+    dur: 4.4
     background: kitchen
     camera: {x: 620, y: 1550, zoom: 1.6}
     props: [*trap, *bait]
@@ -94,7 +94,22 @@ shots:
       - {at: 0.1, name: scuttle, gain: 0.8}
       - {at: 0.5, name: tiny_cheer, gain: 0.6}
     lines:
-      - {id: L04, who: roach@grandma, at: 2.0, pitch: 1.12, text: "Ooh, dumplings!"}
+      - {id: L04, who: roach@grandma, at: 1.6, pitch: 1.12, text: "Ooh, dumplings! Is this the one with the beard?"}
+
+  - id: C2
+    dur: 3.0
+    background: kitchen
+    camera: {x: 620, y: 1620, zoom: 2.6}
+    props: [*trap, *bait]
+    actors:
+      roach@grandma: {x: 620, y: 1735, scale: 0.85, z: 17, action: hips, expr: sideeye, look: camera, variants: *grandma}
+    fx:
+      - *night
+      - {type: text, at: 2.3, dur: 0.8, pos: [620, 1350], text: "OOOH!", size: 70, color: "#FFE45C"}
+    sfx:
+      - {at: 2.3, name: tiny_cheer, gain: 0.5}
+    lines:
+      - {id: L04b, who: roach@grandma, at: 0.2, pitch: 1.12, text: "Baby, that ain't a beard. That's a cry for help."}
 
   - id: D
     dur: 3.2
@@ -139,11 +154,11 @@ shots:
       - *trap
       - {name: sticky_note, x: 600, y: 1700, z: 15, scale: 0.8}
     fx:
-      - {type: burst, at: 0.2, dur: 2.4, pos: [540, 620], world: false, text: "5 STARS. GREAT SERVICE.", size: 52, bg: "#FFE45C", color: "#1E1410"}
+      - {type: burst, at: 0.2, dur: 2.4, pos: [540, 620], world: false, text: "5 STARS. FOOD GOOD. HOST UGLY.", size: 46, bg: "#FFE45C", color: "#1E1410"}
     sfx:
       - {at: 0.3, name: gasp_sting, gain: 0.6}
     lines:
-      - {id: L08, who: husband, at: 0.9, pitch: 0.95, text: "...Five stars?!"}
+      - {id: L08, who: husband, at: 0.9, pitch: 0.95, text: "...HOST UGLY?!"}
 
   # ---------------------------------------------------------------- PUNCHLINE
   - id: G
@@ -164,7 +179,7 @@ shots:
       - {id: L09, who: husband, at: 1.6, pitch: 0.9, text: "...Oh no."}
 
   - id: H
-    dur: 3.4
+    dur: 5.8
     background: kitchen
     camera: {x: 700, y: 1400, zoom: 1.15}
     props: [*trap]
@@ -174,10 +189,11 @@ shots:
     lines:
       - {id: L10, who: wife, at: 0.2, text: "Why are you stuck to the floor?"}
       - {id: L11, who: husband, at: 2.0, shout: true, text: "It's a STRATEGY."}
+      - {id: L11b, who: wife, at: 3.4, text: "Your whole life is stuck to the floor."}
 
   # ---------------------------------------------------------------- LOOP ENDING
   - id: I
-    dur: 3.4
+    dur: 5.0
     background: kitchen
     camera: {x: 420, y: 1120, zoom: 1.4}
     actors:
@@ -189,4 +205,4 @@ shots:
     sfx:
       - {at: 1.8, name: tiny_cheer, gain: 0.6}
     lines:
-      - {id: L12, who: roach@grandma, at: 0.3, pitch: 1.12, text: "Same time tomorrow, baby!"}
+      - {id: L12, who: roach@grandma, at: 2.03, pitch: 1.12, text: "Same time tomorrow, baby! Bring hot sauce!"}

@@ -12,14 +12,14 @@ punchline: >-
   lavender scent, and the Wife loves how the kitchen smells.
 loop: Ends with the Husband spraying himself in the face and the Roach repeating "Military grade."
 outline: |-
-  1. BUG BOMB! Husband: "Military grade."
+  1. BUG BOMB! Husband: "Military grade, bitch."
   2. He sprays the whole kitchen: "Nothing survives this!"
   3. Total fog. "*cough* ...nothing."
-  4. Fog clears: the Roach in a towel. "Ahh. Thanks for the sauna."
+  4. Fog clears: the Roach in a towel. "Ahh. Thanks for the sauna. You should try a shower sometime."
   5. Husband: "That was MILITARY GRADE!"
-  6. Roach reads the can: "Says here... lavender scent."
+  6. Roach: "So's your breath. They use it to clear out buildings."  Reads the can: "I survived the dinosaurs, bro. You brought... lavender."
   7. Wife walks in: "Why does my kitchen smell like a spa?"
-  8. Wife: "...Honestly? It's nice."  Roach: "I added eucalyptus."
+  8. Wife: "...Honestly? It's nice."  Roach: "First time it smelled good since he moved in."
   9. Husband sprays again, backwards, into his own face. Roach: "Military grade."
 thumbnail_at: 1.1
 thumbnail_text: "Bug spray vs roach"
@@ -40,7 +40,7 @@ common:
 shots:
   # ---------------------------------------------------------------- HOOK
   - id: A
-    dur: 2.8
+    dur: 3.1
     background: kitchen
     camera: {x: 520, y: 1250, zoom: 1.0, keys: [{at: 2.6, x: 360, zoom: 1.35, from: 0.4}]}
     props: [*table]
@@ -53,7 +53,7 @@ shots:
     sfx:
       - {at: 0.0, name: dun_dun_dun, gain: 0.55}
     lines:
-      - {id: L01, who: husband, at: 1.2, pitch: 0.88, speed: 0.85, text: "Military grade."}
+      - {id: L01, who: husband, at: 1.0, pitch: 0.88, speed: 0.9, text: "Military grade, bitch."}
 
   - id: B
     dur: 2.8
@@ -89,7 +89,7 @@ shots:
 
   # ---------------------------------------------------------------- THE SAUNA
   - id: D
-    dur: 3.2
+    dur: 4.3
     background: kitchen
     camera: {x: 700, y: 1150, zoom: 2.3}
     props: [*table]
@@ -101,7 +101,7 @@ shots:
     sfx:
       - {at: 0.4, name: tiny_cheer, gain: 0.3}
     lines:
-      - {id: L04, who: roach, at: 0.6, text: "Ahh. Thanks for the sauna."}
+      - {id: L04, who: roach, at: 0.6, text: "Ahh. Thanks for the sauna. You should try a shower sometime."}
 
   - id: E
     dur: 2.6
@@ -118,7 +118,21 @@ shots:
       - {id: L05, who: husband, at: 0.15, shout: true, text: "That was MILITARY GRADE!"}
 
   - id: F
-    dur: 3.2
+    dur: 3.3
+    background: kitchen
+    camera: {x: 700, y: 1150, zoom: 2.3}
+    props: [*table]
+    actors:
+      roach: {<<: *roach_table, action: point_L, expr: smug, look: camera, hold: {L: towel}}
+    fx:
+      - {type: text, at: 2.6, dur: 0.8, pos: [700, 860], text: "OOOH!", size: 76, color: "#FFE45C"}
+    sfx:
+      - {at: 2.6, name: gasp_sting, gain: 0.5}
+    lines:
+      - {id: L06, who: roach, at: 0.3, text: "So's your breath. They use it to clear out buildings."}
+
+  - id: F2
+    dur: 4.0
     background: kitchen
     camera: {x: 700, y: 1150, zoom: 2.3}
     props: [*table]
@@ -127,11 +141,11 @@ shots:
     sfx:
       - {at: 0.2, name: paper_rustle, gain: 0.4}
     lines:
-      - {id: L06, who: roach, at: 0.4, text: "Says here... lavender scent."}
+      - {id: L06b, who: roach, at: 0.3, text: "I survived the dinosaurs, bro. You brought... lavender."}
 
   # ---------------------------------------------------------------- PUNCHLINE
   - id: G
-    dur: 3.2
+    dur: 3.3
     background: kitchen
     camera: {x: 620, y: 1250, zoom: 1.0}
     props: [*table]
@@ -144,7 +158,7 @@ shots:
       - {id: L07, who: wife, at: 1.0, text: "Why does my kitchen smell like a spa?"}
 
   - id: H
-    dur: 3.6
+    dur: 4.4
     background: kitchen
     camera: {x: 800, y: 1200, zoom: 1.4}
     props: [*table]
@@ -153,11 +167,11 @@ shots:
       wife: {x: 990, y: 1880, scale: 1.0, z: 21, action: hips, expr: happy, look: left}
     lines:
       - {id: L08, who: wife, at: 0.2, text: "Honestly? It's nice."}
-      - {id: L09, who: roach, at: 1.9, text: "I added eucalyptus."}
+      - {id: L09, who: roach, at: 1.9, text: "First time it smelled good since he moved in."}
 
   # ---------------------------------------------------------------- LOOP ENDING
   - id: I
-    dur: 3.4
+    dur: 3.6
     background: kitchen
     camera: {x: 450, y: 1200, zoom: 1.3}
     props: [*table]

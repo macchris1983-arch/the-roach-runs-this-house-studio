@@ -13,13 +13,14 @@ punchline: >-
   the lights go out, and the Husband declares war... then starts snoring mid-threat.
 loop: Ends in the dark on the Husband's snore, which the opening bedside freeze answers again.
 outline: |-
-  1. Husband at the bedside: "That's MY pillow."
-  2. Roach, tucked in: "Not tonight."
+  1. Husband at the bedside: "Get off my pillow, you crusty-ass raisin with legs."
+  2. Roach, tucked in: "Your pillow smells like gas-station sushi. I'm doing you a favor."
   3. Husband: "Babe. Tell him."
   4. Wife, reading: "He doesn't snore."
   5. Husband: "I DON'T snore!"
-  6. Roach holds up his phone: "I have recordings."
-  7. Husband: "...How many recordings?"  Roach: "Forty-two."
+  6. Roach holds up his phone: "Bro, you snore like a leaf blower having a panic attack."
+  7. Husband: "...You RECORDED me?!"  Roach: "Forty-two times."
+  7b. Roach: "And your breath so bad, I moved out the trash can for some fresh air."
   8. Wife: "Goodnight, baby." Roach: "Goodnight."
   9. Lights out. Husband: "This. Means. WAR." ...*SNORE*
 thumbnail_at: 1.4
@@ -40,7 +41,7 @@ common:
 shots:
   # ---------------------------------------------------------------- HOOK
   - id: A
-    dur: 3.0
+    dur: 5.0
     background: bedroom
     camera: {x: 540, y: 1250, zoom: 1.0}
     actors:
@@ -53,16 +54,16 @@ shots:
     sfx:
       - {at: 0.9, name: record_scratch, gain: 0.6}
     lines:
-      - {id: L01, who: husband, at: 1.5, text: "That's MY pillow."}
+      - {id: L01, who: husband, at: 1.5, text: "Get off my pillow, you crusty-ass raisin with legs."}
 
   - id: B
-    dur: 2.4
+    dur: 4.2
     background: bedroom
     camera: {x: 410, y: 960, zoom: 2.6}
     actors:
       roach: {<<: *roach_pillow, expr: unbothered, look: camera}
     lines:
-      - {id: L02, who: roach, at: 0.25, text: "Not tonight."}
+      - {id: L02, who: roach, at: 0.25, text: "Your pillow smells like gas-station sushi. I'm doing you a favor."}
 
   - id: C
     dur: 2.6
@@ -100,7 +101,7 @@ shots:
 
   # ---------------------------------------------------------------- THE EVIDENCE
   - id: F
-    dur: 2.8
+    dur: 3.6
     background: bedroom
     camera: {x: 410, y: 960, zoom: 2.6}
     actors:
@@ -111,7 +112,7 @@ shots:
     sfx:
       - {at: 0.5, name: pop, gain: 0.5}
     lines:
-      - {id: L06, who: roach, at: 0.3, text: "I have recordings."}
+      - {id: L06, who: roach, at: 0.3, text: "Bro, you snore like a leaf blower having a panic attack."}
 
   - id: G
     dur: 2.6
@@ -122,7 +123,7 @@ shots:
     fx:
       - {type: sweat, at: 0.4, pos: [300, 870], dur: 1.6}
     lines:
-      - {id: L07, who: husband, at: 0.25, pitch: 0.95, text: "...How many recordings?"}
+      - {id: L07, who: husband, at: 0.25, pitch: 0.95, text: "...You RECORDED me?!"}
 
   - id: H
     dur: 2.4
@@ -133,7 +134,20 @@ shots:
     sfx:
       - {at: 1.2, name: dun_dun_dun, gain: 0.6}
     lines:
-      - {id: L08, who: roach, at: 0.2, text: "Forty-two."}
+      - {id: L08, who: roach, at: 0.2, text: "Forty-two times."}
+
+  - id: H2
+    dur: 3.7
+    background: bedroom
+    camera: {x: 410, y: 960, zoom: 2.6}
+    actors:
+      roach: {<<: *roach_pillow, expr: smug, look: camera, action: point_L}
+    fx:
+      - {type: text, at: 2.6, dur: 0.8, pos: [560, 760], text: "OOOH!", size: 76, color: "#FFE45C"}
+    sfx:
+      - {at: 2.6, name: gasp_sting, gain: 0.5}
+    lines:
+      - {id: L08b, who: roach, at: 0.2, text: "And your breath so bad, I moved out the trash can for some fresh air."}
 
   # ---------------------------------------------------------------- PUNCHLINE
   - id: I

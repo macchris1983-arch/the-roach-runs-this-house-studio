@@ -1,191 +1,223 @@
 # The Roach Runs This House - S02E07 "The Main Event"  (Roach Wars, season finale)
 # Living room landmarks: couch x 60-1020, couch-back top y=1080, floor y=1560.
-# The living room is the ring: Husband left corner, Roach right corner, Wife refereeing in the middle,
-# the Roach family cheering from the top of the couch.
+# The Roach talks from the top of the couch back, his family watching from the other end of it.
 id: s02e07
 slug: the-main-event
 season: 2
 episode: 7
 title: The Main Event
-logline: "Roach Wars finale. Nothing worked, so it comes down to a fight: the Husband vs the Roach, gloves on, the Wife refereeing and the Roach family in the stands."
-hook: "ROACH WARS: THE MAIN EVENT. The Wife with a whistle: \"In this corner...\""
+logline: "Roach Wars finale. The Roach won't stop roasting the Husband, the Husband finally snaps and swings, and the Roach dodges and knocks him out."
+hook: "The Roach on the couch, mid-roast: \"Your forehead so big I can see the TV in it.\""
 punchline: >-
-  The Husband swings a haymaker and misses. The Roach floats like a roach, stings like a roach, and lands one
-  uppercut. TIMBER. The Wife counts to ten in two numbers and crowns the winner, "and STILL owner of this house."
+  The Roach goes after the Husband's momma one time too many. The Husband snaps and throws a haymaker; the Roach
+  dodges, the punch hits the couch, and the Roach comes back with one shot to the chin. TIMBER. The Wife walks in:
+  "What happened?" Roach: "He tried it."
 loop: Ends with the Husband face-down demanding a rematch next season, and the Roach on his back saying "Pay rent first."
 outline: |-
-  1. ROACH WARS: THE MAIN EVENT. Wife: "In this corner... my husband!"
-  2. Wife: "And in THIS corner... the landlord!" The family goes wild.
-  3. Whistle. ROUND 1. Wife: "FIGHT!"
-  4. Husband's haymaker. MISS.
-  5. Roach: "Float like a roach... sting like a roach."
-  6. One uppercut. POW. The Husband goes down like a tree.
-  7. Wife: "One... two... TEN!"
-  8. Wife: "Winner... and STILL owner of this house!"
-  9. Husband, face-down: "Rematch. Season three."  Roach, on his back: "Pay rent first."
-thumbnail_at: 17.0
-thumbnail_text: "Man vs roach"
-cover_at: 17.0
+  1. Roach: "Bro, your forehead so big I can see the TV in it."
+  2. Husband: "Keep talking, roach. Keep talking."
+  3. Roach: "Your momma so broke, she pay ME rent."
+  4. Husband: "Leave my momma OUT of this!"
+  5. Roach: "Your momma's breath smells like she eats yo daddy's ass at night, just to talk shit in the morning." OHHHH!
+  6. Husband: "THAT'S IT!"
+  7. Haymaker. The Roach dodges. The punch hits the couch. MISS.
+  8. Roach: "Float like a roach... sting like a roach." POW. TIMBER.
+  9. Wife walks in: "What happened?" Roach, on his back: "He tried it."
+  10. Husband, face-down: "Rematch. Season three."  Roach: "Pay rent first."
+thumbnail_at: 22.0
+thumbnail_text: "He fought the roach"
+cover_at: 22.0
 voice_provider: babble
 music: {enabled: true, mood: suspense, bpm: 120, root_midi: 43, seed: 2707, gain: 0.2}
 reels:
   title: "The Main Event | The Roach Runs This House S2 Finale"
-  caption: "Nothing worked. Slipper, spray, traps, grandma's powder, an exterminator... so he FOUGHT the roach 🥊🪳\n\nWait for the uppercut 😭\n\nWho's winning this fight in your house? 👇\n\nROACH WARS finale, Season 2, Ep. 7 of The Roach Runs This House, an original animated comedy. Follow for Season 3."
-  hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#couplescomedy", "#reels"]
+  caption: "The roach would NOT stop talking about his momma... so he swung 👊🪳\n\nWait for the dodge 😭\n\nWho's winning this fight in your house? 👇\n\nROACH WARS finale, Season 2, Ep. 7 of The Roach Runs This House, an original animated comedy. Follow for Season 3."
+  hashtags: ["#TheRoachRunsThisHouse", "#animation", "#cartoon", "#comedy", "#roast", "#reels"]
 
 common:
-  gloves: &gloves {L: boxing_glove, R: boxing_glove}
-  husband_corner: &husband_corner {x: 260, y: 1880, scale: 0.95, z: 20}
-  roach_corner: &roach_corner {x: 800, y: 1880, scale: 1.25, z: 22}
-  wife_ref: &wife_ref {x: 540, y: 1880, scale: 1.0, z: 18}
-  grandma: &grandma {accessory: glasses}
+  roach_couch: &roach_couch {x: 600, y: 1095, scale: 0.8, z: 9}
+  husband_spot: &husband_spot {x: 280, y: 1880, scale: 0.95, z: 20}
   crowd: &crowd
-    roach@grandma: {x: 640, y: 1095, scale: 0.6, z: 9, action: wave, expr: happy, look: camera, variants: {accessory: glasses}}
-    roach@cousin: {x: 900, y: 1095, scale: 0.6, z: 9, action: hold_up, expr: happy, look: camera}
-    roach@kid1: {x: 760, y: 1095, scale: 0.42, z: 10, action: jump, expr: happy, look: camera}
-    roach@kid2: {x: 520, y: 1095, scale: 0.42, z: 10, action: jump, expr: happy, look: camera}
+    roach@grandma: {x: 770, y: 1095, scale: 0.6, z: 8, action: hips, expr: smug, look: left, variants: {accessory: glasses}}
+    roach@kid1: {x: 850, y: 1095, scale: 0.42, z: 8, action: idle, expr: happy, look: left}
+    roach@cousin: {x: 930, y: 1095, scale: 0.6, z: 8, action: cross_arms, expr: smug, look: left}
+    roach@kid2: {x: 990, y: 1095, scale: 0.42, z: 8, action: idle, expr: happy, look: left}
+  crowd_hype: &crowd_hype
+    roach@grandma: {x: 770, y: 1095, scale: 0.6, z: 8, action: wave, expr: shocked, look: camera, variants: {accessory: glasses}}
+    roach@kid1: {x: 850, y: 1095, scale: 0.42, z: 8, action: jump, expr: happy, look: camera}
+    roach@cousin: {x: 930, y: 1095, scale: 0.6, z: 8, action: hold_up, expr: shocked, look: camera}
+    roach@kid2: {x: 990, y: 1095, scale: 0.42, z: 8, action: jump, expr: happy, look: camera}
 
 shots:
   # ---------------------------------------------------------------- HOOK
   - id: A
-    dur: 3.2
+    dur: 3.5
     background: living_room
-    camera: {x: 440, y: 1300, zoom: 1.1}
+    camera: {x: 560, y: 1300, zoom: 1.05}
     actors:
-      wife: {<<: *wife_ref, x: 640, action: point_L, expr: happy, look: camera, hold: {R: whistle}}
-      husband: {<<: *husband_corner, action: dance, expr: determined, look: right, hold: *gloves}
+      <<: *crowd
+      roach: {<<: *roach_couch, action: point_L, expr: smug, look: left}
+      husband: {<<: *husband_spot, action: idle, expr: sideeye, look: right}
     fx:
-      - {type: flash, at: 0.0, dur: 0.15}
-      - {type: burst, at: 0.05, dur: 1.6, pos: [540, 320], world: false, text: "THE MAIN EVENT", size: 62, bg: "#E86A5B"}
-      - {type: spotlight, at: 0.0, pos: [260, 1450], radius: [280, 560], amount: 0.45, tint: "#FFF3B0"}
+      - {type: burst, at: 0.05, dur: 1.5, pos: [540, 320], world: false, text: "ROACH WARS FINALE", size: 58, bg: "#E86A5B"}
     sfx:
-      - {at: 0.0, name: victory, gain: 0.6}
+      - {at: 0.0, name: dun_dun_dun, gain: 0.5}
     lines:
-      - {id: L01, who: wife, at: 1.0, text: "In this corner... my husband!"}
+      - {id: L01, who: roach, at: 0.3, text: "Bro, your forehead so big I can see the TV in it."}
 
   - id: B
-    dur: 3.4
+    dur: 2.7
     background: living_room
-    camera: {x: 700, y: 1350, zoom: 1.15}
+    camera: {x: 300, y: 1250, zoom: 1.7}
     actors:
-      <<: *crowd
-      wife: {<<: *wife_ref, action: point_R, expr: happy, look: right, hold: {L: whistle}}
-      roach: {<<: *roach_corner, action: hips, expr: smug, look: camera, hold: *gloves}
-    fx:
-      - {type: spotlight, at: 0.0, pos: [800, 1650], radius: [240, 520], amount: 0.45, tint: "#FFF3B0"}
-    sfx:
-      - {at: 1.8, name: tiny_cheer, gain: 0.8}
+      husband: {<<: *husband_spot, action: cross_arms, expr: angry, look: right}
     lines:
-      - {id: L02, who: wife, at: 0.2, text: "And in THIS corner... the landlord!"}
+      - {id: L02, who: husband, at: 0.2, pitch: 0.92, text: "Keep talking, roach. Keep talking."}
 
   - id: C
-    dur: 2.2
-    background: living_room
-    camera: {x: 540, y: 1200, zoom: 1.6}
-    actors:
-      wife: {<<: *wife_ref, action: hold_up, expr: determined, look: camera, hold: {R: whistle}}
-    fx:
-      - {type: burst, at: 0.2, dur: 1.8, pos: [540, 380], world: false, text: "ROUND 1", size: 80, bg: "#FFD23F"}
-      - {type: shake, at: 0.2, dur: 0.6, amp: 10}
-    sfx:
-      - {at: 0.1, name: whistle, gain: 0.8}
-    lines:
-      - {id: L03, who: wife, at: 0.9, shout: true, text: "FIGHT!"}
-
-  # ---------------------------------------------------------------- THE FIGHT
-  - id: D
     dur: 3.0
     background: living_room
-    camera: {x: 560, y: 1350, zoom: 1.1}
+    camera: {x: 700, y: 1020, zoom: 2.0}
     actors:
       <<: *crowd
-      husband: {<<: *husband_corner, action: wind_up, expr: furious, look: right, hold: *gloves,
-                keys: [{at: 0.9, x: 520, from: 0.6, ease: in}, {at: 0.9, action: point_R},
-                       {at: 1.5, expr: shocked}]}
-      roach: {<<: *roach_corner, action: idle, expr: unbothered, look: left, hold: *gloves,
-              keys: [{at: 0.85, action: jump, y: 1500, from: 0.7, ease: out}, {at: 1.3, y: 1880, from: 1.0, ease: in},
-                     {at: 1.35, action: hips, expr: smug}]}
+      roach: {<<: *roach_couch, action: hips, expr: smug, look: camera}
     fx:
-      - {type: speedlines, at: 0.6, dur: 0.4, pos: [520, 1400]}
-      - {type: text, at: 0.95, dur: 1.2, pos: [700, 1150], text: "MISS!", size: 100, color: "#FFE45C"}
+      - {type: text, at: 2.3, dur: 0.8, pos: [700, 760], text: "OOOH!", size: 72, color: "#FFE45C"}
     sfx:
-      - {at: 0.6, name: whoosh, gain: 0.8}
-      - {at: 1.3, name: tiny_cheer, gain: 0.6}
+      - {at: 2.3, name: tiny_cheer, gain: 0.5}
+    lines:
+      - {id: L03, who: roach, at: 0.2, text: "Your momma so broke, she pay ME rent."}
+
+  - id: D
+    dur: 2.6
+    background: living_room
+    camera: {x: 300, y: 1200, zoom: 1.7}
+    actors:
+      husband: {<<: *husband_spot, action: point_R, expr: furious, look: right}
+    fx:
+      - {type: shake, at: 0.2, dur: 0.8, amp: 10}
+    lines:
+      - {id: L04, who: husband, at: 0.15, shout: true, text: "Leave my momma OUT of this!"}
 
   - id: E
-    dur: 3.4
+    dur: 6.0
     background: living_room
-    camera: {x: 800, y: 1550, zoom: 2.0}
+    camera: {x: 650, y: 1020, zoom: 2.0, keys: [{at: 4.6, zoom: 2.4, x: 620, from: 0.3}]}
     actors:
-      roach: {<<: *roach_corner, action: dance, expr: smug, look: camera, hold: *gloves}
+      <<: *crowd
+      roach: {<<: *roach_couch, action: point_L, expr: smug, look: camera}
     lines:
-      - {id: L04, who: roach, at: 0.2, text: "Float like a roach..."}
-      - {id: L05, who: roach, at: 1.8, text: "...sting like a roach."}
+      - {id: L05, who: roach, at: 0.2, text: "Your momma's breath smells like she eats yo daddy's ass at night... just to talk shit in the morning."}
 
+  - id: E2
+    dur: 1.8
+    background: living_room
+    camera: {x: 700, y: 1100, zoom: 1.5}
+    actors:
+      <<: *crowd_hype
+      roach: {<<: *roach_couch, action: dance, expr: happy, look: camera}
+    fx:
+      - {type: burst, at: 0.0, dur: 1.8, pos: [540, 420], world: false, text: "OHHHHH!", size: 84, bg: "#FFD23F"}
+      - {type: shake, at: 0.0, dur: 0.6, amp: 10}
+    sfx:
+      - {at: 0.0, name: tiny_cheer, gain: 0.9}
+      - {at: 0.0, name: gasp_sting, gain: 0.6}
+
+  # ---------------------------------------------------------------- THE FIGHT
   - id: F
-    dur: 3.4
+    dur: 2.2
+    background: living_room
+    camera: {x: 300, y: 1150, zoom: 1.9, keys: [{at: 1.8, zoom: 2.3, from: 0.2}]}
+    actors:
+      husband: {<<: *husband_spot, action: wind_up, expr: furious, look: right}
+    fx:
+      - {type: speedlines, at: 0.3, dur: 1.9, pos: [300, 1050]}
+    sfx:
+      - {at: 0.1, name: record_scratch, gain: 0.6}
+    lines:
+      - {id: L06, who: husband, at: 0.2, shout: true, text: "THAT'S IT!"}
+
+  - id: G
+    dur: 3.0
+    background: living_room
+    camera: {x: 520, y: 1250, zoom: 1.15}
+    actors:
+      <<: *crowd
+      husband: {<<: *husband_spot, action: wind_up, expr: furious, look: right,
+                keys: [{at: 0.7, x: 440, from: 0.35, ease: in}, {at: 0.7, action: point_R},
+                       {at: 1.4, expr: shocked}]}
+      roach: {<<: *roach_couch, action: idle, expr: unbothered, look: left,
+              keys: [{at: 0.6, action: jump, y: 760, from: 0.45, ease: out}, {at: 1.3, y: 1095, from: 0.9, ease: in},
+                     {at: 1.35, action: hips, expr: smug}]}
+    fx:
+      - {type: speedlines, at: 0.35, dur: 0.4, pos: [560, 1100]}
+      - {type: text, at: 0.75, dur: 1.2, pos: [620, 820], text: "MISS!", size: 100, color: "#FFE45C"}
+      - {type: shake, at: 0.75, dur: 0.4, amp: 14}
+    sfx:
+      - {at: 0.35, name: whoosh, gain: 0.8}
+      - {at: 0.75, name: crash, gain: 0.7}
+      - {at: 1.4, name: tiny_cheer, gain: 0.6}
+
+  - id: H
+    dur: 3.6
+    background: living_room
+    camera: {x: 600, y: 1000, zoom: 2.4}
+    actors:
+      roach: {<<: *roach_couch, action: dance, expr: smug, look: camera}
+    lines:
+      - {id: L07, who: roach, at: 0.2, text: "Float like a roach..."}
+      - {id: L08, who: roach, at: 1.8, text: "...sting like a roach."}
+
+  - id: I
+    dur: 3.2
     background: living_room
     camera: {x: 560, y: 1450, zoom: 1.05}
     actors:
       <<: *crowd
-      husband: {<<: *husband_corner, x: 440, action: wind_up, expr: angry, look: right, hold: *gloves,
-                keys: [{at: 0.8, expr: shocked, action: freeze}, {at: 1.7, rot: 84, x: 150, y: 1800, from: 1.0, ease: in}]}
-      roach: {<<: *roach_corner, x: 760, action: crouch, expr: determined, look: left, hold: *gloves,
-              keys: [{at: 0.8, x: 560, y: 1160, from: 0.45, ease: out}, {at: 0.5, action: hold_up},
-                     {at: 1.5, x: 760, y: 1880, from: 1.0, ease: in}, {at: 1.5, action: hips, expr: smug}]}
+      husband: {<<: *husband_spot, x: 440, action: point_R, expr: angry, look: right,
+                keys: [{at: 0.7, expr: shocked, action: freeze}, {at: 1.5, rot: 84, x: 150, y: 1800, from: 0.85, ease: in}]}
+      roach: {<<: *roach_couch, action: crouch, expr: determined, look: left,
+              keys: [{at: 0.7, x: 520, y: 1190, from: 0.35, ease: out}, {at: 0.35, action: hold_up, z: 25},
+                     {at: 1.4, x: 600, y: 1095, from: 0.9, ease: in}, {at: 1.4, action: hips, expr: smug, z: 9}]}
     fx:
-      - {type: speedlines, at: 0.45, dur: 0.35, pos: [520, 1200]}
-      - {type: flash, at: 0.8, dur: 0.18}
-      - {type: text, at: 0.8, dur: 0.9, pos: [470, 900], text: "POW!", size: 120, color: "#FFE45C"}
-      - {type: text, at: 1.7, dur: 1.4, pos: [600, 1300], text: "TIMBER!", size: 90, color: "#FFFFFF"}
-      - {type: shake, at: 1.7, dur: 0.6, amp: 18}
+      - {type: speedlines, at: 0.35, dur: 0.35, pos: [480, 1000]}
+      - {type: flash, at: 0.7, dur: 0.18}
+      - {type: text, at: 0.7, dur: 0.9, pos: [470, 800], text: "POW!", size: 120, color: "#FFE45C"}
+      - {type: text, at: 1.5, dur: 1.5, pos: [600, 1300], text: "TIMBER!", size: 90, color: "#FFFFFF"}
+      - {type: shake, at: 1.5, dur: 0.6, amp: 18}
     sfx:
-      - {at: 0.45, name: whoosh, gain: 0.8}
-      - {at: 0.8, name: boing, gain: 0.9}
-      - {at: 1.7, name: crash, gain: 0.8}
+      - {at: 0.35, name: whoosh, gain: 0.8}
+      - {at: 0.7, name: boing, gain: 0.9}
+      - {at: 1.5, name: crash, gain: 0.8}
+      - {at: 1.8, name: tiny_cheer, gain: 0.8}
 
   # ---------------------------------------------------------------- PUNCHLINE
-  - id: G
-    dur: 3.0
-    background: living_room
-    camera: {x: 580, y: 1520, zoom: 1.05}
-    actors:
-      <<: *crowd
-      husband: {<<: *husband_corner, x: 150, y: 1800, rot: 84, action: freeze, expr: shocked, look: up, hold: *gloves}
-      wife: {x: 300, y: 1880, scale: 1.0, z: 24, action: point_L, expr: happy, look: left, hold: {R: whistle}}
-    fx:
-      - {type: marks, at: 0.0, dur: 3.0, pos: [930, 1620], text: "@#!"}
-    lines:
-      - {id: L06, who: wife, at: 0.2, speed: 1.1, text: "One... two... TEN!"}
-
-  - id: H
+  - id: J
     dur: 3.4
     background: living_room
-    camera: {x: 580, y: 1500, zoom: 1.05}
+    camera: {x: 600, y: 1500, zoom: 1.05}
     actors:
-      <<: *crowd
-      husband: {<<: *husband_corner, x: 150, y: 1800, rot: 84, action: freeze, expr: shocked, look: up, hold: *gloves}
-      roach: {<<: *roach_corner, x: 620, y: 1640, scale: 1.1, z: 26, action: hold_up, expr: happy, look: camera, hold: *gloves}
-      wife: {x: 860, y: 1880, scale: 1.0, z: 24, action: point_L, expr: happy, look: left, hold: {R: whistle}}
+      <<: *crowd_hype
+      husband: {<<: *husband_spot, x: 150, y: 1800, rot: 84, action: freeze, expr: shocked, look: up}
+      roach: {x: 620, y: 1640, scale: 1.0, z: 26, action: hips, expr: smug, look: right}
+      wife: {x: 1200, y: 1880, scale: 1.0, z: 24, action: walk, expr: confused, look: left,
+             keys: [{at: 0.8, x: 900, ease: out}, {at: 0.8, action: hips}]}
     fx:
-      - {type: burst, at: 0.1, dur: 3.2, pos: [540, 330], world: false, text: "WINNER!", size: 80, bg: "#FFD23F"}
-      - {type: flash, at: 0.1, dur: 0.15}
-    sfx:
-      - {at: 0.1, name: victory, gain: 0.7}
-      - {at: 0.4, name: tiny_cheer, gain: 0.8}
+      - {type: marks, at: 0.0, dur: 3.4, pos: [960, 1600], text: "@#!"}
     lines:
-      - {id: L07, who: wife, at: 0.6, text: "Winner... and STILL owner of this house!"}
+      - {id: L09, who: wife, at: 0.6, text: "...What happened?"}
+      - {id: L10, who: roach, at: 1.9, text: "He tried it."}
 
   # ---------------------------------------------------------------- LOOP ENDING
-  - id: I
+  - id: K
     dur: 3.8
     background: living_room
     camera: {x: 780, y: 1660, zoom: 1.55}
     actors:
-      husband: {<<: *husband_corner, x: 150, y: 1800, rot: 84, action: freeze, expr: pleading, look: camera, hold: *gloves}
-      roach: {<<: *roach_corner, x: 620, y: 1640, scale: 1.1, z: 26, action: cross_arms, expr: smug, look: camera}
+      husband: {<<: *husband_spot, x: 150, y: 1800, rot: 84, action: freeze, expr: pleading, look: camera}
+      roach: {x: 620, y: 1640, scale: 1.0, z: 26, action: cross_arms, expr: smug, look: camera}
     sfx:
       - {at: 3.0, name: dun_dun_dun, gain: 0.5}
     lines:
-      - {id: L08, who: husband, at: 0.3, pitch: 0.92, text: "Rematch. Season three."}
-      - {id: L09, who: roach, at: 2.1, text: "Pay rent first."}
+      - {id: L11, who: husband, at: 0.3, pitch: 0.92, text: "Rematch. Season three."}
+      - {id: L12, who: roach, at: 2.1, text: "Pay rent first."}

@@ -12,15 +12,15 @@ punchline: >-
   and the Wife reminds him what happens if he misses: he's on the couch. The Roach: "I'll make room."
 loop: Ends on the Roach winding up the slipper with the same "Say goodnight." the Husband opened with.
 outline: |-
-  1. Slow-mo wind-up. Husband: "Say goodnight."
-  2. Throw. The Roach hops over it. MISS. Roach: "You throw like you're asking permission."
+  1. Slow-mo wind-up. Husband: "Say goodnight, you nasty little raisin."
+  2. Throw. The Roach hops over it. MISS. Roach: "You throw like your momma throws parties. Nobody shows up."
   3. Husband: "Babe. I need your slipper." Wife: "Absolutely not."
-  4. Husband: "It's for the WAR."
+  4. Husband: "Your momma so nasty she got roaches... and she IS a roach!"  Roach: "Dawg. Your hairline been running from you since 2009."
   5. Wife hands it over: "Miss, and you sleep on the couch."
-  6. Second throw. The Roach catches it. "Thank you."
+  6. Second throw. The Roach catches it. "Thank you. Your wife got better aim than your whole bloodline."
   7. Roach throws it back. BONK. Husband goes down.
-  8. Wife: "Couch." Roach pats the cushion: "I'll make room."
-  9. Roach winds up: "Say goodnight."
+  8. Wife: "Couch." Roach: "I'll make room. Bring your own blanket, mine don't smell like feet."
+  9. Roach winds up: "Say goodnight, you nasty BIG raisin."
 thumbnail_at: 1.0
 thumbnail_text: "Slipper vs roach"
 cover_at: 1.0
@@ -40,7 +40,7 @@ common:
 shots:
   # ---------------------------------------------------------------- HOOK
   - id: A
-    dur: 2.8
+    dur: 4.2
     background: living_room
     camera: {x: 500, y: 1250, zoom: 1.0, keys: [{at: 2.6, zoom: 1.25, x: 400, from: 0.2}]}
     actors:
@@ -52,10 +52,10 @@ shots:
     sfx:
       - {at: 0.0, name: dun_dun_dun, gain: 0.55}
     lines:
-      - {id: L01, who: husband, at: 1.2, pitch: 0.9, speed: 0.8, text: "Say goodnight."}
+      - {id: L01, who: husband, at: 1.0, pitch: 0.9, speed: 0.85, text: "Say goodnight, you nasty little raisin."}
 
   - id: B
-    dur: 3.4
+    dur: 4.9
     background: living_room
     camera: {x: 560, y: 1250, zoom: 1.0}
     props:
@@ -74,11 +74,11 @@ shots:
       - {at: 0.35, name: whoosh, gain: 0.7}
       - {at: 1.05, name: crash, gain: 0.45}
     lines:
-      - {id: L02, who: roach, at: 1.5, text: "You throw like you're asking permission."}
+      - {id: L02, who: roach, at: 1.5, text: "You throw like your momma throws parties. Nobody shows up."}
 
   # ---------------------------------------------------------------- RELOAD
   - id: C
-    dur: 3.0
+    dur: 3.7
     background: living_room
     camera: {x: 560, y: 1300, zoom: 1.05}
     actors:
@@ -86,10 +86,10 @@ shots:
       wife: {<<: *wife_spot, action: cross_arms, expr: unbothered, look: left}
     lines:
       - {id: L03, who: husband, at: 0.15, text: "Babe. I need your slipper."}
-      - {id: L04, who: wife, at: 2.1, text: "Absolutely not."}
+      - {id: L04, who: wife, at: 2.14, text: "Absolutely not."}
 
   - id: D
-    dur: 2.2
+    dur: 4.0
     background: living_room
     camera: {x: 260, y: 1250, zoom: 1.8}
     actors:
@@ -97,7 +97,20 @@ shots:
     fx:
       - {type: shake, at: 0.2, dur: 0.8, amp: 10}
     lines:
-      - {id: L05, who: husband, at: 0.15, shout: true, text: "It's for the WAR!"}
+      - {id: L05, who: husband, at: 0.15, shout: true, text: "Your momma so nasty she got roaches... and she IS a roach!"}
+
+  - id: D2
+    dur: 3.2
+    background: living_room
+    camera: {x: 700, y: 1000, zoom: 2.3}
+    actors:
+      roach: {<<: *roach_couch, action: point_L, expr: smug, look: camera}
+    fx:
+      - {type: text, at: 2.5, dur: 0.8, pos: [700, 760], text: "OOOH!", size: 76, color: "#FFE45C"}
+    sfx:
+      - {at: 2.5, name: gasp_sting, gain: 0.5}
+    lines:
+      - {id: L05b, who: roach, at: 0.2, text: "Dawg. Your hairline been running from you since 2009."}
 
   - id: E
     dur: 3.0
@@ -110,7 +123,7 @@ shots:
 
   # ---------------------------------------------------------------- THE CATCH
   - id: F
-    dur: 3.0
+    dur: 5.0
     background: living_room
     camera: {x: 560, y: 1250, zoom: 1.0}
     props:
@@ -128,7 +141,7 @@ shots:
       - {at: 0.35, name: whoosh, gain: 0.7}
       - {at: 0.8, name: pop, gain: 0.7}
     lines:
-      - {id: L07, who: roach, at: 1.3, text: "Thank you."}
+      - {id: L07, who: roach, at: 1.3, text: "Thank you. Your wife got better aim than your whole bloodline."}
 
   - id: G
     dur: 3.0
@@ -154,7 +167,7 @@ shots:
 
   # ---------------------------------------------------------------- PUNCHLINE
   - id: H
-    dur: 3.4
+    dur: 5.0
     background: living_room
     camera: {x: 620, y: 1300, zoom: 1.0}
     actors:
@@ -163,11 +176,11 @@ shots:
       wife: {<<: *wife_spot, x: 470, action: hips, expr: unbothered, look: right, variants: *barefoot}
     lines:
       - {id: L08, who: wife, at: 0.2, text: "Couch."}
-      - {id: L09, who: roach, at: 1.4, text: "I'll make room."}
+      - {id: L09, who: roach, at: 1.4, text: "I'll make room. Bring your own blanket, mine don't smell like feet."}
 
   # ---------------------------------------------------------------- LOOP ENDING
   - id: I
-    dur: 2.8
+    dur: 3.4
     background: living_room
     camera: {x: 700, y: 1000, zoom: 2.3}
     actors:
@@ -177,4 +190,4 @@ shots:
     sfx:
       - {at: 0.4, name: dun_dun_dun, gain: 0.55}
     lines:
-      - {id: L10, who: roach, at: 0.8, pitch: 0.9, speed: 0.8, text: "Say goodnight."}
+      - {id: L10, who: roach, at: 0.8, pitch: 0.9, speed: 0.85, text: "Say goodnight, you nasty BIG raisin."}

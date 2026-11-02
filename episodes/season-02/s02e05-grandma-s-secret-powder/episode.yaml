@@ -17,10 +17,10 @@ outline: |-
   2. He shakes it everywhere: "Goodbye, roaches."
   3. The Roach family cookout on the table. Roach: "Pass the seasoning."
   4. Husband: "That's POISON!"
-  5. Grandma Roach: "Baby, that's FLAVOR."  Kids: "More!"
+  5. Grandma Roach: "Baby, I been eating out your trash six years. Nothing in this house can kill me."  Kids: "More!"
   6. Wife tastes it: "Mm! Who seasoned this?"  Grandma Roach: "His grandma."
   7. Wife: "...You never cook like this."
-  8. Grandma Roach: "Tell her it needs garlic."
+  8. Grandma Roach: "He cooks like he dresses. Bland and on clearance."
   9. Husband: "Grandma's OTHER powder." The family: "Ooh!"
 thumbnail_at: 7.0
 thumbnail_text: "Roach cookout"
@@ -41,7 +41,7 @@ common:
 shots:
   # ---------------------------------------------------------------- HOOK
   - id: A
-    dur: 3.0
+    dur: 3.8
     background: kitchen
     camera: {x: 300, y: 1250, zoom: 1.5}
     actors:
@@ -103,7 +103,7 @@ shots:
       - {id: L04, who: husband, at: 0.15, shout: true, text: "That's POISON!"}
 
   - id: E
-    dur: 3.2
+    dur: 5.1
     background: kitchen
     camera: {x: 820, y: 1180, zoom: 2.5}
     props: [*table, *plate]
@@ -113,8 +113,8 @@ shots:
     sfx:
       - {at: 2.3, name: tiny_cheer, gain: 0.5}
     lines:
-      - {id: L05, who: roach@grandma, at: 0.2, pitch: 1.12, text: "Baby, that's FLAVOR."}
-      - {id: L06, who: roach@kid2, at: 2.1, pitch: 1.35, speed: 1.1, text: "More!"}
+      - {id: L05, who: roach@grandma, at: 0.2, pitch: 1.12, text: "Baby, I been eating out your trash six years. Nothing in this house can kill me."}
+      - {id: L06, who: roach@kid2, at: 4.3, pitch: 1.35, speed: 1.1, text: "More!"}
 
   # ---------------------------------------------------------------- PUNCHLINE
   - id: F
@@ -145,14 +145,18 @@ shots:
       - {id: L09, who: wife, at: 0.2, text: "...You never cook like this."}
 
   - id: H
-    dur: 2.6
+    dur: 3.0
     background: kitchen
     camera: {x: 820, y: 1180, zoom: 2.5}
     props: [*table, *plate]
     actors:
       roach@grandma: {x: 850, y: 1326, scale: 0.85, z: 15, action: point_L, expr: smug, look: camera, variants: *grandma}
+    fx:
+      - {type: text, at: 2.6, dur: 0.8, pos: [820, 1000], text: "OOOH!", size: 70, color: "#FFE45C"}
+    sfx:
+      - {at: 2.6, name: tiny_cheer, gain: 0.6}
     lines:
-      - {id: L10, who: roach@grandma, at: 0.2, pitch: 1.12, text: "Tell her it needs garlic."}
+      - {id: L10, who: roach@grandma, at: 0.2, pitch: 1.12, text: "He cooks like he dresses. Bland and on clearance."}
 
   # ---------------------------------------------------------------- LOOP ENDING
   - id: I

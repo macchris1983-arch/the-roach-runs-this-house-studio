@@ -16,11 +16,11 @@ outline: |-
   1. CALL A PRO. Husband: "I need a PROFESSIONAL. Today."
   2. Ding. Husband: "Wow. That was fast."
   3. The Roach in a badge and glasses with a clipboard: "Pest Control. You called?"
-  4. Husband: "YOU'RE the exterminator?!"
+  4. Husband: "YOU'RE the exterminator?!"  Roach: "I'm the only one who'd come to this neighborhood."
   5. Roach inspects: "Mm-hm. Mm-hm. I found the problem."  Husband: "Where?!"
-  6. Roach points at him: "Six foot. Beard. Very loud."
+  6. Roach points at him: "Six foot. Beard. Smells like expired cologne and bad decisions."
   7. Wife: "Yep. That's the pest."
-  8. Roach hands over a bill: "Two hundred dollars."  Husband: "For WHAT?!"  Roach: "Emotional damage."
+  8. Roach hands over a bill: "Two hundred dollars."  Husband: "For WHAT?!"  Roach: "Emotional damage. I had to look at you."
   9. Husband dials again: "I need a SECOND opinion." The Roach's phone rings: "Pest Control."
 thumbnail_at: 6.6
 thumbnail_text: "The exterminator is a roach"
@@ -40,7 +40,7 @@ common:
 shots:
   # ---------------------------------------------------------------- HOOK
   - id: A
-    dur: 2.8
+    dur: 3.5
     background: living_room
     camera: {x: 320, y: 1250, zoom: 1.6}
     actors:
@@ -90,6 +90,15 @@ shots:
     lines:
       - {id: L04, who: husband, at: 0.15, shout: true, text: "YOU'RE the exterminator?!"}
 
+  - id: D2
+    dur: 3.0
+    background: living_room
+    camera: {x: 760, y: 1000, zoom: 2.3}
+    actors:
+      roach: {<<: *roach_couch, action: hips, expr: unbothered, look: camera, variants: *pro, hold: {L: clipboard}}
+    lines:
+      - {id: L04b, who: roach, at: 0.2, text: "I'm the only one who'd come to this neighborhood."}
+
   # ---------------------------------------------------------------- THE INSPECTION
   - id: E
     dur: 3.6
@@ -115,7 +124,7 @@ shots:
       - {id: L07, who: husband, at: 0.15, shout: true, text: "Where?!"}
 
   - id: G
-    dur: 3.2
+    dur: 4.1
     background: living_room
     camera: {x: 420, y: 1250, zoom: 1.15}
     actors:
@@ -127,7 +136,7 @@ shots:
     sfx:
       - {at: 0.4, name: dun_dun_dun, gain: 0.5}
     lines:
-      - {id: L08, who: roach, at: 0.4, text: "Six foot. Beard. Very loud."}
+      - {id: L08, who: roach, at: 0.4, text: "Six foot. Beard. Smells like expired cologne and bad decisions."}
 
   # ---------------------------------------------------------------- PUNCHLINE
   - id: H
@@ -140,7 +149,7 @@ shots:
       - {id: L09, who: wife, at: 0.2, text: "Yep. That's the pest."}
 
   - id: I
-    dur: 4.4
+    dur: 5.6
     background: living_room
     camera: {x: 420, y: 1250, zoom: 1.15}
     actors:
@@ -153,7 +162,7 @@ shots:
     lines:
       - {id: L10, who: roach, at: 0.2, text: "Two hundred dollars."}
       - {id: L11, who: husband, at: 1.5, shout: true, text: "For WHAT?!"}
-      - {id: L12, who: roach, at: 2.7, text: "Emotional damage."}
+      - {id: L12, who: roach, at: 2.7, text: "Emotional damage. I had to look at you."}
 
   # ---------------------------------------------------------------- LOOP ENDING
   - id: J
