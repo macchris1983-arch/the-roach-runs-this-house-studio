@@ -1,0 +1,15 @@
+{
+  "episode_id": "s02e01",
+  "reviewer": "Chris",
+  "approved_at": "2026-11-03T02:58:00+00:00",
+  "video": "s02e01.mp4",
+  "video_sha256": "512964f5cd7b5da2c7da07238ef34408cc22cd497b94906c4720b53aa8912115",
+  "human_review": {
+    "Characters match the approved reference/model sheet (faces, skin tones, hair, outfits)": true,
+    "Dialogue is clear and the jokes land (hook in first 2 seconds, clear punchline)": true,
+    "Captions are readable on a phone and not covered by the Reels UI": true,
+    "Nothing in the video copies an existing show, character, script or song": true
+  },
+  "notes": "Chris: 'Schedule them @ 2 a day in all social media platforms' (Nov 2 2026), roast-battle version",
+  "publish_permission": false
+}

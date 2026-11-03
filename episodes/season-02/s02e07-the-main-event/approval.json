@@ -1,0 +1,15 @@
+{
+  "episode_id": "s02e07",
+  "reviewer": "Chris",
+  "approved_at": "2026-11-03T02:58:31+00:00",
+  "video": "s02e07.mp4",
+  "video_sha256": "445d8fcca00e716570c51d23fb8d82e0e21f2af734507368c39b279ce1f34528",
+  "human_review": {
+    "Characters match the approved reference/model sheet (faces, skin tones, hair, outfits)": true,
+    "Dialogue is clear and the jokes land (hook in first 2 seconds, clear punchline)": true,
+    "Captions are readable on a phone and not covered by the Reels UI": true,
+    "Nothing in the video copies an existing show, character, script or song": true
+  },
+  "notes": "Chris: 'Schedule them @ 2 a day in all social media platforms' (Nov 2 2026), roast-battle version",
+  "publish_permission": false
+}
