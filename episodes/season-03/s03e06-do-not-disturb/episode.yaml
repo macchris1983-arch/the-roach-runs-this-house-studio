@@ -1,0 +1,395 @@
+id: s03e06
+slug: do-not-disturb
+season: 3
+episode: 6
+title: Do Not Disturb
+logline: The Wife turns a suggestive request into a kitchen cleaning assignment.
+hook: Tonight, I want you on your knees.
+punchline: Premium subscription. I paid in crumbs.
+loop: Husband looks hopefully up at the Wife, who lifts another cleaning glove.
+outline: 'WIFE: Tonight, I want you on your knees.
+
+  HUSBAND: Finally. Some appreciation.
+
+  WIFE: With a scrub brush.
+
+  ROACH: Damn. Fifty shades of grout.
+
+  HUSBAND: I thought we was getting freaky!
+
+  WIFE: We are. That floor''s never seen you finish.
+
+  ROACH: Use protection. Gloves, nasty ass.
+
+  HUSBAND: Why you watching?
+
+  ROACH: Premium subscription. I paid in crumbs.'
+cover_at: 0.7
+voice_provider: babble
+music:
+  enabled: true
+  mood: sneaky_funk
+  bpm: 98
+  root_midi: 45
+  seed: 3006
+  gain: 0.16
+visual_reference_pack:
+  wife: assets/characters/reference/wife-character-sheet.png
+  husband: assets/characters/reference/husband-character-sheet.png
+  roach: assets/characters/reference/roach-character-sheet.png
+  props: assets/characters/reference/props-and-set-extras.png
+  supporting: assets/characters/reference/supporting-cast-sheet.png
+reference_animation_status: not_rendered; legacy studio renders are staging tests
+  only
+reels:
+  title: Do Not Disturb | The Roach Runs This House S3 Ep. 6
+  caption: 'The Wife turns a suggestive request into a kitchen cleaning assignment.
+
+
+    Original adult animated comedy. Uncensored language.
+
+    Which roommate are you backing?'
+  hashtags:
+  - '#TheRoachRunsThisHouse'
+  - '#AnimatedComedy'
+  - '#AdultAnimation'
+  - '#RoommateComedy'
+  - '#Reels'
+shots:
+- id: A
+  dur: 3.56
+  background: kitchen
+  camera:
+    x: 860
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: talk
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L01
+    who: wife
+    at: 0.25
+    text: Tonight, I want you on your knees.
+  sfx:
+  - at: 0.0
+    name: record_scratch
+    gain: 0.3
+- id: B
+  dur: 2.62
+  background: kitchen
+  camera:
+    x: 280
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: talk
+      expr: angry
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L02
+    who: husband
+    at: 0.25
+    text: Finally. Some appreciation.
+- id: C
+  dur: 2.88
+  background: kitchen
+  camera:
+    x: 860
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: talk
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L03
+    who: wife
+    at: 0.25
+    text: With a scrub brush.
+- id: D
+  dur: 2.74
+  background: kitchen
+  camera:
+    x: 620
+    y: 1000
+    zoom: 2.0
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: talk
+      expr: smug
+      look: camera
+  lines:
+  - id: L04
+    who: roach
+    at: 0.25
+    text: Damn. Fifty shades of grout.
+- id: E
+  dur: 3.15
+  background: kitchen
+  camera:
+    x: 280
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: talk
+      expr: angry
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L05
+    who: husband
+    at: 0.25
+    text: I thought we was getting freaky!
+- id: F
+  dur: 4.52
+  background: kitchen
+  camera:
+    x: 860
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: talk
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L06
+    who: wife
+    at: 0.25
+    text: We are. That floor's never seen you finish.
+- id: G
+  dur: 2.74
+  background: kitchen
+  camera:
+    x: 620
+    y: 1000
+    zoom: 2.0
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: talk
+      expr: smug
+      look: camera
+  lines:
+  - id: L07
+    who: roach
+    at: 0.25
+    text: Use protection. Gloves, nasty ass.
+- id: H
+  dur: 2.0
+  background: kitchen
+  camera:
+    x: 280
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: talk
+      expr: angry
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L08
+    who: husband
+    at: 0.25
+    text: Why you watching?
+- id: I
+  dur: 10.79
+  background: kitchen
+  camera:
+    x: 620
+    y: 1000
+    zoom: 2.0
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: talk
+      expr: smug
+      look: camera
+  lines:
+  - id: L09
+    who: roach
+    at: 0.25
+    text: Premium subscription. I paid in crumbs.
