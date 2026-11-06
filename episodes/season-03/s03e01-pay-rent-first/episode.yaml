@@ -1,0 +1,358 @@
+id: s03e01
+slug: pay-rent-first
+season: 3
+episode: 1
+title: Pay Rent First
+logline: The Roach makes paying rent a condition of the promised rematch.
+hook: Rematch. Right fucking now.
+punchline: Security deposit. For the next ass-whooping.
+loop: Roach slides a tiny rent paper toward him; Husband points at the amount, poised
+  to demand another rematch.
+outline: 'HUSBAND: Rematch. Right fucking now.
+
+  ROACH: Rent first. You already got your ass handed to you free.
+
+  WIFE: Your jaw wrote a check your bank account can''t cash.
+
+  HUSBAND: I got stamina.
+
+  ROACH: Last night she called you the loading screen.
+
+  WIFE: Don''t bring that two-minute free trial into this.
+
+  HUSBAND: Fine. How much?
+
+  ROACH: Security deposit. For the next ass-whooping.'
+cover_at: 0.7
+voice_provider: babble
+music:
+  enabled: true
+  mood: sneaky_funk
+  bpm: 98
+  root_midi: 45
+  seed: 3001
+  gain: 0.16
+visual_reference_pack:
+  wife: assets/characters/reference/wife-character-sheet.png
+  husband: assets/characters/reference/husband-character-sheet.png
+  roach: assets/characters/reference/roach-character-sheet.png
+  props: assets/characters/reference/props-and-set-extras.png
+  supporting: assets/characters/reference/supporting-cast-sheet.png
+reference_animation_status: not_rendered; legacy studio renders are staging tests
+  only
+reels:
+  title: Pay Rent First | The Roach Runs This House S3 Ep. 1
+  caption: 'The Roach makes paying rent a condition of the promised rematch.
+
+
+    Original adult animated comedy. Uncensored language.
+
+    Which roommate are you backing?'
+  hashtags:
+  - '#TheRoachRunsThisHouse'
+  - '#AnimatedComedy'
+  - '#AdultAnimation'
+  - '#RoommateComedy'
+  - '#Reels'
+shots:
+- id: A
+  dur: 2.33
+  background: living_room
+  camera:
+    x: 280
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 180
+      y: 1800
+      scale: 0.95
+      z: 20
+      action: freeze
+      expr: pleading
+      look: right
+      rot: 84
+    roach:
+      x: 620
+      y: 1095
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L01
+    who: husband
+    at: 0.25
+    text: Rematch. Right fucking now.
+  sfx:
+  - at: 0.0
+    name: record_scratch
+    gain: 0.3
+- id: B
+  dur: 5.74
+  background: living_room
+  camera:
+    x: 620
+    y: 1000
+    zoom: 2.0
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1095
+      scale: 0.8
+      z: 22
+      action: talk
+      expr: smug
+      look: camera
+  lines:
+  - id: L02
+    who: roach
+    at: 0.25
+    text: Rent first. You already got your ass handed to you free.
+- id: C
+  dur: 4.78
+  background: living_room
+  camera:
+    x: 860
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: talk
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1095
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L03
+    who: wife
+    at: 0.25
+    text: Your jaw wrote a check your bank account can't cash.
+- id: D
+  dur: 2.0
+  background: living_room
+  camera:
+    x: 280
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: talk
+      expr: angry
+      look: right
+    roach:
+      x: 620
+      y: 1095
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L04
+    who: husband
+    at: 0.25
+    text: I got stamina.
+- id: E
+  dur: 3.97
+  background: living_room
+  camera:
+    x: 620
+    y: 1000
+    zoom: 2.0
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1095
+      scale: 0.8
+      z: 22
+      action: talk
+      expr: smug
+      look: camera
+  lines:
+  - id: L05
+    who: roach
+    at: 0.25
+    text: Last night she called you the loading screen.
+- id: F
+  dur: 4.52
+  background: living_room
+  camera:
+    x: 860
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: talk
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1095
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L06
+    who: wife
+    at: 0.25
+    text: Don't bring that two-minute free trial into this.
+- id: G
+  dur: 2.0
+  background: living_room
+  camera:
+    x: 280
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: talk
+      expr: angry
+      look: right
+    roach:
+      x: 620
+      y: 1095
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L07
+    who: husband
+    at: 0.25
+    text: Fine. How much?
+- id: H
+  dur: 9.66
+  background: living_room
+  camera:
+    x: 620
+    y: 1000
+    zoom: 2.0
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1095
+      scale: 0.8
+      z: 22
+      action: talk
+      expr: smug
+      look: camera
+  lines:
+  - id: L08
+    who: roach
+    at: 0.25
+    text: Security deposit. For the next ass-whooping.
