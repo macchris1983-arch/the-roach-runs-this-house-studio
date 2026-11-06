@@ -1,0 +1,232 @@
+{
+  "episode_id": "s03e05",
+  "status": "script_and_shot_plan_complete; reference_animation_pending",
+  "target_duration_seconds": 35,
+  "visual_style": "original warm cel-shaded 2D sitcom; use the five repository reference PNGs",
+  "continuity": "Mr. Baines waits silently at the kitchen threshold with his established key ring and clipboard. This is an exaggerated sitcom rent visit, not advice about tenancy law. The tile floor remains tile; title is an adult innuendo.",
+  "silent_adult_guests": [
+    "landlord"
+  ],
+  "source_of_truth": "episode.yaml",
+  "legacy_renderer_limit": "The existing renderer ignores image reference fields and draws the old rigs. Its local test MP4 is not the new-art final. Do not approve or publish it as such.",
+  "audio": {
+    "voices": {
+      "wife": "confident sharp adult female, dry timing",
+      "husband": "adult male baritone, bluster punctured by nervous pauses",
+      "roach": "adult raspy nimble voice, smug timing"
+    },
+    "music": "low sparse funk beneath speech; use authorized original stem",
+    "audience": "brief laughs only after selected punchlines; never over the next line",
+    "captions": "uncensored short karaoke groups from final audio alignment; final captions after picture lock"
+  },
+  "shots": [
+    {
+      "shot": "A",
+      "start_seconds": 0,
+      "planned_duration_seconds": 3.56,
+      "speaker": "husband",
+      "dialogue": "Landlord's here. Act like we own something.",
+      "identity_references": [
+        "assets/characters/reference/husband-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png",
+        "assets/characters/reference/supporting-cast-sheet.png"
+      ],
+      "silent_extras": [
+        "landlord"
+      ],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. kitchen setting. Mr. Baines waits silently at the kitchen threshold with his established key ring and clipboard. This is an exaggerated sitcom rent visit, not advice about tenancy law. The tile floor remains tile; title is an adult innuendo. Shot A: close-up centered on husband, all listener mouths closed. husband says exactly: \"Landlord's here. Act like we own something.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "B",
+      "start_seconds": 3.56,
+      "planned_duration_seconds": 4.52,
+      "speaker": "wife",
+      "dialogue": "We own three late notices and your bullshit.",
+      "identity_references": [
+        "assets/characters/reference/wife-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png",
+        "assets/characters/reference/supporting-cast-sheet.png"
+      ],
+      "silent_extras": [
+        "landlord"
+      ],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. kitchen setting. Mr. Baines waits silently at the kitchen threshold with his established key ring and clipboard. This is an exaggerated sitcom rent visit, not advice about tenancy law. The tile floor remains tile; title is an adult innuendo. Shot B: close-up centered on wife, all listener mouths closed. wife says exactly: \"We own three late notices and your bullshit.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": true,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.75,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "C",
+      "start_seconds": 8.08,
+      "planned_duration_seconds": 3.56,
+      "speaker": "roach",
+      "dialogue": "I own the crumbs. My portfolio diversified.",
+      "identity_references": [
+        "assets/characters/reference/roach-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png",
+        "assets/characters/reference/supporting-cast-sheet.png"
+      ],
+      "silent_extras": [
+        "landlord"
+      ],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. kitchen setting. Mr. Baines waits silently at the kitchen threshold with his established key ring and clipboard. This is an exaggerated sitcom rent visit, not advice about tenancy law. The tile floor remains tile; title is an adult innuendo. Shot C: close-up centered on roach, all listener mouths closed. roach says exactly: \"I own the crumbs. My portfolio diversified.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "D",
+      "start_seconds": 11.64,
+      "planned_duration_seconds": 4.37,
+      "speaker": "husband",
+      "dialogue": "Tell him I bring a lot to the table.",
+      "identity_references": [
+        "assets/characters/reference/husband-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png",
+        "assets/characters/reference/supporting-cast-sheet.png"
+      ],
+      "silent_extras": [
+        "landlord"
+      ],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. kitchen setting. Mr. Baines waits silently at the kitchen threshold with his established key ring and clipboard. This is an exaggerated sitcom rent visit, not advice about tenancy law. The tile floor remains tile; title is an adult innuendo. Shot D: close-up centered on husband, all listener mouths closed. husband says exactly: \"Tell him I bring a lot to the table.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "E",
+      "start_seconds": 16.01,
+      "planned_duration_seconds": 3.97,
+      "speaker": "wife",
+      "dialogue": "Baby, you bring your dick and an appetite.",
+      "identity_references": [
+        "assets/characters/reference/wife-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png",
+        "assets/characters/reference/supporting-cast-sheet.png"
+      ],
+      "silent_extras": [
+        "landlord"
+      ],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. kitchen setting. Mr. Baines waits silently at the kitchen threshold with his established key ring and clipboard. This is an exaggerated sitcom rent visit, not advice about tenancy law. The tile floor remains tile; title is an adult innuendo. Shot E: close-up centered on wife, all listener mouths closed. wife says exactly: \"Baby, you bring your dick and an appetite.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "F",
+      "start_seconds": 19.98,
+      "planned_duration_seconds": 3.7,
+      "speaker": "roach",
+      "dialogue": "And both been disappointing the kitchen.",
+      "identity_references": [
+        "assets/characters/reference/roach-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png",
+        "assets/characters/reference/supporting-cast-sheet.png"
+      ],
+      "silent_extras": [
+        "landlord"
+      ],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. kitchen setting. Mr. Baines waits silently at the kitchen threshold with his established key ring and clipboard. This is an exaggerated sitcom rent visit, not advice about tenancy law. The tile floor remains tile; title is an adult innuendo. Shot F: close-up centered on roach, all listener mouths closed. roach says exactly: \"And both been disappointing the kitchen.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": true,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.75,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "G",
+      "start_seconds": 23.68,
+      "planned_duration_seconds": 3.15,
+      "speaker": "husband",
+      "dialogue": "I'm the man of this house!",
+      "identity_references": [
+        "assets/characters/reference/husband-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png",
+        "assets/characters/reference/supporting-cast-sheet.png"
+      ],
+      "silent_extras": [
+        "landlord"
+      ],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. kitchen setting. Mr. Baines waits silently at the kitchen threshold with his established key ring and clipboard. This is an exaggerated sitcom rent visit, not advice about tenancy law. The tile floor remains tile; title is an adult innuendo. Shot G: close-up centered on husband, all listener mouths closed. husband says exactly: \"I'm the man of this house!\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "H",
+      "start_seconds": 26.83,
+      "planned_duration_seconds": 8.17,
+      "speaker": "wife",
+      "dialogue": "Good. Man up and pay the fucking rent.",
+      "identity_references": [
+        "assets/characters/reference/wife-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png",
+        "assets/characters/reference/supporting-cast-sheet.png"
+      ],
+      "silent_extras": [
+        "landlord"
+      ],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. kitchen setting. Mr. Baines waits silently at the kitchen threshold with his established key ring and clipboard. This is an exaggerated sitcom rent visit, not advice about tenancy law. The tile floor remains tile; title is an adult innuendo. Shot H: close-up centered on wife, all listener mouths closed. wife says exactly: \"Good. Man up and pay the fucking rent.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": true,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.75,
+        "timing_status": "requires final audio alignment"
+      }
+    }
+  ]
+}
