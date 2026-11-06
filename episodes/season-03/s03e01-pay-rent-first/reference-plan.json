@@ -1,0 +1,206 @@
+{
+  "episode_id": "s03e01",
+  "status": "script_and_shot_plan_complete; reference_animation_pending",
+  "target_duration_seconds": 35,
+  "visual_style": "original warm cel-shaded 2D sitcom; use the five repository reference PNGs",
+  "continuity": "Continue on the exact living-room floor position from the finale: Husband face-down, Roach beside his back, Wife watching. Husband rises slowly; do not reset the defeat.",
+  "silent_adult_guests": [],
+  "source_of_truth": "episode.yaml",
+  "legacy_renderer_limit": "The existing renderer ignores image reference fields and draws the old rigs. Its local test MP4 is not the new-art final. Do not approve or publish it as such.",
+  "audio": {
+    "voices": {
+      "wife": "confident sharp adult female, dry timing",
+      "husband": "adult male baritone, bluster punctured by nervous pauses",
+      "roach": "adult raspy nimble voice, smug timing"
+    },
+    "music": "low sparse funk beneath speech; use authorized original stem",
+    "audience": "brief laughs only after selected punchlines; never over the next line",
+    "captions": "uncensored short karaoke groups from final audio alignment; final captions after picture lock"
+  },
+  "shots": [
+    {
+      "shot": "A",
+      "start_seconds": 0,
+      "planned_duration_seconds": 2.33,
+      "speaker": "husband",
+      "dialogue": "Rematch. Right fucking now.",
+      "identity_references": [
+        "assets/characters/reference/husband-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. living room setting. Continue on the exact living-room floor position from the finale: Husband face-down, Roach beside his back, Wife watching. Husband rises slowly; do not reset the defeat. Shot A: close-up centered on husband, all listener mouths closed. husband says exactly: \"Rematch. Right fucking now.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "B",
+      "start_seconds": 2.33,
+      "planned_duration_seconds": 5.74,
+      "speaker": "roach",
+      "dialogue": "Rent first. You already got your ass handed to you free.",
+      "identity_references": [
+        "assets/characters/reference/roach-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. living room setting. Continue on the exact living-room floor position from the finale: Husband face-down, Roach beside his back, Wife watching. Husband rises slowly; do not reset the defeat. Shot B: close-up centered on roach, all listener mouths closed. roach says exactly: \"Rent first. You already got your ass handed to you free.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": true,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.75,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "C",
+      "start_seconds": 8.07,
+      "planned_duration_seconds": 4.78,
+      "speaker": "wife",
+      "dialogue": "Your jaw wrote a check your bank account can't cash.",
+      "identity_references": [
+        "assets/characters/reference/wife-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. living room setting. Continue on the exact living-room floor position from the finale: Husband face-down, Roach beside his back, Wife watching. Husband rises slowly; do not reset the defeat. Shot C: close-up centered on wife, all listener mouths closed. wife says exactly: \"Your jaw wrote a check your bank account can't cash.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "D",
+      "start_seconds": 12.85,
+      "planned_duration_seconds": 2.0,
+      "speaker": "husband",
+      "dialogue": "I got stamina.",
+      "identity_references": [
+        "assets/characters/reference/husband-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. living room setting. Continue on the exact living-room floor position from the finale: Husband face-down, Roach beside his back, Wife watching. Husband rises slowly; do not reset the defeat. Shot D: close-up centered on husband, all listener mouths closed. husband says exactly: \"I got stamina.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "E",
+      "start_seconds": 14.85,
+      "planned_duration_seconds": 3.97,
+      "speaker": "roach",
+      "dialogue": "Last night she called you the loading screen.",
+      "identity_references": [
+        "assets/characters/reference/roach-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. living room setting. Continue on the exact living-room floor position from the finale: Husband face-down, Roach beside his back, Wife watching. Husband rises slowly; do not reset the defeat. Shot E: close-up centered on roach, all listener mouths closed. roach says exactly: \"Last night she called you the loading screen.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "F",
+      "start_seconds": 18.82,
+      "planned_duration_seconds": 4.52,
+      "speaker": "wife",
+      "dialogue": "Don't bring that two-minute free trial into this.",
+      "identity_references": [
+        "assets/characters/reference/wife-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. living room setting. Continue on the exact living-room floor position from the finale: Husband face-down, Roach beside his back, Wife watching. Husband rises slowly; do not reset the defeat. Shot F: close-up centered on wife, all listener mouths closed. wife says exactly: \"Don't bring that two-minute free trial into this.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": true,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.75,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "G",
+      "start_seconds": 23.34,
+      "planned_duration_seconds": 2.0,
+      "speaker": "husband",
+      "dialogue": "Fine. How much?",
+      "identity_references": [
+        "assets/characters/reference/husband-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. living room setting. Continue on the exact living-room floor position from the finale: Husband face-down, Roach beside his back, Wife watching. Husband rises slowly; do not reset the defeat. Shot G: close-up centered on husband, all listener mouths closed. husband says exactly: \"Fine. How much?\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "H",
+      "start_seconds": 25.34,
+      "planned_duration_seconds": 9.66,
+      "speaker": "roach",
+      "dialogue": "Security deposit. For the next ass-whooping.",
+      "identity_references": [
+        "assets/characters/reference/roach-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. living room setting. Continue on the exact living-room floor position from the finale: Husband face-down, Roach beside his back, Wife watching. Husband rises slowly; do not reset the defeat. Shot H: close-up centered on roach, all listener mouths closed. roach says exactly: \"Security deposit. For the next ass-whooping.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": true,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.75,
+        "timing_status": "requires final audio alignment"
+      }
+    }
+  ]
+}
