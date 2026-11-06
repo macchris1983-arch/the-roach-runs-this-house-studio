@@ -1,0 +1,358 @@
+id: s03e03
+slug: thin-walls-thick-lies
+season: 3
+episode: 3
+title: Thin Walls, Thick Lies
+logline: A bedroom noise sounds impressive until the Wife explains the embarrassing
+  accident.
+hook: Quit telling the neighbors our business!
+punchline: Five stars. Best lay-down on the block.
+loop: The loose frame squeaks again; Husband starts to offer the same boast.
+outline: 'HUSBAND: Quit telling the neighbors our business!
+
+  WIFE: Then quit announcing round two before you take a nap.
+
+  ROACH: Whole block heard that headboard.
+
+  HUSBAND: See? I still got it.
+
+  WIFE: That was you falling out the bed.
+
+  ROACH: Only thing you banged was your damn elbow.
+
+  WIFE: Pearl brought ice. For your elbow, Romeo.
+
+  ROACH: Five stars. Best lay-down on the block.'
+cover_at: 0.7
+voice_provider: babble
+music:
+  enabled: true
+  mood: sneaky_funk
+  bpm: 98
+  root_midi: 45
+  seed: 3003
+  gain: 0.16
+visual_reference_pack:
+  wife: assets/characters/reference/wife-character-sheet.png
+  husband: assets/characters/reference/husband-character-sheet.png
+  roach: assets/characters/reference/roach-character-sheet.png
+  props: assets/characters/reference/props-and-set-extras.png
+  supporting: assets/characters/reference/supporting-cast-sheet.png
+reference_animation_status: not_rendered; legacy studio renders are staging tests
+  only
+reels:
+  title: Thin Walls, Thick Lies | The Roach Runs This House S3 Ep. 3
+  caption: 'A bedroom noise sounds impressive until the Wife explains the embarrassing
+    accident.
+
+
+    Original adult animated comedy. Uncensored language.
+
+    Which roommate are you backing?'
+  hashtags:
+  - '#TheRoachRunsThisHouse'
+  - '#AnimatedComedy'
+  - '#AdultAnimation'
+  - '#RoommateComedy'
+  - '#Reels'
+shots:
+- id: A
+  dur: 3.15
+  background: bedroom
+  camera:
+    x: 280
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: talk
+      expr: angry
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L01
+    who: husband
+    at: 0.25
+    text: Quit telling the neighbors our business!
+  sfx:
+  - at: 0.0
+    name: record_scratch
+    gain: 0.3
+- id: B
+  dur: 4.78
+  background: bedroom
+  camera:
+    x: 860
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: talk
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L02
+    who: wife
+    at: 0.25
+    text: Then quit announcing round two before you take a nap.
+- id: C
+  dur: 2.74
+  background: bedroom
+  camera:
+    x: 620
+    y: 1000
+    zoom: 2.0
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: talk
+      expr: smug
+      look: camera
+  lines:
+  - id: L03
+    who: roach
+    at: 0.25
+    text: Whole block heard that headboard.
+- id: D
+  dur: 2.74
+  background: bedroom
+  camera:
+    x: 280
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: talk
+      expr: angry
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L04
+    who: husband
+    at: 0.25
+    text: See? I still got it.
+- id: E
+  dur: 4.11
+  background: bedroom
+  camera:
+    x: 860
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: talk
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L05
+    who: wife
+    at: 0.25
+    text: That was you falling out the bed.
+- id: F
+  dur: 4.52
+  background: bedroom
+  camera:
+    x: 620
+    y: 1000
+    zoom: 2.0
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: talk
+      expr: smug
+      look: camera
+  lines:
+  - id: L06
+    who: roach
+    at: 0.25
+    text: Only thing you banged was your damn elbow.
+- id: G
+  dur: 3.56
+  background: bedroom
+  camera:
+    x: 860
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: talk
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L07
+    who: wife
+    at: 0.25
+    text: Pearl brought ice. For your elbow, Romeo.
+- id: H
+  dur: 9.4
+  background: bedroom
+  camera:
+    x: 620
+    y: 1000
+    zoom: 2.0
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: talk
+      expr: smug
+      look: camera
+  lines:
+  - id: L08
+    who: roach
+    at: 0.25
+    text: Five stars. Best lay-down on the block.
