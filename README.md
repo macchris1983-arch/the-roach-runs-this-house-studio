@@ -82,3 +82,10 @@ exports/           approved ready-to-post packages (videos not committed)
 ## Rights
 
 All characters, artwork, scripts, branding and episodes are proprietary. All rights reserved. See [LICENSE](LICENSE).
+
+
+## Season 3 — No Free Rides
+
+[Read all seven scripts and the season arc](episodes/season-03/README.md). The premiere picks up the Season 2 finale's “Rematch. Season three.” / “Pay rent first.” exchange. Each episode includes an engine-compatible source file and a shot-by-shot plan using the [new character reference images](assets/characters/reference/README.md).
+
+Scripts and shot plans are complete; all seven source files passed validation. Finished animation in the new image style is pending. See the [production status and render limits](episodes/season-03/PRODUCTION_STATUS.md) before treating any local rig output as a final episode.
