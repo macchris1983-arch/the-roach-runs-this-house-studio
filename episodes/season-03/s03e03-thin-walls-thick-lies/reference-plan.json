@@ -1,0 +1,232 @@
+{
+  "episode_id": "s03e03",
+  "status": "script_and_shot_plan_complete; reference_animation_pending",
+  "target_duration_seconds": 35,
+  "visual_style": "original warm cel-shaded 2D sitcom; use the five repository reference PNGs",
+  "continuity": "The adults stand in the bedroom in their normal established outfits. A harmless loose bedframe squeaks. Pearl appears silently at the doorway with an ice pack; no sexual activity is shown.",
+  "silent_adult_guests": [
+    "neighbor"
+  ],
+  "source_of_truth": "episode.yaml",
+  "legacy_renderer_limit": "The existing renderer ignores image reference fields and draws the old rigs. Its local test MP4 is not the new-art final. Do not approve or publish it as such.",
+  "audio": {
+    "voices": {
+      "wife": "confident sharp adult female, dry timing",
+      "husband": "adult male baritone, bluster punctured by nervous pauses",
+      "roach": "adult raspy nimble voice, smug timing"
+    },
+    "music": "low sparse funk beneath speech; use authorized original stem",
+    "audience": "brief laughs only after selected punchlines; never over the next line",
+    "captions": "uncensored short karaoke groups from final audio alignment; final captions after picture lock"
+  },
+  "shots": [
+    {
+      "shot": "A",
+      "start_seconds": 0,
+      "planned_duration_seconds": 3.15,
+      "speaker": "husband",
+      "dialogue": "Quit telling the neighbors our business!",
+      "identity_references": [
+        "assets/characters/reference/husband-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png",
+        "assets/characters/reference/supporting-cast-sheet.png"
+      ],
+      "silent_extras": [
+        "neighbor"
+      ],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. bedroom setting. The adults stand in the bedroom in their normal established outfits. A harmless loose bedframe squeaks. Pearl appears silently at the doorway with an ice pack; no sexual activity is shown. Shot A: close-up centered on husband, all listener mouths closed. husband says exactly: \"Quit telling the neighbors our business!\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "B",
+      "start_seconds": 3.15,
+      "planned_duration_seconds": 4.78,
+      "speaker": "wife",
+      "dialogue": "Then quit announcing round two before you take a nap.",
+      "identity_references": [
+        "assets/characters/reference/wife-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png",
+        "assets/characters/reference/supporting-cast-sheet.png"
+      ],
+      "silent_extras": [
+        "neighbor"
+      ],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. bedroom setting. The adults stand in the bedroom in their normal established outfits. A harmless loose bedframe squeaks. Pearl appears silently at the doorway with an ice pack; no sexual activity is shown. Shot B: close-up centered on wife, all listener mouths closed. wife says exactly: \"Then quit announcing round two before you take a nap.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "C",
+      "start_seconds": 7.93,
+      "planned_duration_seconds": 2.74,
+      "speaker": "roach",
+      "dialogue": "Whole block heard that headboard.",
+      "identity_references": [
+        "assets/characters/reference/roach-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png",
+        "assets/characters/reference/supporting-cast-sheet.png"
+      ],
+      "silent_extras": [
+        "neighbor"
+      ],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. bedroom setting. The adults stand in the bedroom in their normal established outfits. A harmless loose bedframe squeaks. Pearl appears silently at the doorway with an ice pack; no sexual activity is shown. Shot C: close-up centered on roach, all listener mouths closed. roach says exactly: \"Whole block heard that headboard.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "D",
+      "start_seconds": 10.67,
+      "planned_duration_seconds": 2.74,
+      "speaker": "husband",
+      "dialogue": "See? I still got it.",
+      "identity_references": [
+        "assets/characters/reference/husband-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png",
+        "assets/characters/reference/supporting-cast-sheet.png"
+      ],
+      "silent_extras": [
+        "neighbor"
+      ],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. bedroom setting. The adults stand in the bedroom in their normal established outfits. A harmless loose bedframe squeaks. Pearl appears silently at the doorway with an ice pack; no sexual activity is shown. Shot D: close-up centered on husband, all listener mouths closed. husband says exactly: \"See? I still got it.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "E",
+      "start_seconds": 13.41,
+      "planned_duration_seconds": 4.11,
+      "speaker": "wife",
+      "dialogue": "That was you falling out the bed.",
+      "identity_references": [
+        "assets/characters/reference/wife-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png",
+        "assets/characters/reference/supporting-cast-sheet.png"
+      ],
+      "silent_extras": [
+        "neighbor"
+      ],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. bedroom setting. The adults stand in the bedroom in their normal established outfits. A harmless loose bedframe squeaks. Pearl appears silently at the doorway with an ice pack; no sexual activity is shown. Shot E: close-up centered on wife, all listener mouths closed. wife says exactly: \"That was you falling out the bed.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": true,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.75,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "F",
+      "start_seconds": 17.52,
+      "planned_duration_seconds": 4.52,
+      "speaker": "roach",
+      "dialogue": "Only thing you banged was your damn elbow.",
+      "identity_references": [
+        "assets/characters/reference/roach-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png",
+        "assets/characters/reference/supporting-cast-sheet.png"
+      ],
+      "silent_extras": [
+        "neighbor"
+      ],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. bedroom setting. The adults stand in the bedroom in their normal established outfits. A harmless loose bedframe squeaks. Pearl appears silently at the doorway with an ice pack; no sexual activity is shown. Shot F: close-up centered on roach, all listener mouths closed. roach says exactly: \"Only thing you banged was your damn elbow.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": true,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.75,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "G",
+      "start_seconds": 22.04,
+      "planned_duration_seconds": 3.56,
+      "speaker": "wife",
+      "dialogue": "Pearl brought ice. For your elbow, Romeo.",
+      "identity_references": [
+        "assets/characters/reference/wife-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png",
+        "assets/characters/reference/supporting-cast-sheet.png"
+      ],
+      "silent_extras": [
+        "neighbor"
+      ],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. bedroom setting. The adults stand in the bedroom in their normal established outfits. A harmless loose bedframe squeaks. Pearl appears silently at the doorway with an ice pack; no sexual activity is shown. Shot G: close-up centered on wife, all listener mouths closed. wife says exactly: \"Pearl brought ice. For your elbow, Romeo.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "H",
+      "start_seconds": 25.6,
+      "planned_duration_seconds": 9.4,
+      "speaker": "roach",
+      "dialogue": "Five stars. Best lay-down on the block.",
+      "identity_references": [
+        "assets/characters/reference/roach-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png",
+        "assets/characters/reference/supporting-cast-sheet.png"
+      ],
+      "silent_extras": [
+        "neighbor"
+      ],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. bedroom setting. The adults stand in the bedroom in their normal established outfits. A harmless loose bedframe squeaks. Pearl appears silently at the doorway with an ice pack; no sexual activity is shown. Shot H: close-up centered on roach, all listener mouths closed. roach says exactly: \"Five stars. Best lay-down on the block.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": true,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.75,
+        "timing_status": "requires final audio alignment"
+      }
+    }
+  ]
+}
