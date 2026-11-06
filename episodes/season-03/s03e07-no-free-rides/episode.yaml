@@ -1,0 +1,398 @@
+id: s03e07
+slug: no-free-rides
+season: 3
+episode: 7
+title: No Free Rides
+logline: The long-promised rematch ends with the Wife making both rivals compete at
+  housework.
+hook: I paid the rent. Ring the fucking bell.
+punchline: Exactly. No free rides.
+loop: Husband demands the bell again while Roach lifts a dish like a championship
+  belt; match-cut the raised arm back to the opening challenge.
+outline: 'HUSBAND: I paid the rent. Ring the fucking bell.
+
+  ROACH: You paid half. That''s one ass cheek.
+
+  WIFE: Winner runs this house.
+
+  HUSBAND: I''m about to beat your little ass.
+
+  ROACH: You couldn''t beat an egg without checking YouTube.
+
+  WIFE: First round: dishes. Second round: laundry.
+
+  HUSBAND: That''s not a fight!
+
+  ROACH: That''s a fucking marriage.
+
+  WIFE: Exactly. No free rides.'
+cover_at: 0.7
+voice_provider: babble
+music:
+  enabled: true
+  mood: sneaky_funk
+  bpm: 98
+  root_midi: 45
+  seed: 3007
+  gain: 0.16
+visual_reference_pack:
+  wife: assets/characters/reference/wife-character-sheet.png
+  husband: assets/characters/reference/husband-character-sheet.png
+  roach: assets/characters/reference/roach-character-sheet.png
+  props: assets/characters/reference/props-and-set-extras.png
+  supporting: assets/characters/reference/supporting-cast-sheet.png
+reference_animation_status: not_rendered; legacy studio renders are staging tests
+  only
+reels:
+  title: No Free Rides | The Roach Runs This House S3 Ep. 7
+  caption: 'The long-promised rematch ends with the Wife making both rivals compete
+    at housework.
+
+
+    Original adult animated comedy. Uncensored language.
+
+    Which roommate are you backing?'
+  hashtags:
+  - '#TheRoachRunsThisHouse'
+  - '#AnimatedComedy'
+  - '#AdultAnimation'
+  - '#RoommateComedy'
+  - '#Reels'
+shots:
+- id: A
+  dur: 3.97
+  background: living_room
+  camera:
+    x: 280
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: talk
+      expr: angry
+      look: right
+    roach:
+      x: 620
+      y: 1095
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L01
+    who: husband
+    at: 0.25
+    text: I paid the rent. Ring the fucking bell.
+  sfx:
+  - at: 0.0
+    name: record_scratch
+    gain: 0.3
+- id: B
+  dur: 4.11
+  background: living_room
+  camera:
+    x: 620
+    y: 1000
+    zoom: 2.0
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1095
+      scale: 0.8
+      z: 22
+      action: talk
+      expr: smug
+      look: camera
+  lines:
+  - id: L02
+    who: roach
+    at: 0.25
+    text: You paid half. That's one ass cheek.
+- id: C
+  dur: 2.33
+  background: living_room
+  camera:
+    x: 860
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: talk
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1095
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L03
+    who: wife
+    at: 0.25
+    text: Winner runs this house.
+- id: D
+  dur: 3.56
+  background: living_room
+  camera:
+    x: 280
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: talk
+      expr: angry
+      look: right
+    roach:
+      x: 620
+      y: 1095
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L04
+    who: husband
+    at: 0.25
+    text: I'm about to beat your little ass.
+- id: E
+  dur: 4.52
+  background: living_room
+  camera:
+    x: 620
+    y: 1000
+    zoom: 2.0
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1095
+      scale: 0.8
+      z: 22
+      action: talk
+      expr: smug
+      look: camera
+  lines:
+  - id: L05
+    who: roach
+    at: 0.25
+    text: You couldn't beat an egg without checking YouTube.
+- id: F
+  dur: 3.15
+  background: living_room
+  camera:
+    x: 860
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: talk
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1095
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L06
+    who: wife
+    at: 0.25
+    text: 'First round: dishes. Second round: laundry.'
+- id: G
+  dur: 2.33
+  background: living_room
+  camera:
+    x: 280
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: talk
+      expr: angry
+      look: right
+    roach:
+      x: 620
+      y: 1095
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L07
+    who: husband
+    at: 0.25
+    text: That's not a fight!
+- id: H
+  dur: 2.88
+  background: living_room
+  camera:
+    x: 620
+    y: 1000
+    zoom: 2.0
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1095
+      scale: 0.8
+      z: 22
+      action: talk
+      expr: smug
+      look: camera
+  lines:
+  - id: L08
+    who: roach
+    at: 0.25
+    text: That's a fucking marriage.
+- id: I
+  dur: 8.15
+  background: living_room
+  camera:
+    x: 860
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: talk
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1095
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L09
+    who: wife
+    at: 0.25
+    text: Exactly. No free rides.
