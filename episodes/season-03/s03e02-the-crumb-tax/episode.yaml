@@ -1,0 +1,356 @@
+id: s03e02
+slug: the-crumb-tax
+season: 3
+episode: 2
+title: The Crumb Tax
+logline: The Roach monetizes the pantry until the Wife turns the bill on the Husband.
+hook: Who the hell put a lock on my snacks?
+punchline: Cool. Put his name on the biggest fucking bill.
+loop: Wife reaches for the cabinet lock again while Husband stares at his snack bill.
+outline: 'WIFE: Who the hell put a lock on my snacks?
+
+  ROACH: Crumb tax. Mouths don''t feed themselves.
+
+  HUSBAND: I ain''t paying you to eat my wife''s cookies.
+
+  WIFE: You ain''t eaten those in weeks.
+
+  ROACH: Damn. Pantry dry, marriage drier.
+
+  HUSBAND: Unlock the damn cabinet!
+
+  WIFE: New rule. Whoever eats pays.
+
+  ROACH: Cool. Put his name on the biggest fucking bill.'
+cover_at: 0.7
+voice_provider: babble
+music:
+  enabled: true
+  mood: sneaky_funk
+  bpm: 98
+  root_midi: 45
+  seed: 3002
+  gain: 0.16
+visual_reference_pack:
+  wife: assets/characters/reference/wife-character-sheet.png
+  husband: assets/characters/reference/husband-character-sheet.png
+  roach: assets/characters/reference/roach-character-sheet.png
+  props: assets/characters/reference/props-and-set-extras.png
+  supporting: assets/characters/reference/supporting-cast-sheet.png
+reference_animation_status: not_rendered; legacy studio renders are staging tests
+  only
+reels:
+  title: The Crumb Tax | The Roach Runs This House S3 Ep. 2
+  caption: 'The Roach monetizes the pantry until the Wife turns the bill on the Husband.
+
+
+    Original adult animated comedy. Uncensored language.
+
+    Which roommate are you backing?'
+  hashtags:
+  - '#TheRoachRunsThisHouse'
+  - '#AnimatedComedy'
+  - '#AdultAnimation'
+  - '#RoommateComedy'
+  - '#Reels'
+shots:
+- id: A
+  dur: 4.37
+  background: kitchen
+  camera:
+    x: 860
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: talk
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L01
+    who: wife
+    at: 0.25
+    text: Who the hell put a lock on my snacks?
+  sfx:
+  - at: 0.0
+    name: record_scratch
+    gain: 0.3
+- id: B
+  dur: 3.15
+  background: kitchen
+  camera:
+    x: 620
+    y: 1000
+    zoom: 2.0
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: talk
+      expr: smug
+      look: camera
+  lines:
+  - id: L02
+    who: roach
+    at: 0.25
+    text: Crumb tax. Mouths don't feed themselves.
+- id: C
+  dur: 4.37
+  background: kitchen
+  camera:
+    x: 280
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: talk
+      expr: angry
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L03
+    who: husband
+    at: 0.25
+    text: I ain't paying you to eat my wife's cookies.
+- id: D
+  dur: 3.7
+  background: kitchen
+  camera:
+    x: 860
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: talk
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L04
+    who: wife
+    at: 0.25
+    text: You ain't eaten those in weeks.
+- id: E
+  dur: 3.29
+  background: kitchen
+  camera:
+    x: 620
+    y: 1000
+    zoom: 2.0
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: talk
+      expr: smug
+      look: camera
+  lines:
+  - id: L05
+    who: roach
+    at: 0.25
+    text: Damn. Pantry dry, marriage drier.
+- id: F
+  dur: 2.33
+  background: kitchen
+  camera:
+    x: 280
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: talk
+      expr: angry
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L06
+    who: husband
+    at: 0.25
+    text: Unlock the damn cabinet!
+- id: G
+  dur: 2.74
+  background: kitchen
+  camera:
+    x: 860
+    y: 1250
+    zoom: 1.7
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: talk
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: hips
+      expr: smug
+      look: camera
+  lines:
+  - id: L07
+    who: wife
+    at: 0.25
+    text: New rule. Whoever eats pays.
+- id: H
+  dur: 11.05
+  background: kitchen
+  camera:
+    x: 620
+    y: 1000
+    zoom: 2.0
+  actors:
+    wife:
+      x: 900
+      y: 1880
+      scale: 1.0
+      z: 21
+      action: hips
+      expr: sideeye
+      look: left
+    husband:
+      x: 260
+      y: 1880
+      scale: 0.95
+      z: 20
+      action: idle
+      expr: confused
+      look: right
+    roach:
+      x: 620
+      y: 1326
+      scale: 0.8
+      z: 22
+      action: talk
+      expr: smug
+      look: camera
+  lines:
+  - id: L08
+    who: roach
+    at: 0.25
+    text: Cool. Put his name on the biggest fucking bill.
