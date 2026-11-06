@@ -1,0 +1,229 @@
+{
+  "episode_id": "s03e07",
+  "status": "script_and_shot_plan_complete; reference_animation_pending",
+  "target_duration_seconds": 35,
+  "visual_style": "original warm cel-shaded 2D sitcom; use the five repository reference PNGs",
+  "continuity": "Bring back the living-room fight positions from the Season 2 finale. Husband now has his rent envelope. He stays in the green shirt and charcoal pants. Wife reveals dish and laundry stations as the rematch rounds; the competition becomes chores rather than another knockout.",
+  "silent_adult_guests": [],
+  "source_of_truth": "episode.yaml",
+  "legacy_renderer_limit": "The existing renderer ignores image reference fields and draws the old rigs. Its local test MP4 is not the new-art final. Do not approve or publish it as such.",
+  "audio": {
+    "voices": {
+      "wife": "confident sharp adult female, dry timing",
+      "husband": "adult male baritone, bluster punctured by nervous pauses",
+      "roach": "adult raspy nimble voice, smug timing"
+    },
+    "music": "low sparse funk beneath speech; use authorized original stem",
+    "audience": "brief laughs only after selected punchlines; never over the next line",
+    "captions": "uncensored short karaoke groups from final audio alignment; final captions after picture lock"
+  },
+  "shots": [
+    {
+      "shot": "A",
+      "start_seconds": 0,
+      "planned_duration_seconds": 3.97,
+      "speaker": "husband",
+      "dialogue": "I paid the rent. Ring the fucking bell.",
+      "identity_references": [
+        "assets/characters/reference/husband-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. living room setting. Bring back the living-room fight positions from the Season 2 finale. Husband now has his rent envelope. He stays in the green shirt and charcoal pants. Wife reveals dish and laundry stations as the rematch rounds; the competition becomes chores rather than another knockout. Shot A: close-up centered on husband, all listener mouths closed. husband says exactly: \"I paid the rent. Ring the fucking bell.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "B",
+      "start_seconds": 3.97,
+      "planned_duration_seconds": 4.11,
+      "speaker": "roach",
+      "dialogue": "You paid half. That's one ass cheek.",
+      "identity_references": [
+        "assets/characters/reference/roach-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. living room setting. Bring back the living-room fight positions from the Season 2 finale. Husband now has his rent envelope. He stays in the green shirt and charcoal pants. Wife reveals dish and laundry stations as the rematch rounds; the competition becomes chores rather than another knockout. Shot B: close-up centered on roach, all listener mouths closed. roach says exactly: \"You paid half. That's one ass cheek.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": true,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.75,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "C",
+      "start_seconds": 8.08,
+      "planned_duration_seconds": 2.33,
+      "speaker": "wife",
+      "dialogue": "Winner runs this house.",
+      "identity_references": [
+        "assets/characters/reference/wife-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. living room setting. Bring back the living-room fight positions from the Season 2 finale. Husband now has his rent envelope. He stays in the green shirt and charcoal pants. Wife reveals dish and laundry stations as the rematch rounds; the competition becomes chores rather than another knockout. Shot C: close-up centered on wife, all listener mouths closed. wife says exactly: \"Winner runs this house.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "D",
+      "start_seconds": 10.41,
+      "planned_duration_seconds": 3.56,
+      "speaker": "husband",
+      "dialogue": "I'm about to beat your little ass.",
+      "identity_references": [
+        "assets/characters/reference/husband-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. living room setting. Bring back the living-room fight positions from the Season 2 finale. Husband now has his rent envelope. He stays in the green shirt and charcoal pants. Wife reveals dish and laundry stations as the rematch rounds; the competition becomes chores rather than another knockout. Shot D: close-up centered on husband, all listener mouths closed. husband says exactly: \"I'm about to beat your little ass.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "E",
+      "start_seconds": 13.97,
+      "planned_duration_seconds": 4.52,
+      "speaker": "roach",
+      "dialogue": "You couldn't beat an egg without checking YouTube.",
+      "identity_references": [
+        "assets/characters/reference/roach-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. living room setting. Bring back the living-room fight positions from the Season 2 finale. Husband now has his rent envelope. He stays in the green shirt and charcoal pants. Wife reveals dish and laundry stations as the rematch rounds; the competition becomes chores rather than another knockout. Shot E: close-up centered on roach, all listener mouths closed. roach says exactly: \"You couldn't beat an egg without checking YouTube.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": true,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.75,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "F",
+      "start_seconds": 18.49,
+      "planned_duration_seconds": 3.15,
+      "speaker": "wife",
+      "dialogue": "First round: dishes. Second round: laundry.",
+      "identity_references": [
+        "assets/characters/reference/wife-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. living room setting. Bring back the living-room fight positions from the Season 2 finale. Husband now has his rent envelope. He stays in the green shirt and charcoal pants. Wife reveals dish and laundry stations as the rematch rounds; the competition becomes chores rather than another knockout. Shot F: close-up centered on wife, all listener mouths closed. wife says exactly: \"First round: dishes. Second round: laundry.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "G",
+      "start_seconds": 21.64,
+      "planned_duration_seconds": 2.33,
+      "speaker": "husband",
+      "dialogue": "That's not a fight!",
+      "identity_references": [
+        "assets/characters/reference/husband-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. living room setting. Bring back the living-room fight positions from the Season 2 finale. Husband now has his rent envelope. He stays in the green shirt and charcoal pants. Wife reveals dish and laundry stations as the rematch rounds; the competition becomes chores rather than another knockout. Shot G: close-up centered on husband, all listener mouths closed. husband says exactly: \"That's not a fight!\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "H",
+      "start_seconds": 23.97,
+      "planned_duration_seconds": 2.88,
+      "speaker": "roach",
+      "dialogue": "That's a fucking marriage.",
+      "identity_references": [
+        "assets/characters/reference/roach-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. living room setting. Bring back the living-room fight positions from the Season 2 finale. Husband now has his rent envelope. He stays in the green shirt and charcoal pants. Wife reveals dish and laundry stations as the rematch rounds; the competition becomes chores rather than another knockout. Shot H: close-up centered on roach, all listener mouths closed. roach says exactly: \"That's a fucking marriage.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": true,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.75,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "I",
+      "start_seconds": 26.85,
+      "planned_duration_seconds": 8.15,
+      "speaker": "wife",
+      "dialogue": "Exactly. No free rides.",
+      "identity_references": [
+        "assets/characters/reference/wife-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. living room setting. Bring back the living-room fight positions from the Season 2 finale. Husband now has his rent envelope. He stays in the green shirt and charcoal pants. Wife reveals dish and laundry stations as the rematch rounds; the competition becomes chores rather than another knockout. Shot I: close-up centered on wife, all listener mouths closed. wife says exactly: \"Exactly. No free rides.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    }
+  ]
+}
