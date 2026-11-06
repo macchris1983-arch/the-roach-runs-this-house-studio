@@ -1,0 +1,56 @@
+season: 3
+title: The Roach Runs This House — No Free Rides
+episode_count: 7
+format: 9:16 adult animated comedy; 35–40 seconds planned per episode
+continuity_source: episodes/season-02/s02e07-the-main-event/episode.yaml
+arc: Pay rent first becomes a household power struggle. The Husband earns his rematch,
+  the Roach monetizes every corner, and the Wife makes both rivals compete at doing
+  the work.
+art_references:
+  wife: assets/characters/reference/wife-character-sheet.png
+  husband: assets/characters/reference/husband-character-sheet.png
+  roach: assets/characters/reference/roach-character-sheet.png
+  props: assets/characters/reference/props-and-set-extras.png
+  supporting: assets/characters/reference/supporting-cast-sheet.png
+new_adult_guests:
+  neighbor: Pearl
+  landlord: Mr. Baines
+  exterminator: Tasha
+episodes:
+- id: s03e01
+  title: Pay Rent First
+  path: episodes/season-03/s03e01-pay-rent-first
+  planned_seconds: 35
+  status: script_and_shots_complete; upgraded_animation_pending
+- id: s03e02
+  title: The Crumb Tax
+  path: episodes/season-03/s03e02-the-crumb-tax
+  planned_seconds: 35
+  status: script_and_shots_complete; upgraded_animation_pending
+- id: s03e03
+  title: Thin Walls, Thick Lies
+  path: episodes/season-03/s03e03-thin-walls-thick-lies
+  planned_seconds: 35
+  status: script_and_shots_complete; upgraded_animation_pending
+- id: s03e04
+  title: The Real Exterminator
+  path: episodes/season-03/s03e04-the-real-exterminator
+  planned_seconds: 35
+  status: script_and_shots_complete; upgraded_animation_pending
+- id: s03e05
+  title: The Hardwood Inspection
+  path: episodes/season-03/s03e05-the-hardwood-inspection
+  planned_seconds: 35
+  status: script_and_shots_complete; upgraded_animation_pending
+- id: s03e06
+  title: Do Not Disturb
+  path: episodes/season-03/s03e06-do-not-disturb
+  planned_seconds: 35
+  status: script_and_shots_complete; upgraded_animation_pending
+- id: s03e07
+  title: No Free Rides
+  path: episodes/season-03/s03e07-no-free-rides
+  planned_seconds: 35
+  status: script_and_shots_complete; upgraded_animation_pending
+publishing: not authorized by this season package; stop at owner review
+final_animation_status: not_rendered_with_new_art
