@@ -5,4 +5,29 @@
 #     source: where it came from
 #     licence: licence name / proof of permission
 #     added_by: name
-files: []
+files:
+  - file: wife-character-sheet.png
+    path: assets/characters/reference/wife-character-sheet.png
+    source: ChatGPT image generation from the owner's supplied cast reference; supporting cast designed as optional extras
+    licence: Project reference artwork added at the owner's request; repository LICENSE applies; no third-party stock asset used
+    added_by: ChatGPT at Christopher McDonald's request
+  - file: husband-character-sheet.png
+    path: assets/characters/reference/husband-character-sheet.png
+    source: ChatGPT image generation from the owner's supplied cast reference; supporting cast designed as optional extras
+    licence: Project reference artwork added at the owner's request; repository LICENSE applies; no third-party stock asset used
+    added_by: ChatGPT at Christopher McDonald's request
+  - file: roach-character-sheet.png
+    path: assets/characters/reference/roach-character-sheet.png
+    source: ChatGPT image generation from the owner's supplied cast reference; supporting cast designed as optional extras
+    licence: Project reference artwork added at the owner's request; repository LICENSE applies; no third-party stock asset used
+    added_by: ChatGPT at Christopher McDonald's request
+  - file: props-and-set-extras.png
+    path: assets/characters/reference/props-and-set-extras.png
+    source: ChatGPT image generation from the owner's supplied cast reference; supporting cast designed as optional extras
+    licence: Project reference artwork added at the owner's request; repository LICENSE applies; no third-party stock asset used
+    added_by: ChatGPT at Christopher McDonald's request
+  - file: supporting-cast-sheet.png
+    path: assets/characters/reference/supporting-cast-sheet.png
+    source: ChatGPT image generation from the owner's supplied cast reference; supporting cast designed as optional extras
+    licence: Project reference artwork added at the owner's request; repository LICENSE applies; no third-party stock asset used
+    added_by: ChatGPT at Christopher McDonald's request
