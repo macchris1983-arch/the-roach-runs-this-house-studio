@@ -1,0 +1,229 @@
+{
+  "episode_id": "s03e06",
+  "status": "script_and_shot_plan_complete; reference_animation_pending",
+  "target_duration_seconds": 35,
+  "visual_style": "original warm cel-shaded 2D sitcom; use the five repository reference PNGs",
+  "continuity": "All three remain fully dressed in their established outfits. Wife hands Husband a scrub brush beside the tiled kitchen floor. The joke is a chore request mistaken for an invitation; no sex or nudity is depicted.",
+  "silent_adult_guests": [],
+  "source_of_truth": "episode.yaml",
+  "legacy_renderer_limit": "The existing renderer ignores image reference fields and draws the old rigs. Its local test MP4 is not the new-art final. Do not approve or publish it as such.",
+  "audio": {
+    "voices": {
+      "wife": "confident sharp adult female, dry timing",
+      "husband": "adult male baritone, bluster punctured by nervous pauses",
+      "roach": "adult raspy nimble voice, smug timing"
+    },
+    "music": "low sparse funk beneath speech; use authorized original stem",
+    "audience": "brief laughs only after selected punchlines; never over the next line",
+    "captions": "uncensored short karaoke groups from final audio alignment; final captions after picture lock"
+  },
+  "shots": [
+    {
+      "shot": "A",
+      "start_seconds": 0,
+      "planned_duration_seconds": 3.56,
+      "speaker": "wife",
+      "dialogue": "Tonight, I want you on your knees.",
+      "identity_references": [
+        "assets/characters/reference/wife-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. kitchen setting. All three remain fully dressed in their established outfits. Wife hands Husband a scrub brush beside the tiled kitchen floor. The joke is a chore request mistaken for an invitation; no sex or nudity is depicted. Shot A: close-up centered on wife, all listener mouths closed. wife says exactly: \"Tonight, I want you on your knees.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "B",
+      "start_seconds": 3.56,
+      "planned_duration_seconds": 2.62,
+      "speaker": "husband",
+      "dialogue": "Finally. Some appreciation.",
+      "identity_references": [
+        "assets/characters/reference/husband-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. kitchen setting. All three remain fully dressed in their established outfits. Wife hands Husband a scrub brush beside the tiled kitchen floor. The joke is a chore request mistaken for an invitation; no sex or nudity is depicted. Shot B: close-up centered on husband, all listener mouths closed. husband says exactly: \"Finally. Some appreciation.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "C",
+      "start_seconds": 6.18,
+      "planned_duration_seconds": 2.88,
+      "speaker": "wife",
+      "dialogue": "With a scrub brush.",
+      "identity_references": [
+        "assets/characters/reference/wife-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. kitchen setting. All three remain fully dressed in their established outfits. Wife hands Husband a scrub brush beside the tiled kitchen floor. The joke is a chore request mistaken for an invitation; no sex or nudity is depicted. Shot C: close-up centered on wife, all listener mouths closed. wife says exactly: \"With a scrub brush.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": true,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.75,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "D",
+      "start_seconds": 9.06,
+      "planned_duration_seconds": 2.74,
+      "speaker": "roach",
+      "dialogue": "Damn. Fifty shades of grout.",
+      "identity_references": [
+        "assets/characters/reference/roach-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. kitchen setting. All three remain fully dressed in their established outfits. Wife hands Husband a scrub brush beside the tiled kitchen floor. The joke is a chore request mistaken for an invitation; no sex or nudity is depicted. Shot D: close-up centered on roach, all listener mouths closed. roach says exactly: \"Damn. Fifty shades of grout.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "E",
+      "start_seconds": 11.8,
+      "planned_duration_seconds": 3.15,
+      "speaker": "husband",
+      "dialogue": "I thought we was getting freaky!",
+      "identity_references": [
+        "assets/characters/reference/husband-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. kitchen setting. All three remain fully dressed in their established outfits. Wife hands Husband a scrub brush beside the tiled kitchen floor. The joke is a chore request mistaken for an invitation; no sex or nudity is depicted. Shot E: close-up centered on husband, all listener mouths closed. husband says exactly: \"I thought we was getting freaky!\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "F",
+      "start_seconds": 14.95,
+      "planned_duration_seconds": 4.52,
+      "speaker": "wife",
+      "dialogue": "We are. That floor's never seen you finish.",
+      "identity_references": [
+        "assets/characters/reference/wife-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. kitchen setting. All three remain fully dressed in their established outfits. Wife hands Husband a scrub brush beside the tiled kitchen floor. The joke is a chore request mistaken for an invitation; no sex or nudity is depicted. Shot F: close-up centered on wife, all listener mouths closed. wife says exactly: \"We are. That floor's never seen you finish.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": true,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.75,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "G",
+      "start_seconds": 19.47,
+      "planned_duration_seconds": 2.74,
+      "speaker": "roach",
+      "dialogue": "Use protection. Gloves, nasty ass.",
+      "identity_references": [
+        "assets/characters/reference/roach-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. kitchen setting. All three remain fully dressed in their established outfits. Wife hands Husband a scrub brush beside the tiled kitchen floor. The joke is a chore request mistaken for an invitation; no sex or nudity is depicted. Shot G: close-up centered on roach, all listener mouths closed. roach says exactly: \"Use protection. Gloves, nasty ass.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "H",
+      "start_seconds": 22.21,
+      "planned_duration_seconds": 2.0,
+      "speaker": "husband",
+      "dialogue": "Why you watching?",
+      "identity_references": [
+        "assets/characters/reference/husband-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. kitchen setting. All three remain fully dressed in their established outfits. Wife hands Husband a scrub brush beside the tiled kitchen floor. The joke is a chore request mistaken for an invitation; no sex or nudity is depicted. Shot H: close-up centered on husband, all listener mouths closed. husband says exactly: \"Why you watching?\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": false,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.2,
+        "timing_status": "requires final audio alignment"
+      }
+    },
+    {
+      "shot": "I",
+      "start_seconds": 24.21,
+      "planned_duration_seconds": 10.79,
+      "speaker": "roach",
+      "dialogue": "Premium subscription. I paid in crumbs.",
+      "identity_references": [
+        "assets/characters/reference/roach-character-sheet.png",
+        "assets/characters/reference/props-and-set-extras.png"
+      ],
+      "silent_extras": [],
+      "camera": "speaker close-up; one speaker mouth only",
+      "keyframe_required": true,
+      "keyframe_status": "pending",
+      "video_status": "not_generated",
+      "generation_prompt": "Original 2D adult sitcom The Roach Runs This House. Match the supplied clean scene frame and the exact approved character references. kitchen setting. All three remain fully dressed in their established outfits. Wife hands Husband a scrub brush beside the tiled kitchen floor. The joke is a chore request mistaken for an invitation; no sex or nudity is depicted. Shot I: close-up centered on roach, all listener mouths closed. roach says exactly: \"Premium subscription. I paid in crumbs.\". Natural adult conversational English; no bleeps or substituted wording. Keep wardrobe, face, hair and colors consistent. Roach has two arms, two legs, two antennae. Bold ink outlines, rich warm cel shading. Small animated acting, synchronized mouth shapes, no narrator, no captions baked into generation, no music. Hold a silent reaction after the final word. No extra speech, morphing or character swaps.",
+      "audience_laugh": {
+        "enabled": true,
+        "placement": "after actual spoken line ends; fit inside reaction hold",
+        "planned_hold_seconds": 0.75,
+        "timing_status": "requires final audio alignment"
+      }
+    }
+  ]
+}
