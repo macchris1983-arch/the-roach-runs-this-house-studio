@@ -31,3 +31,53 @@ files:
     source: ChatGPT image generation from the owner's supplied cast reference; supporting cast designed as optional extras
     licence: Project reference artwork added at the owner's request; repository LICENSE applies; no third-party stock asset used
     added_by: ChatGPT at Christopher McDonald's request
+  - file: wife-3d-sheet.png
+    path: assets/characters/reference-3d/wife-3d-sheet.png
+    source: Canva AI image generation (owner's Canva account) from the 2D reference sheets and the owner's direction; 800px Canva preview export
+    licence: Project reference artwork added at the owner's request; all rights reserved; no third-party stock asset used
+    added_by: Claude at Christopher McDonald's request
+  - file: husband-3d-sheet.png
+    path: assets/characters/reference-3d/husband-3d-sheet.png
+    source: Canva AI image generation (owner's Canva account) from the 2D reference sheets and the owner's direction; 800px Canva preview export
+    licence: Project reference artwork added at the owner's request; all rights reserved; no third-party stock asset used
+    added_by: Claude at Christopher McDonald's request
+  - file: roach-3d-sheet.png
+    path: assets/characters/reference-3d/roach-3d-sheet.png
+    source: Canva AI image generation (owner's Canva account) from the 2D reference sheets and the owner's direction; 800px Canva preview export
+    licence: Project reference artwork added at the owner's request; all rights reserved; no third-party stock asset used
+    added_by: Claude at Christopher McDonald's request
+  - file: grandma-husbands-mom-3d-sheet.png
+    path: assets/characters/reference-3d/grandma-husbands-mom-3d-sheet.png
+    source: Canva AI image generation (owner's Canva account) from the 2D reference sheets and the owner's direction; 800px Canva preview export
+    licence: Project reference artwork added at the owner's request; all rights reserved; no third-party stock asset used
+    added_by: Claude at Christopher McDonald's request
+  - file: cousin-human-3d-sheet.png
+    path: assets/characters/reference-3d/cousin-human-3d-sheet.png
+    source: Canva AI image generation (owner's Canva account) from the 2D reference sheets and the owner's direction; 800px Canva preview export
+    licence: Project reference artwork added at the owner's request; all rights reserved; no third-party stock asset used
+    added_by: Claude at Christopher McDonald's request
+  - file: family-kids-streetwear-3d-sheet.png
+    path: assets/characters/reference-3d/family-kids-streetwear-3d-sheet.png
+    source: Canva AI image generation (owner's Canva account) from the 2D reference sheets and the owner's direction; 800px Canva preview export
+    licence: Project reference artwork added at the owner's request; all rights reserved; no third-party stock asset used
+    added_by: Claude at Christopher McDonald's request
+  - file: kids-multiple-looks-v1-3d-sheet.png
+    path: assets/characters/reference-3d/kids-multiple-looks-v1-3d-sheet.png
+    source: Canva AI image generation (owner's Canva account) from the 2D reference sheets and the owner's direction; 800px Canva preview export
+    licence: Project reference artwork added at the owner's request; all rights reserved; no third-party stock asset used
+    added_by: Claude at Christopher McDonald's request
+  - file: kids-multiple-looks-v2-3d-sheet.png
+    path: assets/characters/reference-3d/kids-multiple-looks-v2-3d-sheet.png
+    source: Canva AI image generation (owner's Canva account) from the 2D reference sheets and the owner's direction; 800px Canva preview export
+    licence: Project reference artwork added at the owner's request; all rights reserved; no third-party stock asset used
+    added_by: Claude at Christopher McDonald's request
+  - file: brutus-rottweiler-3d-sheet.png
+    path: assets/characters/reference-3d/brutus-rottweiler-3d-sheet.png
+    source: Canva AI image generation (owner's Canva account) from the 2D reference sheets and the owner's direction; 800px Canva preview export
+    licence: Project reference artwork added at the owner's request; all rights reserved; no third-party stock asset used
+    added_by: Claude at Christopher McDonald's request
+  - file: supporting-cast-3d-sheet.png
+    path: assets/characters/reference-3d/supporting-cast-3d-sheet.png
+    source: Canva AI image generation (owner's Canva account) from the 2D reference sheets and the owner's direction; 800px Canva preview export
+    licence: Project reference artwork added at the owner's request; all rights reserved; no third-party stock asset used
+    added_by: Claude at Christopher McDonald's request
