@@ -12,7 +12,7 @@ The Husband and Wife have tried everything (sprays, traps, bug bombs, slippers) 
 
 - **Format:** 7 episodes, about 35 seconds each. *(laugh)* marks a short audience laugh.
 - **Tone:** raunchy roast battle with profanity and Bay Area slang. The Roach has the most disrespectful mouth in the house.
-- **Rules:** no sex or nudity shown, and the kids are never around the drugs, the raunchy jokes or the cussing. They only show up in clean scenes, and nobody roasts them. The drug dealing stays a joke; nothing shows how to make or use anything.
+- **Rules:** no sex or nudity shown, and the teens (15 and 14) never appear in sex jokes or drug scenes. They cuss and talk trash, but their hustles are bikes, phones and resale. See the Bay Area Style Bible. The drug dealing stays a joke; nothing shows how to make or use anything.
 - **The couple:** the Wife always has the Husband's back. They lose to the Roach together, never to each other.
 - **Animation:** the room stays completely still; only the characters move (no camera zooms or push-ins).
 
@@ -23,8 +23,8 @@ The Husband and Wife have tried everything (sprays, traps, bug bombs, slippers) 
 | **The Roach** | Gangster from the Town. Runs a trap in the walls, a stash in the toaster and a scam on everybody. Never loses for long. Scared to death of the dog. | "Hella," "on my mama," "yadadamean," "cuddy," "mane," "bootsie," "fetti," "lil mama," "you trippin'." Pure disrespect. |
 | **The Wife** | Boss of the house, ride-or-die for her man, swings first. | Sharp and fed up. Never turns on the Husband. |
 | **The Husband** | Done with this roach. Keeps calling in help. | Frustrated, loud, determined. |
-| **The Son (10)** | The couple's boy. Thinks the Roach is kind of cool, which drives his dad crazy. | Kid talk, no cussing. |
-| **The Daughter (9)** | The couple's girl. Smarter than everybody in the house and not scared of the Roach. | Kid talk, no cussing. |
+| **The Son (15)** | Bad-ass Bay teen. Rides a scraper bike, turf dances, films everything and thinks the Roach is a legend, which drives his dad crazy. | Bay + Gen Z slang ("hella," "bruh," "no cap," "cooked"); cusses and talks trash. |
+| **The Daughter (14)** | Bad-ass Bay teen and the family's real hustler. Smarter than everybody, never scared, always selling something. | Sharp and quick; roasts grown-ups; cusses. |
 | **Brutus** | The family's huge, scary Rottweiler. The only thing in the house the Roach is scared of. Listens to the Cousin... sometimes, halfway. | Growls and barks. |
 | **Grandma** | The Husband's mom. Always has a joint in her hand. Supposed to help, but she's the Roach's best customer. | Laid back, unbothered. |
 | **The Cousin** | The Husband's crackhead cousin, a human. The Roach pays him in crack crumbles to be a pest to the couple. | Twitchy, fast-talking hustler. |
@@ -118,13 +118,13 @@ The Husband and Wife have tried everything (sprays, traps, bug bombs, slippers) 
 
 *(laugh)*
 
-**Son:** *(running in)* Dad, if she doesn't get him, can I keep him?
+**Son:** *(rolling in on his scraper bike, filming)* Dad, if she don't smoke him, he's mine. He finna go viral, no cap.
 
 **Husband:** NO.
 
-**Daughter:** Ms. Tasha, he hides in the toaster. Every time.
+**Daughter:** Ms. Tasha, he be in the toaster. That tip'll cost you five dollars.
 
-**Roach:** Aye, who taught this kid to talk?
+**Roach:** Lil one hustlin' off MY info? ...Respect.
 
 **Husband:** Tasha, you gon' let him talk to you like that?
 
@@ -196,7 +196,7 @@ The Husband and Wife have tried everything (sprays, traps, bug bombs, slippers) 
 
 *(laugh)*
 
-**Daughter:** Mr. Baines, does the roach have a lease?
+**Daughter:** Mr. Baines, do the roach got a lease? 'Cause if not, I'll rent him my closet. For the low.
 
 **Mr. Baines:** No. But his credit score's better than your daddy's.
 
@@ -224,9 +224,13 @@ The Husband and Wife have tried everything (sprays, traps, bug bombs, slippers) 
 
 **Pearl:** ...It does run a little slow.
 
-**Son:** He sold her a watch to watch HIM? That's kinda genius.
+**Son:** He sold her a watch to watch HIM? Bruh, that's hella peak.
 
 **Husband:** Don't you DARE.
+
+*(laugh)*
+
+**Daughter:** *(filming)* Pearl, the watch slow AND the wig moded.
 
 *(laugh)*
 

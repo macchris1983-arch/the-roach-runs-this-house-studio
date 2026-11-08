@@ -8,7 +8,7 @@ Every spoken line from `README.md`, grouped by character in episode order, ready
 | Wife | 11 |
 | Husband | 18 |
 | Son | 2 |
-| Daughter | 2 |
+| Daughter | 3 |
 | Grandma | 4 |
 | Cousin | 5 |
 | Tasha | 2 |
@@ -30,7 +30,7 @@ Every spoken line from `README.md`, grouped by character in episode order, ready
 9. **E02** (Tasha Tried It): Stole? I relocated 'em. Service fee.
 10. **E02** (Tasha Tried It): *(sniffing)* Mmm, lavender. Y'all trying to kill me or tuck me in?
 11. **E02** (Tasha Tried It): What truck? It's on bricks.
-12. **E02** (Tasha Tried It): Aye, who taught this kid to talk?
+12. **E02** (Tasha Tried It): Lil one hustlin' off MY info? ...Respect.
 13. **E02** (Tasha Tried It): She ain't gon' do nothing. I'm her best client. Every time she leave, y'all call her back. I'm job security, mane.
 14. **E03** (Grandma's Got Gas): Grandma! My favorite customer! You want the usual?
 15. **E03** (Grandma's Got Gas): For you? Family discount. And I threw in a pre-roll 'cause your son hella bootsie.
@@ -90,17 +90,18 @@ Every spoken line from `README.md`, grouped by character in episode order, ready
 
 ## Son
 
-*Voice:* 10-year-old boy; thinks the Roach is kind of cool. Clean lines only.
+*Voice:* 15. Bad-ass Bay teen; scraper bike, turf dancer, films everything; Bay + Gen Z slang.
 
-1. **E02** (Tasha Tried It): *(running in)* Dad, if she doesn't get him, can I keep him?
-2. **E05** (Neighborhood Watch): He sold her a watch to watch HIM? That's kinda genius.
+1. **E02** (Tasha Tried It): *(rolling in on his scraper bike, filming)* Dad, if she don't smoke him, he's mine. He finna go viral, no cap.
+2. **E05** (Neighborhood Watch): He sold her a watch to watch HIM? Bruh, that's hella peak.
 
 ## Daughter
 
-*Voice:* 9-year-old girl; smartest one in the house. Clean lines only.
+*Voice:* 14. Bad-ass Bay teen and the family's real hustler; quick, roasts grown-ups.
 
-1. **E02** (Tasha Tried It): Ms. Tasha, he hides in the toaster. Every time.
-2. **E04** (Lease Violation): Mr. Baines, does the roach have a lease?
+1. **E02** (Tasha Tried It): Ms. Tasha, he be in the toaster. That tip'll cost you five dollars.
+2. **E04** (Lease Violation): Mr. Baines, do the roach got a lease? 'Cause if not, I'll rent him my closet. For the low.
+3. **E05** (Neighborhood Watch): *(filming)* Pearl, the watch slow AND the wig moded.
 
 ## Grandma
 
