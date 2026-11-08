@@ -28,9 +28,9 @@ The Husband and Wife have tried everything (sprays, traps, bug bombs, slippers) 
 | **Brutus** | The family's huge, scary Rottweiler. The only thing in the house the Roach is scared of. Listens to the Cousin... sometimes, halfway. | Growls and barks. |
 | **Grandma** | The Husband's mom. Always has a joint in her hand. Supposed to help, but she's the Roach's best customer. | Laid back, unbothered. |
 | **The Cousin** | The Husband's crackhead cousin, a human. The Roach pays him in crack crumbles to be a pest to the couple. | Twitchy, fast-talking hustler. |
-| **Tasha** | Real human exterminator. | Silent. |
-| **Mr. Baines** | The landlord. | Silent. |
-| **Pearl** | Nosy neighbor; runs the neighborhood watch. | Silent. |
+| **Tasha** | Real human exterminator. | Unbothered pro with dry one-liners. |
+| **Mr. Baines** | The landlord. | Deadpan, all about the money. |
+| **Pearl** | Nosy neighbor; runs the neighborhood watch. | Loud, nosy, lives for gossip. |
 
 **Cousin's running gags:** siphons gas from the couple's car for his lawnmower and bike, snatches hot meat off the grill, shits on the side of the house, tries to sell them pieces of Pearl's wind chimes, strips copper out of the toaster, sells them back their own TV remote.
 
@@ -90,9 +90,11 @@ The Husband and Wife have tried everything (sprays, traps, bug bombs, slippers) 
 
 **Premise:** The couple calls in a real exterminator. The Roach robs her truck and roasts her spray.
 
-**Staging:** Living room. Tasha walks in silently with her sprayer. Through the window, the Cousin rolls her hubcaps down the street.
+**Staging:** Living room. Tasha walks in with her sprayer. Through the window, the Cousin rolls her hubcaps down the street.
 
 **Roach:** Ooh, they sent a professional? Lil mama, that spray expired in 2019, yadadamean.
+
+**Tasha:** Baby, I been killing roaches since flip phones. Hold still.
 
 **Husband:** She's the best in the Bay.
 
@@ -109,6 +111,20 @@ The Husband and Wife have tried everything (sprays, traps, bug bombs, slippers) 
 **Roach:** *(sniffing)* Mmm, lavender. Y'all trying to kill me or tuck me in?
 
 *(laugh)*
+
+**Tasha:** That was the warm-up. The real stuff's in the truck.
+
+**Roach:** What truck? It's on bricks.
+
+*(laugh)*
+
+**Son:** *(running in)* Dad, if she doesn't get him, can I keep him?
+
+**Husband:** NO.
+
+**Daughter:** Ms. Tasha, he hides in the toaster. Every time.
+
+**Roach:** Aye, who taught this kid to talk?
 
 **Husband:** Tasha, you gon' let him talk to you like that?
 
@@ -154,11 +170,13 @@ The Husband and Wife have tried everything (sprays, traps, bug bombs, slippers) 
 
 **Premise:** The couple brings in the landlord to evict the Roach. Turns out the Roach has been paying their rent with their own money.
 
-**Staging:** Kitchen. Mr. Baines stands silently in the doorway with his clipboard and key ring. Exaggerated sitcom visit, not real tenancy advice.
+**Staging:** Kitchen. Mr. Baines stands in the doorway with his clipboard and key ring. Exaggerated sitcom visit, not real tenancy advice.
 
 **Husband:** Mr. Baines, you gotta evict him.
 
 **Roach:** Evict me? Baines, tell 'em who been paying rent on this unit.
+
+**Mr. Baines:** Honestly? He's my best tenant. Never late.
 
 **Wife:** ...What?
 
@@ -178,19 +196,37 @@ The Husband and Wife have tried everything (sprays, traps, bug bombs, slippers) 
 
 *(laugh)*
 
+**Daughter:** Mr. Baines, does the roach have a lease?
+
+**Mr. Baines:** No. But his credit score's better than your daddy's.
+
+*(laugh)*
+
+**Mr. Baines:** Rent's due on the first. All of y'all.
+
 **Loop:** Mr. Baines shakes the Roach's tiny hand while the couple stares.
 
 ## E05 — Neighborhood Watch
 
 **Premise:** Pearl starts a neighborhood watch to catch whoever's robbing the block. Everything traces back to the Roach and his Cousin.
 
-**Staging:** Front porch. Pearl stands silently with a whistle and clipboard.
+**Staging:** Front porch. Pearl stands with a whistle and clipboard. The kids sit on the steps.
+
+**Pearl:** *(blowing her whistle)* Neighborhood watch is in session!
 
 **Husband:** Pearl started a neighborhood watch. We on you now.
 
 **Roach:** Neighborhood watch? I sold Pearl that watch, bruh.
 
 *(Pearl looks at her wrist.)*
+
+*(laugh)*
+
+**Pearl:** ...It does run a little slow.
+
+**Son:** He sold her a watch to watch HIM? That's kinda genius.
+
+**Husband:** Don't you DARE.
 
 *(laugh)*
 
@@ -201,6 +237,8 @@ The Husband and Wife have tried everything (sprays, traps, bug bombs, slippers) 
 **Cousin:** *(popping up)* Y'all want a chime? Five dollars a ding.
 
 *(laugh)*
+
+**Pearl:** I KNEW I heard my chimes dinging at the pawn shop!
 
 **Husband:** That's it, we calling the police.
 
