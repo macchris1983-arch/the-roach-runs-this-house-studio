@@ -10,7 +10,7 @@ The Roach is a straight-up gangster from the Town who runs a full operation out 
 
 The Husband and Wife have tried everything (sprays, traps, bug bombs, slippers) with no luck. This season they call in all the help they can get, and the Roach clowns every last one of them.
 
-- **Format:** 7 episodes, about 35 seconds each. *(laugh)* marks a short audience laugh.
+- **Format:** a pilot (E00) plus 7 episodes, about 35 seconds each. *(laugh)* marks a short audience laugh.
 - **Tone:** raunchy roast battle with profanity and Bay Area slang. The Roach has the most disrespectful mouth in the house.
 - **Rules:** no sex or nudity shown, and the teens (15 and 14) never appear in sex jokes or drug scenes. They cuss and talk trash, but their hustles are bikes, phones and resale. See the Bay Area Style Bible. The drug dealing stays a joke; nothing shows how to make or use anything.
 - **The couple:** the Wife always has the Husband's back. They lose to the Roach together, never to each other.
@@ -35,6 +35,64 @@ The Husband and Wife have tried everything (sprays, traps, bug bombs, slippers) 
 **Cousin's running gags:** siphons gas from the couple's car for his lawnmower and bike, snatches hot meat off the grill, shits on the side of the house, tries to sell them pieces of Pearl's wind chimes, strips copper out of the toaster, sells them back their own TV remote.
 
 3D character references: `assets/characters/reference-3d/README.md`.
+
+## E00 — Meet the Tenants (pilot)
+
+**Premise:** The Roach gives the viewer a tour of "his" house and introduces everybody, reality-show style. Sets up the whole cast in one episode.
+
+**Staging:** The Roach stands on the kitchen counter talking straight to camera. Quick cut-ins of each character with a freeze frame and name card as he names them. The kids' cut-ins are clean; Grandma's cut-in is a separate shot with no kids in it.
+
+**Roach:** Welcome to my house. Don't touch nothing, I got it priced.
+
+*(Cut-in: the Husband swinging a slipper and missing.)*
+
+**Roach:** That's the Husband. Pays the bills, misses every swing.
+
+**Husband:** I'm gon' get you!
+
+**Roach:** Fasho, unc.
+
+*(laugh)*
+
+*(Cut-in: the Wife holding a spray can like a pistol.)*
+
+**Roach:** That's the Wife. Only one in here I respect. She swing first.
+
+**Wife:** And I don't miss.
+
+*(Cut-in: the Son on his scraper bike filming; the Daughter selling snacks at the table.)*
+
+**Roach:** Them two? Lil hustlers. Learned it from me.
+
+**Son:** Learned it from YouTube, bruh.
+
+**Daughter:** Five dollars to be in our video.
+
+*(laugh)*
+
+*(Cut-in: Brutus growls. The Roach jumps a foot in the air.)*
+
+**Roach:** That's Brutus. We don't talk about Brutus.
+
+*(Cut-in: Grandma on the couch, joint in hand.)*
+
+**Roach:** Grandma. My best customer.
+
+**Grandma:** *(puffs)* Hey, baby.
+
+*(Cut-in: the Cousin at the window holding a gas can.)*
+
+**Roach:** And that's the Cousin. He on payroll.
+
+**Cousin:** Gas for the mower, cuz! Don't trip!
+
+*(laugh)*
+
+**Roach:** They been tryna get rid of me for years. On my mama... *(a slipper slams down next to him)* ...the Roach runs this house.
+
+*(laugh)*
+
+**Loop:** The slipper lifts away. The Roach winks at the camera.
 
 ## E01 — Everything But the Kitchen Sink
 
