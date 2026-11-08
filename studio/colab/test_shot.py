@@ -5,7 +5,7 @@ Tools (all free/open source):
   - SDXL-Turbo (stabilityai/sdxl-turbo) for one consistent 3D kitchen background
   - the owner's 3D character cut-outs (assets/characters/cutouts-3d) for identity
   - LTX-Video (Lightricks/LTX-Video) image-to-video for motion
-  - Kokoro-82M (hexgrad/Kokoro-82M) for the voice
+  - Kokoro-82M via kokoro-onnx for the voice
 Run:  !python studio/colab/test_shot.py   (from the repo root, after setup.sh)
 """
 import gc, os, subprocess, sys
@@ -89,13 +89,13 @@ export_to_video(frames, SILENT, fps=FPS)
 del pipe; free()
 
 # ---------------------------------------------------------------- 4) voice with Kokoro
-from kokoro import KPipeline
+from kokoro_onnx import Kokoro
 import soundfile as sf
 LINE = "Welcome to my house. Don't touch nothin', it's priced."
-tts = KPipeline(lang_code="a")
-audio = np.concatenate([a for _, _, a in tts(LINE, voice="am_puck", speed=1.1)])
+tts = Kokoro("/content/models/kokoro-v1.0.onnx", "/content/models/voices-v1.0.bin")
+audio, sr = tts.create(LINE, voice="am_puck", speed=1.1, lang="en-us")
 WAV = f"{OUT}/e00_s1_roach.wav"
-sf.write(WAV, audio, 24000)
+sf.write(WAV, audio, sr)
 
 # ---------------------------------------------------------------- 5) mux
 FINAL = f"{OUT}/e00_s1_test.mp4"
