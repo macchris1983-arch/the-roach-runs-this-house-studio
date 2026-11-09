@@ -12,7 +12,7 @@ The Husband and Wife have tried everything (sprays, traps, bug bombs, slippers) 
 
 - **Format:** a pilot (E00) plus 7 episodes, about 35 seconds each. *(laugh)* marks a short audience laugh.
 - **Tone:** raunchy roast battle with profanity and Bay Area slang. The Roach has the most disrespectful mouth in the house.
-- **Rules:** no sex or nudity shown, and the teens (15 and 14) never appear in sex jokes or drug scenes. They cuss and talk trash, but their hustles are bikes, phones and resale. See the Bay Area Style Bible. The drug dealing stays a joke; nothing shows how to make or use anything.
+- **Rules:** no sex or nudity shown, and the twins (18) still stay out of sex jokes and drug scenes (kept from the earlier rule until the owner changes it). They cuss and talk trash, but their hustles are bikes, phones and resale. See the Bay Area Style Bible. The drug dealing stays a joke; nothing shows how to make or use anything.
 - **The couple:** the Wife always has the Husband's back. They lose to the Roach together, never to each other.
 - **Animation:** the room stays completely still; only the characters move (no camera zooms or push-ins).
 
@@ -23,8 +23,8 @@ The Husband and Wife have tried everything (sprays, traps, bug bombs, slippers) 
 | **The Roach** | Gangster from the Town. Runs a trap in the walls, a stash in the toaster and a scam on everybody. Never loses for long. Scared to death of the dog. | "Hella," "on my mama," "yadadamean," "cuddy," "mane," "bootsie," "fetti," "lil mama," "you trippin'." Pure disrespect. |
 | **The Wife** | Boss of the house, ride-or-die for her man, swings first. | Sharp and fed up. Never turns on the Husband. |
 | **The Husband** | Done with this roach. Keeps calling in help. | Frustrated, loud, determined. |
-| **The Son (15)** | Bad-ass Bay teen. Rides a scraper bike, turf dances, films everything and thinks the Roach is a legend, which drives his dad crazy. | Bay + Gen Z slang ("hella," "bruh," "no cap," "cooked"); cusses and talks trash. |
-| **The Daughter (14)** | Bad-ass Bay teen and the family's real hustler. Smarter than everybody, never scared, always selling something. | Sharp and quick; roasts grown-ups; cusses. |
+| **The Son (18, Daughter's twin)** | Bad-ass Bay 18-year-old. Rides a scraper bike, turf dances, films everything and thinks the Roach is a legend, which drives his dad crazy. | Bay + Gen Z slang ("hella," "bruh," "no cap," "cooked"); cusses and talks trash. |
+| **The Daughter (18, Son's twin)** | Bad-ass Bay 18-year-old and the family's real hustler. Smarter than everybody, never scared, always selling something. | Sharp and quick; roasts grown-ups; cusses. |
 | **Brutus** | The family's huge, scary Rottweiler. The only thing in the house the Roach is scared of. Listens to the Cousin... sometimes, halfway. | Growls and barks. |
 | **Grandma** | The Husband's mom. Always has a joint in her hand. Supposed to help, but she's the Roach's best customer. | Laid back, unbothered. |
 | **The Cousin** | The Husband's crackhead cousin, a human. The Roach pays him in crack crumbles to be a pest to the couple. | Twitchy, fast-talking hustler. |

@@ -101,7 +101,7 @@ Every spoken line from `README.md`, grouped by character in episode order, ready
 
 ## Son
 
-*Voice:* 15. Bad-ass Bay teen; scraper bike, turf dancer, films everything; Bay + Gen Z slang.
+*Voice:* 18, the Daughter's twin. Bad-ass Bay young man; scraper bike, turf dancer, films everything; Bay + Gen Z slang.
 
 1. **E00** (Meet the Tenants (pilot)): Learned it from YouTube, bruh.
 2. **E02** (Tasha Tried It): *(rolling in on his scraper bike, filming)* Dad, if she don't smoke him, he's mine. He finna go viral, no cap.
@@ -109,7 +109,7 @@ Every spoken line from `README.md`, grouped by character in episode order, ready
 
 ## Daughter
 
-*Voice:* 14. Bad-ass Bay teen and the family's real hustler; quick, roasts grown-ups.
+*Voice:* 18, the Son's twin. Bad-ass Bay young woman and the family's real hustler; quick, roasts grown-ups.
 
 1. **E00** (Meet the Tenants (pilot)): Five dollars to be in our video.
 2. **E02** (Tasha Tried It): Ms. Tasha, he be in the toaster. That tip'll cost you five dollars.
